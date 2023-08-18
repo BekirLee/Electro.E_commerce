@@ -1,0 +1,10 @@
+.header_fluid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 107px;
+}
+.logo img {
+    width: 125px;
+    height: auto;
+}
