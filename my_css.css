@@ -63,3 +63,49 @@
     padding: 2px;
     background-color: #fff;
 }
+
+.menuBackcolor {
+    background-color: #0573f0 !important;
+}
+
+.slick_nav {
+    display: none;
+    height: 50px;
+    background-color: #444444;
+    width: 100%;
+}
+
+.menu-responsive {
+    position: relative;
+}
+
+.menu_links {
+    display: none;
+    text-align: left;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444444;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 170px;
+}
+
+
+.active {
+    width: 100%;
+    display: block;
+    text-align: left;
+    transition: 0.8s ease-out 0.3s;
+}
+
+.active li {
+    padding: 5px 10px;
+    margin: 2px 5px;
+    font-size: 10px;
+    list-style: none;
+
+
+}
