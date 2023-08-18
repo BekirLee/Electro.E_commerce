@@ -2,9 +2,48 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 107px;
+    height: 70px;
+    background-color: #0573f0;
+    border-bottom: 1px solid grey;
 }
+
 .logo img {
     width: 125px;
     height: auto;
+}
+
+.menu li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.search form {
+    display: flex;
+}
+
+.search form input {
+    margin-right: 1rem;
+}
+
+.main_menu {
+    background-color: #0573f0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    padding: .5rem;
+}
+
+.menu li a {
+    text-align: center;
+    color: #fff;
 }
