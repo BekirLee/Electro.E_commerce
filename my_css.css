@@ -186,14 +186,25 @@
 
 .services_ul li .service_items {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .textofService {
     margin-left: 5px;
 }
 
-.textofService h5,
-.textofService p {
+.textofService h5 {
     font-size: 15px;
+}
+
+.textofService p {
+    color: #9ca7ab;
+    font-size: 12px;
+
+}
+
+.service i {
+    color: #0573f0;
+    font-size: 20px;
+    margin-right: 5px;
 }
