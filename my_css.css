@@ -1,3 +1,11 @@
+.container {
+    margin: 2rem;
+}
+
+.containerBorder {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .header_fluid {
     display: flex;
     justify-content: space-around;
@@ -208,3 +216,46 @@
     font-size: 20px;
     margin-right: 5px;
 }
+
+/* productsBox */
+.productsBox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.productsBox img {
+    width: 250px;
+    height: 250px;
+}
+
+.product {
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.product h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+    bottom: 1.8em;
+    font-size: .9em;
+    text-align: center;
+    position: absolute;
+    left: 60px;
+    top: 200px;
+}
+
+.product p {
+    color: #27323f;
+    background: 0 0;
+    opacity: .5;
+    font-size: .75em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.gadget {
+    left: 90px !important;
+}
+
