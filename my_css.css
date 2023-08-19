@@ -37,10 +37,13 @@
 .menu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0px;
 }
 
 .menu li {
     padding: .5rem;
+    text-align: center;
 }
 
 .menu li a {
@@ -119,4 +122,38 @@
     padding: 11px;
     margin-top: 5px;
     height: 100%;
+}
+
+.tv_background {
+    position: relative;
+}
+
+.tv_background img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.entertainment_system {
+    position: absolute;
+    background-color: #fff;
+    top: 100px;
+    left: 810px;
+    height: 410px;
+    text-align: left;
+    padding: 30px;
+    width: 430px;
+}
+
+.entertainment_system img {
+    width: 95px;
+    margin-bottom: 1rem;
+}
+
+.entertainment_system h2 {
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4em;
+    color: #27323f;
 }
