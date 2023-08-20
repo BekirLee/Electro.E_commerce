@@ -286,9 +286,76 @@
     text-align: center;
 }
 
+.card {
+    position: relative;
+}
+
+.card .fa-solid {
+    position: absolute;
+    left: 170px;
+    top: 20px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: #c8cccc;
+    opacity: .8;
+    display: none;
+}
+
+.card:hover .fa-solid {
+    display: inline-block;
+    transition: 1s;
+}
+
 .cards {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr);
     padding: 25px;
     gap: 2vw;
+}
+
+.cards a {
+    text-decoration: none;
+}
+
+.cards p {
+    color: #000;
+    margin-bottom: 0.5em;
+    padding: 0;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4em;
+}
+
+.price del {
+    outline: #0573f0;
+}
+
+.price del {
+    color: #48515b;
+    opacity: .5;
+    font-weight: 700;
+}
+
+.price span {
+    color: #48515b;
+    font-weight: 700;
+}
+
+.img {
+    display: none;
+}
+
+.card:hover .card-img-top {
+    display: none;
+}
+
+.card:hover .img {
+    display: block;
+}
+
+/* icons */
+.fa-star {
+    color: orange;
 }
