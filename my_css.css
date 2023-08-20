@@ -298,14 +298,11 @@
     border-radius: 50%;
     padding: 4px;
     background-color: #c8cccc;
-    opacity: .8;
+    opacity: 0.8;
     display: none;
 }
 
-.card:hover .fa-solid {
-    display: inline-block;
-    transition: 1s;
-}
+
 
 .cards {
     display: grid !important;
@@ -343,7 +340,9 @@
     font-weight: 700;
 }
 
-.img {
+/*  */
+
+/* .img {
     display: none;
 }
 
@@ -353,7 +352,41 @@
 
 .card:hover .img {
     display: block;
+    transition: all .3s ease-in-out .6s;
 }
+ */
+
+.card .card-img-top,
+.card .img {
+    transition: opacity 0.5s ease;
+}
+
+.img {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card:hover .card-img-top {
+    opacity: 0;
+}
+
+.card:hover .img {
+    opacity: 1;
+}
+
+.card {
+    position: relative;
+}
+
+
+.card:hover .fa-solid {
+    opacity: 1;
+    display: inline-block;
+    transition: 1s;
+}
+
 
 /* icons */
 .fa-star {
