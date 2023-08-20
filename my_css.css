@@ -259,3 +259,19 @@
     left: 90px !important;
 }
 
+.containerSaleAndCase {
+    /* padding: 9px; */
+    margin: 2rem;
+}
+
+.saleAndCase {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.saleAndCase img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
