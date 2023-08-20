@@ -275,3 +275,20 @@
     width: 100%;
     height: auto;
 }
+
+/* today's deal */
+.productDeal h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+    bottom: 1.8em;
+    font-size: .9em;
+    text-align: center;
+}
+
+.cards {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 25px;
+    gap: 2vw;
+}
