@@ -15,6 +15,7 @@
     border-bottom: 1px solid grey;
 }
 
+
 .logo img {
     width: 125px;
     height: auto;
@@ -392,6 +393,41 @@
     color: #54595F;
 }
 
+/* brand lists */
+.topBrands {
+    /* margin: 70px 20px 40px 20px; */
+    margin: 4%;
+}
+
+.topBrands h4 {
+    margin: 90px 0px 40px 0px;
+}
+
+.brandList {
+    border: 1px solid grey;
+    padding: 0; 
+    background-color: #ffffff;
+    /* padding: 10px; */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+}
+
+
+.brands li {
+    list-style: none;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #dbe2e2;
+    height: 100%;
+}
+
+.brands li img {
+    height: 100%;
+    max-width: 100%;
+    width: 70px;
+    object-fit: contain;
+}
 
 /* icons */
 .fa-star {
