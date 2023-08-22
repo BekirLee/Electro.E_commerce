@@ -431,8 +431,8 @@
 
 /* users' side */
 .users {
-    grid-template-columns: repeat(3.1fr);
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
@@ -440,7 +440,8 @@
     padding: 1rem;
     /* border: 1px solid red; */
     /* background-color: #dbe2e2; */
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    margin-bottom: 20px;
 }
 
 
