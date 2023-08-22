@@ -396,7 +396,7 @@
 /* brand lists */
 .topBrands {
     /* margin: 70px 20px 40px 20px; */
-    margin: 4%;
+    margin: 4rem;
 }
 
 .topBrands h4 {
@@ -405,7 +405,7 @@
 
 .brandList {
     border: 1px solid grey;
-    padding: 0; 
+    padding: 0;
     background-color: #ffffff;
     /* padding: 10px; */
     display: grid;
@@ -428,6 +428,35 @@
     width: 70px;
     object-fit: contain;
 }
+
+/* users' side */
+.users {
+    grid-template-columns: repeat(3.1fr);
+    display: grid;
+    gap: 10px;
+}
+
+.user {
+    padding: 1rem;
+    /* border: 1px solid red; */
+    /* background-color: #dbe2e2; */
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+
+.userInfo {
+    display: flex;
+    align-items: center;
+}
+
+.userInfo img {
+    margin-right: 1.1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 /* icons */
 .fa-star {
