@@ -294,13 +294,13 @@
     position: absolute;
     left: 199px;
     top: 20px;
+    color: rgb(82, 80, 80);
     border: 1px solid grey;
     border-radius: 50%;
-    padding: 4px;
-    background-color: #c8cccc;
+    padding: 6px;
+    background-color: #dbe2e2;
     display: none;
 }
-
 
 
 .cards {
@@ -322,6 +322,10 @@
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     line-height: 1.4em;
+}
+
+.cards .card {
+    border: 0;
 }
 
 .price del {
@@ -369,6 +373,23 @@
 .card:hover .fa-solid {
     display: inline-block;
     transition: 1s;
+}
+
+.sale {
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+    color: var(--ast-global-color-3);
+    background-color: #FFFFFF;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 0.4em 0.8em;
+    font-size: .87em;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: normal;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    color: #54595F;
 }
 
 
