@@ -292,13 +292,12 @@
 
 .card .fa-solid {
     position: absolute;
-    left: 170px;
+    left: 199px;
     top: 20px;
     border: 1px solid grey;
     border-radius: 50%;
     padding: 4px;
     background-color: #c8cccc;
-    opacity: 0.8;
     display: none;
 }
 
@@ -342,20 +341,6 @@
 
 /*  */
 
-/* .img {
-    display: none;
-}
-
-.card:hover .card-img-top {
-    display: none;
-}
-
-.card:hover .img {
-    display: block;
-    transition: all .3s ease-in-out .6s;
-}
- */
-
 .card .card-img-top,
 .card .img {
     transition: opacity 0.5s ease;
@@ -382,7 +367,6 @@
 
 
 .card:hover .fa-solid {
-    opacity: 1;
     display: inline-block;
     transition: 1s;
 }
