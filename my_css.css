@@ -458,6 +458,54 @@
     object-fit: cover;
 }
 
+/* footer side */
+
+.footerSides {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 50px 0 50px 0px;
+}
+
+.logo_side {
+    text-align: center;
+}
+
+.logo_side img {
+    width: 125px;
+    height: auto;
+    /* object-fit: cover; */
+}
+
+.needs a,
+.contact_side a,
+.shop_side a {
+    text-decoration: none;
+    color: #000;
+}
+
+.needs li,
+.contact_side li,
+.shop_side li {
+    list-style: none;
+}
+
+.downFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #204782;
+    color: #fff;
+}
+
+.copyWrite {
+    margin-left: 1.5rem;
+}
+
+.footerIcons {
+    margin-right: 1.5rem;
+}
 
 /* icons */
 .fa-star {
