@@ -73,6 +73,7 @@ let products = [
             hover: "img/bill_image.jpg",
             infoImg1: "img/phone_info1.jpg",
             infoImg2: "img/phone_info2.jpg",
+            infoImg3: "img/phone_info2.jpg",
         },
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
@@ -181,6 +182,7 @@ let products = [
 
 getProducts();
 productInfo();
+info();
 
 function getProducts() {
 
@@ -194,7 +196,7 @@ function getProducts() {
          ${product.name} <p>4 products</p>
         </h2>
         </div>`;
-        elements.insertAdjacentHTML("beforeend", element)
+        elements.insertAdjacentHTML("beforeend", element);
     }
 }
 
@@ -230,26 +232,29 @@ function productInfo() {
 
 function info() {
 
-    let element = document.querySelector(".gallery-wrap");
+    let element = document.querySelector(".all_product_gallery");
     for (information of products) {
         let elements = `
+    <div class="gallery-wrap" id="${information.id}">
          <div class="img-big-wrap img-thumbnail">
-            <a href="img/beardcleaner.jpg" data-type="image" data-fslightbox="mygallery">
-            <img src="img/beardcleaner.jpg" alt="">
+            <a href="${information.info.img}" data-type="image" data-fslightbox="mygallery">
+            <img src="${information.info.img}" alt="">
             </a>
         </div>
-    <div class="thumbs-wrap pt-2 " style="text-align: center;">
+        <div class="thumbs-wrap pt-2 " style="text-align: center;">
 
-        <a href="img/chrisevans.jpeg" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="img/chrisevans.jpeg" alt="">
+        <a href="${information.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${information.info.infoImg1}" alt="">
         </a>
-        <a href="img/anadearmas1.jpg" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="img/anadearmas1.jpg" alt="">
+        <a href="${information.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${information.info.infoImg2}" alt="">
         </a>
-        <a href="img/willsmith.jpg" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="img/willsmith.jpg" alt="">
+        <a href="${information.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${information.info.infoImg3}" alt="">
         </a>
-    </div>`;
+        </div>
+    </div > `;
+
         element.insertAdjacentHTML("beforeend", elements);
     }
 }
