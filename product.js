@@ -186,9 +186,11 @@ info();
 
 function getProducts() {
 
-    let elements = document.querySelector(".productsBox");
-
-    for (product of mainProducts) {
+    var elementler = document.querySelector(".productsBox");
+    if (!elementler) {
+        console.error(".productsBox elementi bulunamıyor.");
+    }
+    for (let product of mainProducts) {
         let element = ` 
         <div class="product" id="${product.id}" >
         <img src="${product.img}" alt="">
@@ -196,14 +198,14 @@ function getProducts() {
          ${product.name} <p>4 products</p>
         </h2>
         </div>`;
-        elements.insertAdjacentHTML("beforeend", element);
+        elementler.insertAdjacentHTML("beforeend", element);
     }
 }
 
 function productInfo() {
 
     let elementsInfo = document.querySelector(".cards");
-    for (element of products) {
+    for (let element of products) {
         let info = ` <a href="product.html">
         <div class="card" id="${element.id}">
             <img src="${element.info.img}" class="card-img-top" alt="...">
@@ -233,7 +235,7 @@ function productInfo() {
 function info() {
 
     let element = document.querySelector(".all_product_gallery");
-    for (information of products) {
+    for (let information of products) {
         let elements = `
     <div class="gallery-wrap" id="${information.id}">
          <div class="img-big-wrap img-thumbnail">
