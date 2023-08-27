@@ -189,22 +189,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function getProducts() {
-    let elements = document.querySelector(".productsBox");
+    var elementler = document.querySelector(".productsBox");
 
-    if (!elements) {
-        console.error(".productsBox elementi bulunamıyor.");
+    if (!elementler) {
+        console.error(".productsBox elementi.");
         return; // Eğer eleman bulunamazsa fonksiyonu burada sonlandır.
     }
 
-    for (let product of mainProducts) {
-        let element = `
+    for (var product of mainProducts) {
+        var elementi = `
         <div class="product" id="${product.id}" >
         <img src="${product.img}" alt="">
         <h2>
          ${product.name} <p>4 products</p>
         </h2>
         </div>`;
-        elements.insertAdjacentHTML("beforeend", element);
+        elementler.insertAdjacentHTML("beforeend", elementi);
     }
 }
 
@@ -228,9 +228,9 @@ function getProducts() {
 
 function productInfo() {
 
-    let elementsInfo = document.querySelector(".cards");
-    for (let element of products) {
-        let info = ` <a href="product.html">
+    var elementsInfo = document.querySelector(".cards");
+    for (var element of products) {
+        var info = ` <a href="product.html">
         <div class="card" id="${element.id}">
             <img src="${element.info.img}" class="card-img-top" alt="...">
             <img src="${element.info.hover}" class="card-img-top img" alt="...">
@@ -259,9 +259,9 @@ function productInfo() {
 
 function info() {
 
-    let element = document.querySelector(".all_product_gallery");
-    for (let information of products) {
-        let elements = `
+    var good = document.querySelector(".all_product_gallery");
+    for (var information of products) {
+        var elements = `
     <div class="gallery-wrap" id="${information.id}">
          <div class="img-big-wrap img-thumbnail">
             <a href="${information.info.img}" data-type="image" data-fslightbox="mygallery">
@@ -282,7 +282,7 @@ function info() {
         </div>
     </div > `;
 
-        element.insertAdjacentHTML("beforeend", elements);
+        good.insertAdjacentHTML("beforeend", elements);
     }
 }
 
