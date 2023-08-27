@@ -180,27 +180,51 @@ let products = [
 ]
 
 
-getProducts();
-productInfo();
-info();
+document.addEventListener('DOMContentLoaded', function () {
+    getProducts();
+    // Diğer fonksiyonlarınızı da burada çağırabilirsiniz.
+    productInfo();  
+    info();
+});
+
 
 function getProducts() {
+    let elements = document.querySelector(".productsBox");
 
-    var elementler = document.querySelector(".productsBox");
-    if (!elementler) {
+    if (!elements) {
         console.error(".productsBox elementi bulunamıyor.");
+        return; // Eğer eleman bulunamazsa fonksiyonu burada sonlandır.
     }
+
     for (let product of mainProducts) {
-        let element = ` 
+        let element = `
         <div class="product" id="${product.id}" >
         <img src="${product.img}" alt="">
         <h2>
          ${product.name} <p>4 products</p>
         </h2>
         </div>`;
-        elementler.insertAdjacentHTML("beforeend", element);
+        elements.insertAdjacentHTML("beforeend", element);
     }
 }
+
+// function getProducts() {
+
+//     var elementler = document.querySelector(".productsBox");
+//     if (!elementler) {
+//         console.log(".productsBox elementi bulunamiyor.");
+//     }
+//     for (let product of mainProducts) {
+//         let element = ` 
+//             <div class="product" id="${product.id}" >
+//             <img src="${product.img}" alt="">
+//             <h2>
+//             ${product.name} <p>4 products</p>
+//             </h2>
+//             </div>`;
+//         elementler.insertAdjacentHTML("beforeend", element);
+//     }
+// }
 
 function productInfo() {
 
@@ -231,6 +255,7 @@ function productInfo() {
         elementsInfo.insertAdjacentHTML("beforeend", info);
     }
 }
+// dfs
 
 function info() {
 
