@@ -180,24 +180,21 @@ let products = [
 ]
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    getProducts();
-    // Diğer fonksiyonlarınızı da burada çağırabilirsiniz.
-    productInfo();  
-    info();
-});
+getProducts();
+productInfo();
+info();
 
 
 function getProducts() {
-    var elementler = document.querySelector(".productsBox");
+    let elementler = document.querySelector(".productsBox");
 
     if (!elementler) {
         console.error(".productsBox elementi.");
         return; // Eğer eleman bulunamazsa fonksiyonu burada sonlandır.
     }
 
-    for (var product of mainProducts) {
-        var elementi = `
+    for (let product of mainProducts) {
+        let elementi = `
         <div class="product" id="${product.id}" >
         <img src="${product.img}" alt="">
         <h2>
@@ -208,29 +205,11 @@ function getProducts() {
     }
 }
 
-// function getProducts() {
-
-//     var elementler = document.querySelector(".productsBox");
-//     if (!elementler) {
-//         console.log(".productsBox elementi bulunamiyor.");
-//     }
-//     for (let product of mainProducts) {
-//         let element = ` 
-//             <div class="product" id="${product.id}" >
-//             <img src="${product.img}" alt="">
-//             <h2>
-//             ${product.name} <p>4 products</p>
-//             </h2>
-//             </div>`;
-//         elementler.insertAdjacentHTML("beforeend", element);
-//     }
-// }
-
 function productInfo() {
 
-    var elementsInfo = document.querySelector(".cards");
-    for (var element of products) {
-        var info = ` <a href="product.html">
+    let elementsInfo = document.querySelector(".cards");
+    for (let element of products) {
+        let info = ` <a href="product.html">
         <div class="card" id="${element.id}">
             <img src="${element.info.img}" class="card-img-top" alt="...">
             <img src="${element.info.hover}" class="card-img-top img" alt="...">
@@ -255,14 +234,13 @@ function productInfo() {
         elementsInfo.insertAdjacentHTML("beforeend", info);
     }
 }
-// dfs
 
 function info() {
 
-    var good = document.querySelector(".all_product_gallery");
-    for (var information of products) {
-        var elements = `
-    <div class="gallery-wrap" id="${information.id}">
+    let good = document.querySelector(".gallery-wrap");
+    for (let information of products) {
+        let elements = `
+    <div class="gallery" id="${information.id}">
          <div class="img-big-wrap img-thumbnail">
             <a href="${information.info.img}" data-type="image" data-fslightbox="mygallery">
             <img src="${information.info.img}" alt="">
@@ -270,7 +248,7 @@ function info() {
         </div>
         <div class="thumbs-wrap pt-2 " style="text-align: center;">
 
-        <a href="${information.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
+        <a href="${information.infoImg1}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${information.info.infoImg1}" alt="">
         </a>
         <a href="${information.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
@@ -285,5 +263,10 @@ function info() {
         good.insertAdjacentHTML("beforeend", elements);
     }
 }
+
+
+
+
+
 
 // last in here
