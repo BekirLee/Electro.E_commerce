@@ -1,4 +1,4 @@
-let mainProducts = [
+var mainProducts = [
     {
         id: 1,
         category: "air-conditioner",
@@ -60,6 +60,7 @@ let mainProducts = [
         href: "pages/products.html"
     },
 ]
+
 
 let products = [
     {
@@ -179,27 +180,19 @@ let products = [
     },
 ]
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    getProducts();
-    productInfo();
-    info();
-    // DOM ile ilgili kodlarınız burada olmalı.
-});
+getProducts();
 
 
 function getProducts() {
-    var elements = document.querySelector(".productsBox");
+    let elements = document.querySelector(".productsBox");
 
     if (!elements) {
         console.error(".productsBox elementi.");
         return; // Eğer eleman bulunamazsa fonksiyonu burada sonlandır.
     }
 
-    for (var product of mainProducts) {
-        console.log("hello");
-        var elementi = `
+    for (let product of mainProducts) {
+        let elementi = `
         <div class="product" id="${product.id}" >
         <img src="${product.img}" alt="">
         <h2>
@@ -209,6 +202,9 @@ function getProducts() {
         elements.insertAdjacentHTML("beforeend", elementi);
     }
 }
+
+productInfo();
+
 
 function productInfo() {
 
@@ -239,43 +235,3 @@ function productInfo() {
         elementsInfo.insertAdjacentHTML("beforeend", info);
     }
 }
-
-function info() {
-
-    let good = document.querySelector(".gallery-wrap");
-    if (document.querySelector(".gallery").id == document.querySelector(".cards .card").id) {
-        console.log("hello");
-    }
-
-    for (var information of products) {
-        var elements = `
-    <div class="gallery" id="${information.id}">
-         <div class="img-big-wrap img-thumbnail">
-            <a href="${information.info.img}" data-type="image" data-fslightbox="mygallery">
-            <img src="${information.info.img}" alt="">
-            </a>
-        </div>
-        <div class="thumbs-wrap pt-2 " style="text-align: center;">
-
-        <a href="${information.infoImg1}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${information.info.infoImg1}" alt="">
-        </a>
-        <a href="${information.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${information.info.infoImg2}" alt="">
-        </a>
-        <a href="${information.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${information.info.infoImg3}" alt="">
-        </a>
-        </div>
-    </div > `;
-
-        good.insertAdjacentHTML("beforeend", elements);
-    }
-}
-
-
-
-
-
-
-// last in here
