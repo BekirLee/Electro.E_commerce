@@ -1,67 +1,6 @@
-let mainProducts = [
-    {
-        id: 1,
-        category: "air-conditioner",
-        name: "Air-conditioners",
-        img: "img/airconditioner_image.jpg",
-        href: "pages/products.html"
-    },
-    {
-        id: 2,
-        category: "phone",
-        name: "Bills",
-        img: "img/bill_image.jpg",
-        href: "pages/products.html"
-    },
-    {
-        id: 3,
-        category: "phone",
-        name: "Iphone",
-        img: "img/phone_image.jpg",
-        href: "pages/products.html"
-    },
-    {
-        id: 4,
 
-        category: "phone",
-        name: "Laptops",
-        img: "img/laptop_image.jpg",
-        href: "pages/products.html"
-    },
-    {
-        id: 5,
 
-        category: "phone",
-        name: "Kitchendevices",
-        img: "img/kitchendevice_image.jpg",
-        href: "pages/products.html"
-    },
-    {
-        id: 6,
-
-        category: "phone",
-        name: "Refrigerators",
-        img: "img/refrigerator_image.jpg",
-        href: "pages/products.html"
-    },
-    {
-        id: 7,
-
-        category: "phone",
-        name: "Tv",
-        img: "img/tv_image.jpg",
-        href: "pages/products.html"
-    },
-    {
-        id: 8,
-        category: "phone",
-        name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
-    },
-]
-
-let products = [
+var products = [
     {
         id: 1,
         info: {
@@ -182,70 +121,14 @@ let products = [
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    getProducts();
-    productInfo();
     info();
-    // DOM ile ilgili kodlarınız burada olmalı.
 });
 
-
-function getProducts() {
-    var elements = document.querySelector(".productsBox");
-
-    if (!elements) {
-        console.error(".productsBox elementi.");
-        return; // Eğer eleman bulunamazsa fonksiyonu burada sonlandır.
-    }
-
-    for (var product of mainProducts) {
-        console.log("hello");
-        var elementi = `
-        <div class="product" id="${product.id}" >
-        <img src="${product.img}" alt="">
-        <h2>
-         ${product.name} <p>4 products</p>
-        </h2>
-        </div>`;
-        elements.insertAdjacentHTML("beforeend", elementi);
-    }
-}
-
-function productInfo() {
-
-    let elementsInfo = document.querySelector(".cards");
-    for (let element of products) {
-        let info = ` <a href="product.html">
-        <div class="card" id="${element.id}">
-            <img src="${element.info.img}" class="card-img-top" alt="...">
-            <img src="${element.info.hover}" class="card-img-top img" alt="...">
-            <i class="fa-solid fa-basket-shopping"></i>
-            <span class="sale">Sale</span>
-            <div class="card-body">
-                <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
-                </h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </p>
-                <div class="price">
-                    <del>${element.info.price}</del>
-                    <span>${element.info.discount}</span>
-                </div>
-            </div>
-        </div>
-    </a>`;
-        elementsInfo.insertAdjacentHTML("beforeend", info);
-    }
-}
 
 function info() {
 
     let good = document.querySelector(".gallery-wrap");
-    if (document.querySelector(".gallery").id == document.querySelector(".cards .card").id) {
-        console.log("hello");
-    }
+
 
     for (var information of products) {
         var elements = `

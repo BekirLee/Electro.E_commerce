@@ -181,6 +181,7 @@ let products = [
 ]
 
 getProducts();
+productInfo();
 
 
 function getProducts() {
@@ -203,7 +204,6 @@ function getProducts() {
     }
 }
 
-productInfo();
 
 
 function productInfo() {
