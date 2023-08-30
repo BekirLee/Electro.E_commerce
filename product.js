@@ -251,7 +251,7 @@ function displayGallery(product) {
         </div>
     `;
 
-
+    
 }
 
 // last in here
