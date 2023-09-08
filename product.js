@@ -151,107 +151,42 @@ let products = [
 // important but failed
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     info();
-// });
-
-
-// function info() {
-
-//     let good = document.querySelector(".gallery-wrap");
-
-
-//     for (var information of products) {
-//         var elements = `
-//     <div class="gallery" id="${information.id}">
-//          <div class="img-big-wrap img-thumbnail">
-//             <a href="${information.info.img}" data-type="image" data-fslightbox="mygallery">
-//             <img src="${information.info.img}" alt="">
-//             </a>
-//         </div>
-//         <div class="thumbs-wrap pt-2 " style="text-align: center;">
-
-//         <a href="${information.infoImg1}" data-type="image" data-fslightbox="mygallery">
-//             <img width="60" height="60" src="${information.info.infoImg1}" alt="">
-//         </a>
-//         <a href="${information.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
-//             <img width="60" height="60" src="${information.info.infoImg2}" alt="">
-//         </a>
-//         <a href="${information.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
-//             <img width="60" height="60" src="${information.info.infoImg3}" alt="">
-//         </a>
-//         </div>
-//     </div > `;
-
-//         good.insertAdjacentHTML("beforeend", elements);
-//     }
-// }
-
-
-// document.querySelector(".cards .gallery").addEventListener("click", function () {
-//     for (let some in products) {
-//         if (document.querySelector(".gallery").id == some.id) {
-//             console.log(products[some].name, products[some].href);
-//         }
-//     }
-// })
 
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-
-//     let aElements = this.documentElement.querySelector(".cards a");
-
-// })
-
-displayProduct();
-displayGallery();
-document.addEventListener('DOMContentLoaded', function () {
-    let productLinks = document.querySelectorAll('.cards a');
-
-    for (let i = 0; i < productLinks.length; i++) {
-        productLinks[i].addEventListener('click', function (e) {
-            e.preventDefault();
-            // Burada 'i' değeri, tıklanan a elementinin sırasını temsil eder.
-            let product = products[i];
-            displayProduct(product);
-            displayGallery(product);
-        });
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    info();
 });
 
-function displayProduct(product) {
-    let good = document.querySelector('.gallery_info');
-    good.innerHTML = `
-        <h2>${product.name}</h2>
-        <p>Price: ${product.info.price}</p>
-        <!-- Diğer bilgiler -->
-    `;
-}
 
-function displayGallery(product) {
-    let galleryDiv = document.querySelector('.galery');
+function info() {
 
-    galleryDiv.innerHTML = `
-        <div class="img-big-wrap img-thumbnail">
-            <a href="${product.info.img}" data-type="image" data-fslightbox="mygallery">
-                <img src="${product.info.img}" alt="">
+    let good = document.querySelector(".gallery-wrap");
+
+
+    for (var information of products) {
+        var elements = `
+    <div data-id="${information.id}" class="gallery product-link">
+         <div class="img-big-wrap img-thumbnail">
+            <a href="${information.info.img}" data-type="image" data-fslightbox="mygallery">
+            <img src="${information.info.img}" alt="">
             </a>
         </div>
         <div class="thumbs-wrap pt-2 " style="text-align: center;">
-            <a href="${product.info.hover}" data-type="image" data-fslightbox="mygallery">
-                <img width="60" height="60" src="${product.info.hover}" alt="">
-            </a>
-            <a href="${product.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
-                <img width="60" height="60" src="${product.info.infoImg1}" alt="">
-            </a>
-            <a href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
-                <img width="60" height="60" src="${product.info.infoImg2}" alt="">
-            </a>
+
+        <a href="${information.infoImg1}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${information.info.infoImg1}" alt="">
+        </a>
+        <a href="${information.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${information.info.infoImg2}" alt="">
+        </a>
+        <a href="${information.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${information.info.infoImg3}" alt="">
+        </a>
         </div>
-    `;
+    </div > `;
 
-    
+        good.insertAdjacentHTML("beforeend", elements);
+    }
 }
-
 // last in here
