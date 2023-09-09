@@ -29,7 +29,7 @@ const products = [
             infoImg2: "img/background_amazon_product.jpg",
             infoImg3: "img/amazon_product.jpg",
         },
-        name: "Tefal",
+        name: "Cleaner",
         image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
@@ -38,15 +38,15 @@ const products = [
         info: {
             price: "$229.00",
             discount: "$209.00",
-            brand: "Apple",
-            category: "phone",
+            brand: "Tefal",
+            category: "Home",
             img: "img/amazon_product2.jpg",
             hover: "img/background_amazon_product.jpg",
             infoImg1: "img/amazon_product2.jpg",
             infoImg2: "img/background_amazon_product.jpg",
             infoImg3: "img/amazon_product.jpg",
         },
-        name: "Washingmachines",
+        name: "Cleaner",
         image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
@@ -55,15 +55,15 @@ const products = [
         info: {
             price: "$1,499.00",
             discount: "$1,399.00",
-            brand: "Apple",
-            category: "phone",
+            brand: "İntel",
+            category: "Laptop",
             img: "img/computer.jpg",
             hover: "img/background_computer.jpg",
             infoImg1: "img/computer2.jpg",
             infoImg2: "img/background_computer.jpg",
             infoImg3: "img/laptop_image.jpg",
         },
-        name: "Washingmachines",
+        name: "İntel420",
         image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
@@ -72,15 +72,15 @@ const products = [
         info: {
             price: '$1029.00',
             discount: "$999.00",
-            brand: "Apple",
-            category: "phone",
+            brand: "İntel",
+            category: "Laptop",
             img: "img/computer2.jpg",
             hover: "img/background_computer.jpg",
             infoImg1: "img/computer.jpg",
             infoImg2: "img/background_computer.jpg",
             infoImg3: "img/laptop_image.jpg",
         },
-        name: "Washingmachines",
+        name: "İntel200",
         image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
@@ -97,7 +97,7 @@ const products = [
             infoImg2: "img/phone1.jpg",
             infoImg3: "img/phone_info2.jpg",
         },
-        name: "Washingmachines",
+        name: "Iphone13",
         image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
@@ -114,7 +114,7 @@ const products = [
             infoImg2: "img/phonebackground_img.jpg",
             infoImg3: "img/phone_info1.jpg",
         },
-        name: "Washingmachines",
+        name: "Iphone14 Pro",
         image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
@@ -131,47 +131,11 @@ const products = [
             infoImg2: "img/phone_image.jpg",
             infoImg3: "img/phone_info1.jpg",
         },
-        name: "Washingmachines",
+        name: "Iphone13 Mini    ",
         image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
 ]
-// info();
-
-// function info() {
-
-//     let good = document.querySelector(".gallery_info");
-
-
-//     for (var information of products) {
-//         var elements = `
-//                <span class="infoWay">Home/Smart Home / michrofone</span>
-//                 <h2 class="productName">
-//                     Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room
-//                 </h2>
-//                 <p class="price">${information.info.price}$</p>
-//                 <span>Key all-in-one-ecommerce-solution-featured-image</span>
-//                 <div class="feautures">
-//                     <ul>
-//                         <li class="feauture">aefs</li>
-//                         <li class="feauture">daf</li>
-//                         <li class="feauture">afaff</li>
-//                         <li class="feauture">ttreg</li>
-//                         <li class="feauture">rtgdgd </li>
-//                     </ul>
-//                 </div> `;
-
-//         good.insertAdjacentHTML("beforeend", elements);
-//     }
-// }
-
-
-
-// important but failed
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     info();

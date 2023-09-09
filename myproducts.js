@@ -77,6 +77,7 @@ let products = [
             infoImg2: "img/phone_info2.jpg",
             infoImg3: "img/phone_info2.jpg",
         },
+        firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -92,6 +93,7 @@ let products = [
             img: "img/amazon_product.jpg",
             hover: "img/background_amazon_product.jpg",
         },
+        firstname: "  Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -107,6 +109,7 @@ let products = [
             img: "img/amazon_product2.jpg",
             hover: "img/background_amazon_product.jpg",
         },
+        firstname: "  Home Speaker 500: Smart Bluetooth Speaker with Alexa Voice Control Built-In, White",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -122,6 +125,7 @@ let products = [
             img: "img/computer.jpg",
             hover: "img/background_computer.jpg",
         },
+        firstname: " 13 Ultrabook Gaming Laptop: Intel Core i7-1165G7 4 Core, NVIDIA GeForce GTX 1650 Ti Max-Q, 13.3″ 1080p 120Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB, Thunderbolt 4",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -137,6 +141,7 @@ let products = [
             img: "img/computer2.jpg",
             hover: "img/background_computer.jpg",
         },
+        firstname: "15.6″ FHD Display Laptop – Intel i7 – Intel HD Graphics 6000 , Webcam, WiFi, Bluetooth, HDMI, Windows 11,Grey",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -152,6 +157,7 @@ let products = [
             img: "img/tablet.jpg",
             hover: "img/phone_image.jpg",
         },
+        firstname: "Note 10 Pro 128GB 6GB RAM Factory Unlocked (GSM ONLY) International Model",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -167,6 +173,7 @@ let products = [
             img: "img/phone1.jpg",
             hover: "img/phonebackground_img.jpg",
         },
+        firstname: "5G Unlocked Smartphone,12GB RAM+256GB Storage120Hz Fluid Display Hasselblad Quad Camera 65W Ultra Fast Charge 50W Wireless Charge",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -182,6 +189,7 @@ let products = [
             img: "img/phone2.jpg",
             hover: "img/phonebackground_img.jpg",
         },
+        firstname: "5G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -230,9 +238,7 @@ function productInfo() {
                         class="fa-regular fa-star fa-2xs"></i><i
                         class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
                 </h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </p>
+                <p class="card-text">${element.firstname}</p>
                 <div class="price">
                     <del>${element.info.price}</del>
                     <span>${element.info.discount}</span>
