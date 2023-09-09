@@ -8,7 +8,7 @@ const products = [
             category: "phone",
             img: "img/beardcleaner.jpg",
             hover: "img/bill_image.jpg",
-            infoImg1: "img  /phone_info1.jpg",
+            infoImg1: "img/phone_info1.jpg",
             infoImg2: "img/phone_info2.jpg",
             infoImg3: "img/phone_info2.jpg",
         },
@@ -25,6 +25,9 @@ const products = [
             category: "phone",
             img: "img/amazon_product.jpg",
             hover: "img/background_amazon_product.jpg",
+            infoImg1: "img/amazon_product2.jpg",
+            infoImg2: "img/background_amazon_product.jpg",
+            infoImg3: "img/amazon_product.jpg",
         },
         name: "Washingmachines",
         image: "img/washingmachine_image.jpg",
@@ -39,6 +42,9 @@ const products = [
             category: "phone",
             img: "img/amazon_product2.jpg",
             hover: "img/background_amazon_product.jpg",
+            infoImg1: "img/amazon_product2.jpg",
+            infoImg2: "img/background_amazon_product.jpg",
+            infoImg3: "img/amazon_product.jpg",
         },
         name: "Washingmachines",
         image: "img/washingmachine_image.jpg",
@@ -53,6 +59,9 @@ const products = [
             category: "phone",
             img: "img/computer.jpg",
             hover: "img/background_computer.jpg",
+            infoImg1: "img/computer2.jpg",
+            infoImg2: "img/background_computer.jpg",
+            infoImg3: "img/laptop_image.jpg",
         },
         name: "Washingmachines",
         image: "img/washingmachine_image.jpg",
@@ -67,6 +76,9 @@ const products = [
             category: "phone",
             img: "img/computer2.jpg",
             hover: "img/background_computer.jpg",
+            infoImg1: "img/computer.jpg",
+            infoImg2: "img/background_computer.jpg",
+            infoImg3: "img/laptop_image.jpg",
         },
         name: "Washingmachines",
         image: "img/washingmachine_image.jpg",
@@ -81,6 +93,9 @@ const products = [
             category: "phone",
             img: "img/tablet.jpg",
             hover: "img/phone_image.jpg",
+            infoImg1: "img/phone_image.jpg",
+            infoImg2: "img/phone1.jpg",
+            infoImg3: "img/phone_info2.jpg",
         },
         name: "Washingmachines",
         image: "img/washingmachine_image.jpg",
@@ -95,6 +110,9 @@ const products = [
             category: "phone",
             img: "img/phone1.jpg",
             hover: "img/phonebackground_img.jpg",
+            infoImg1: "img/phone2.jpg",
+            infoImg2: "img/phonebackground_img.jpg",
+            infoImg3: "img/phone_info1.jpg",
         },
         name: "Washingmachines",
         image: "img/washingmachine_image.jpg",
@@ -109,6 +127,9 @@ const products = [
             category: "phone",
             img: "img/phone2.jpg",
             hover: "img/phonebackground_img.jpg",
+            infoImg1: "img/phone_info2.jpg",
+            infoImg2: "img/phone_image.jpg",
+            infoImg3: "img/phone_info1.jpg",
         },
         name: "Washingmachines",
         image: "img/washingmachine_image.jpg",
@@ -183,14 +204,14 @@ function info() {
         </div>
       <div class="thumbs-wrap pt-2 " style="text-align: center;">
 
-        <a href="${product.infoImg1}" data-type="image" data-fslightbox="mygallery">
+        <a href="${product.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg1}" alt="">
         </a>
         <a href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg2}" alt="">
         </a>
         <a href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${product  .info.infoImg3}" alt="">
+            <img width="60" height="60" src="${product.info.infoImg3}" alt="">
         </a>
     </div>
     </div > 
