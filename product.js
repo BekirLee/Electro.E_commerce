@@ -1,6 +1,4 @@
-
-
-let products = [
+const products = [
     {
         id: 1,
         info: {
@@ -15,7 +13,7 @@ let products = [
             infoImg3: "img/phone_info2.jpg",
         },
         name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
+        image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
     {
@@ -29,7 +27,7 @@ let products = [
             hover: "img/background_amazon_product.jpg",
         },
         name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
+        image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
     {
@@ -43,7 +41,7 @@ let products = [
             hover: "img/background_amazon_product.jpg",
         },
         name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
+        image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
     {
@@ -57,7 +55,7 @@ let products = [
             hover: "img/background_computer.jpg",
         },
         name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
+        image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
     {
@@ -71,7 +69,7 @@ let products = [
             hover: "img/background_computer.jpg",
         },
         name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
+        image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
     {
@@ -85,7 +83,7 @@ let products = [
             hover: "img/phone_image.jpg",
         },
         name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
+        image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
     {
@@ -99,7 +97,7 @@ let products = [
             hover: "img/phonebackground_img.jpg",
         },
         name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
+        image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
     {
@@ -113,7 +111,7 @@ let products = [
             hover: "img/phonebackground_img.jpg",
         },
         name: "Washingmachines",
-        img: "img/washingmachine_image.jpg",
+        image: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
 ]
@@ -162,31 +160,65 @@ document.addEventListener("DOMContentLoaded", function () {
 function info() {
 
     let good = document.querySelector(".gallery-wrap");
+    const productId = new URLSearchParams(window.location.search).get('id');
 
+    if (!productId) {
+        console.error("Ürün ID'si bulunamadı.");
+        return;
+    }
 
-    for (var information of products) {
-        var elements = `
-    <div data-id="${information.id}" class="gallery product-link">
-         <div class="img-big-wrap img-thumbnail">
-            <a href="${information.info.img}" data-type="image" data-fslightbox="mygallery">
-            <img src="${information.info.img}" alt="">
+    const product = products.find(p => p.id === parseInt(productId));
+
+    if (!product) {
+        console.error("Ürün bulunamadı.");
+        return;
+    }
+
+    good.innerHTML = `
+    <div data-id="${product.id}" class="gallery product-link">
+        <div class="img-big-wrap img-thumbnail">
+            <a href="${product.info.img}" data-type="image" data-fslightbox="mygallery">
+            <img src="${product.info.img}" alt="">
             </a>
         </div>
-        <div class="thumbs-wrap pt-2 " style="text-align: center;">
+      <div class="thumbs-wrap pt-2 " style="text-align: center;">
 
-        <a href="${information.infoImg1}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${information.info.infoImg1}" alt="">
+        <a href="${product.infoImg1}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${product.info.infoImg1}" alt="">
         </a>
-        <a href="${information.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${information.info.infoImg2}" alt="">
+        <a href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${product.info.infoImg2}" alt="">
         </a>
-        <a href="${information.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${information.info.infoImg3}" alt="">
+        <a href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
+            <img width="60" height="60" src="${product  .info.infoImg3}" alt="">
         </a>
-        </div>
-    </div > `;
+    </div>
+    </div > 
+    `;
 
-        good.insertAdjacentHTML("beforeend", elements);
-    }
+    // for (var information of products) {
+    //     var elements = `
+    // <div data-id="${information.id}" class="gallery product-link">
+    //      <div class="img-big-wrap img-thumbnail">
+    //         <a href="${information.info.img}" data-type="image" data-fslightbox="mygallery">
+    //         <img src="${information.info.img}" alt="">
+    //         </a>
+    //     </div>
+    //     <div class="thumbs-wrap pt-2 " style="text-align: center;">
+
+    //     <a href="${information.infoImg1}" data-type="image" data-fslightbox="mygallery">
+    //         <img width="60" height="60" src="${information.info.infoImg1}" alt="">
+    //     </a>
+    //     <a href="${information.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
+    //         <img width="60" height="60" src="${information.info.infoImg2}" alt="">
+    //     </a>
+    //     <a href="${information.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
+    //         <img width="60" height="60" src="${information.info.infoImg3}" alt="">
+    //     </a>
+    //     </div>
+    // </div > `;
+
+    //     good.insertAdjacentHTML("beforeend", elements);
+    // }
 }
 // last in here

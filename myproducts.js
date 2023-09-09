@@ -65,6 +65,7 @@ var mainProducts = [
 let products = [
     {
         id: 1,
+        id1: 1,
         info: {
             price: "$49.00",
             discount: "$44.00",
@@ -82,6 +83,7 @@ let products = [
     },
     {
         id: 2,
+        id1: 2,
         info: {
             price: "$249.00",
             discount: "$219.00",
@@ -96,6 +98,7 @@ let products = [
     },
     {
         id: 3,
+        id1: 3,
         info: {
             price: "$229.00",
             discount: "$209.00",
@@ -110,6 +113,7 @@ let products = [
     },
     {
         id: 4,
+        id1: 4,
         info: {
             price: "$1,499.00",
             discount: "$1,399.00",
@@ -124,6 +128,7 @@ let products = [
     },
     {
         id: 5,
+        id1: 5,
         info: {
             price: '$1029.00',
             discount: "$999.00",
@@ -138,6 +143,7 @@ let products = [
     },
     {
         id: 6,
+        id1: 6,
         info: {
             price: "$699.00",
             discount: "$659.00",
@@ -152,6 +158,7 @@ let products = [
     },
     {
         id: 7,
+        id1: 7,
         info: {
             price: "$1,299.00",
             discount: "$1,199.00",
@@ -166,6 +173,7 @@ let products = [
     },
     {
         id: 8,
+        id1: 8,
         info: {
             price: "$1,099.00",
             discount: "$999.00",
@@ -210,7 +218,7 @@ function productInfo() {
 
     let elementsInfo = document.querySelector(".cards");
     for (let element of products) {
-        let info = ` <a href="product.html">
+        let info = ` <a href="product.html?id=${element.id1}">
         <div class="card" id="${element.id}">
             <img src="${element.info.img}" class="card-img-top" alt="...">
             <img src="${element.info.hover}" class="card-img-top img" alt="...">
