@@ -8,6 +8,9 @@ let products = [
             brand: "Apple",
             category: "phone",
             img: "img/beardcleaner.jpg",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
+            status: "Newest technology",
             hover: "img/bill_image.jpg",
             infoImg1: "img/phone_info1.jpg",
             infoImg2: "img/phone_info2.jpg",
@@ -25,6 +28,9 @@ let products = [
             price: "$249.00",
             discount: "$219.00",
             brand: "Apple",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
+            status: "Newest technology",
             category: "phone",
             img: "img/amazon_product.jpg",
             hover: "img/background_amazon_product.jpg",
@@ -41,6 +47,9 @@ let products = [
             price: "$229.00",
             discount: "$209.00",
             brand: "Apple",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
+            status: "Newest technology",
             category: "phone",
             img: "img/amazon_product2.jpg",
             hover: "img/background_amazon_product.jpg",
@@ -57,6 +66,9 @@ let products = [
             price: "$1,499.00",
             discount: "$1,399.00",
             brand: "Apple",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
+            status: "Newest technology",
             category: "phone",
             img: "img/computer.jpg",
             hover: "img/background_computer.jpg",
@@ -73,6 +85,9 @@ let products = [
             price: '$1029.00',
             discount: "$999.00",
             brand: "Apple",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
+            status: "Newest technology",
             category: "phone",
             img: "img/computer2.jpg",
             hover: "img/background_computer.jpg",
@@ -89,6 +104,9 @@ let products = [
             price: "$699.00",
             discount: "$659.00",
             brand: "Apple",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
+            status: "Newest technology",
             category: "phone",
             img: "img/tablet.jpg",
             hover: "img/phone_image.jpg",
@@ -105,6 +123,9 @@ let products = [
             price: "$1,299.00",
             discount: "$1,199.00",
             brand: "Apple",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
+            status: "Newest technology",
             category: "phone",
             img: "img/phone1.jpg",
             hover: "img/phonebackground_img.jpg",
@@ -121,6 +142,9 @@ let products = [
             price: "$1,099.00",
             discount: "$999.00",
             brand: "Apple",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
+            status: "Newest technology",
             category: "phone",
             img: "img/phone2.jpg",
             hover: "img/phonebackground_img.jpg",
@@ -203,16 +227,14 @@ function linkWay() {
                         <h2 class="productName">
                            ${eleman.firstname}
                         </h2>
-                        <p class="price">1234$</p>
+                        <p class="price">${eleman.info.price}$ <br/     >Discount: ${eleman.info.discount}</p>
                         <span>Key feautures:</span>
                         <div class="feautures">
                             <ul class="feautures_ul">
-                            <li class="feauture">${eleman.info.price}</li>
-                                                     <li class="feauture">${eleman.info.discount} </li>
-                                                     <li class="feauture">${eleman.name}</li>
+                                                 <li class="feauture">${eleman.name}</li>
+                                                 <li class="feauture"> ${eleman.info.status}</li>
                                                  <li class="feauture"> ${eleman.info.size}</li>
-                                                 <li class="feauture"> ${eleman.info.delivery}</li>
-                                                  <li class="feauture"> ${eleman.info.brand}</li>
+                                                <li class="feauture"> ${eleman.info.brand}</li>
                             </ul>
                         </div>
                         `;
