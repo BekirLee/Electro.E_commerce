@@ -92,7 +92,7 @@ let products = [
             img: "img/computer2.jpg",
             hover: "img/background_computer.jpg",
         },
-        firstname: "15.6″ FHD Display Laptop – Intel i7 – Intel HD Graphics 6000 , Webcam, WiFi, Bluetooth, HDMI, Windows 11,Grey",
+        firstname: "15.6″ FHD Display Laptop Intel i7  Intel HD Graphics 6000 , Webcam, WiFi, Bluetooth, HDMI, Windows 11,Grey",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -149,7 +149,7 @@ let products = [
             img: "img/phone2.jpg",
             hover: "img/phonebackground_img.jpg",
         },
-        firstname: "5G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
+        firstname: "6G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -159,7 +159,7 @@ let products = [
 
 document.addEventListener("DOMContentLoaded", function () {
     info();
-    linkWay();
+    // linkWay();
 });
 
 
@@ -204,42 +204,48 @@ function info() {
     </div > 
     `;
 
-    // feautures.innerHTML = `
-    //                         <li class="feauture">${product.info.price}</li>
-    //                         <li class="feauture">${product.info.discount} </li>
-    //                         <li class="feauture">${product.name}</li>
-    //                         <li class="feauture"> ${product.info.size}</li>
-    //                         <li class="feauture"> ${product.info.delivery}</li>
-    //                         <li class="feauture"> ${product.info.brand}</li>
+    feautures.innerHTML = `
+                         <span class="infoWay">Home/${product.info.category} / ${product.firstname}</span>
+                             <h2 class="productName">
+                                ${product.firstname}
+                             </h2>
+                            <p class="price">${product.info.price}$ <br/     >Discount: ${product.info.discount}</p>
+                           <span>Key feautures:</span>
+                            <li class="feauture">${product.info.price}</li>
+                            <li class="feauture">${product.info.discount} </li>
+                            <li class="feauture">${product.name}</li>
+                            <li class="feauture"> ${product.info.size}</li>
+                            <li class="feauture"> ${product.info.delivery}</li>
+                            <li class="feauture"> ${product.info.brand}</li>
 
-    //                     `;
-
-}
-
-function linkWay() {
-
-    let link_way = document.querySelector(".gallery_info");
-
-    for (let eleman of products) {
-
-        link_way.innerHTML = `
-                        <span class="infoWay">Home/${eleman.info.category} / ${eleman.firstname}</span>
-                        <h2 class="productName">
-                           ${eleman.firstname}
-                        </h2>
-                        <p class="price">${eleman.info.price}$ <br/     >Discount: ${eleman.info.discount}</p>
-                        <span>Key feautures:</span>
-                        <div class="feautures">
-                            <ul class="feautures_ul">
-                                                 <li class="feauture">${eleman.name}</li>
-                                                 <li class="feauture"> ${eleman.info.status}</li>
-                                                 <li class="feauture"> ${eleman.info.size}</li>
-                                                <li class="feauture"> ${eleman.info.brand}</li>
-                            </ul>
-                        </div>
                         `;
 
-    }
 }
+
+// function linkWay() {
+
+//     let link_way = document.querySelector(".gallery_info");
+
+//     for (let eleman of products) {
+
+//         link_way.innerHTML = `
+//                         <span class="infoWay">Home/${eleman.info.category} / ${eleman.firstname}</span>
+//                         <h2 class="productName">
+//                            ${eleman.firstname}
+//                         </h2>
+//                         <p class="price">${eleman.info.price}$ <br/     >Discount: ${eleman.info.discount}</p>
+//                         <span>Key feautures:</span>
+//                         <div class="feautures">
+//                             <ul class="feautures_ul">
+//                                                  <li class="feauture">${eleman.name}</li>
+//                                                  <li class="feauture"> ${eleman.info.status}</li>
+//                                                  <li class="feauture"> ${eleman.info.size}</li>
+//                                                 <li class="feauture"> ${eleman.info.brand}</li>
+//                             </ul>
+//                         </div>
+//                         `;
+
+//     }
+// }
 
 
