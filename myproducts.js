@@ -249,3 +249,5 @@ function productInfo() {
         elementsInfo.insertAdjacentHTML("beforeend", info);
     }
 }
+
+

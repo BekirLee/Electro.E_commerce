@@ -4,7 +4,11 @@ const products = [
         info: {
             price: "$49.00",
             discount: "$44.00",
-            brand: "Newest technology",
+            brand: "Toshiba",
+            delivery: "Newest technology",
+            status: "Best in class components",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
             category: "Home",
             img: "img/beardcleaner.jpg",
             hover: "img/bill_image.jpg",
@@ -22,6 +26,10 @@ const products = [
             price: "$249.00",
             discount: "$219.00",
             brand: "Tefal",
+            delivery: "Newest technology",
+            status: "Best in class components",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
             category: "Home",
             img: "img/amazon_product.jpg",
             hover: "img/background_amazon_product.jpg",
@@ -39,6 +47,10 @@ const products = [
             price: "$229.00",
             discount: "$209.00",
             brand: "Tefal",
+            delivery: "Newest technology",
+            status: "Best in class components",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
             category: "Home",
             img: "img/amazon_product2.jpg",
             hover: "img/background_amazon_product.jpg",
@@ -56,6 +68,10 @@ const products = [
             price: "$1,499.00",
             discount: "$1,399.00",
             brand: "İntel",
+            delivery: "Newest technology",
+            status: "Best in class components",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
             category: "Laptop",
             img: "img/computer.jpg",
             hover: "img/background_computer.jpg",
@@ -73,6 +89,10 @@ const products = [
             price: '$1029.00',
             discount: "$999.00",
             brand: "İntel",
+            delivery: "Newest technology",
+            status: "Best in class components",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
             category: "Laptop",
             img: "img/computer2.jpg",
             hover: "img/background_computer.jpg",
@@ -90,6 +110,10 @@ const products = [
             price: "$699.00",
             discount: "$659.00",
             brand: "Apple",
+            delivery: "Newest technology",
+            status: "Best in class components",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
             category: "phone",
             img: "img/tablet.jpg",
             hover: "img/phone_image.jpg",
@@ -107,6 +131,10 @@ const products = [
             price: "$1,299.00",
             discount: "$1,199.00",
             brand: "Apple",
+            delivery: "Newest technology",
+            status: "Best in class components",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
             category: "phone",
             img: "img/phone1.jpg",
             hover: "img/phonebackground_img.jpg",
@@ -124,6 +152,10 @@ const products = [
             price: "$1,099.00",
             discount: "$999.00",
             brand: "Apple",
+            delivery: "Newest technology",
+            status: "Best in class components",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "12 years warranty",
             category: "phone",
             img: "img/phone2.jpg",
             hover: "img/phonebackground_img.jpg",
@@ -186,8 +218,10 @@ function info() {
                         <li class="feauture">${product.info.price}</li>
                         <li class="feauture">${product.info.discount} </li>
                         <li class="feauture">${product.name}</li>
-                        <li class="feauture">${product.info.category}</li>
+                        <li class="feauture"> ${product.info.size}</li>
+                        <li class="feauture"> ${product.info.delivery}</li>
                         <li class="feauture"> ${product.info.brand}</li>
+                        
     `;
 
 
