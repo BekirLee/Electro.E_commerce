@@ -1,4 +1,4 @@
-let products = [
+let items = [
     {
         id: 1,
         id1: 1,
@@ -11,7 +11,7 @@ let products = [
             size: "Dimensions -69.5 x 75.0 x 169.0",
             guarantee: "12 years warranty",
             status: "Newest technology",
-            hover: "img/bill_image.jpg",
+            hover: "img/beardsheaver.jpeg",
             infoImg1: "img/amazon_product.jpg",
             infoImg2: "img/amazon_product2.jpg",
             infoImg3: "img/beardcleaner.jpg",
@@ -188,7 +188,7 @@ function info() {
         return;
     }
 
-    const product = products.find(p => p.id === parseInt(productId));
+    const product = items.find(p => p.id === parseInt(productId));
 
     if (!product) {
         console.error("Ürün bulunamadı.");
@@ -232,30 +232,6 @@ function info() {
 
 }
 
-// function linkWay() {
 
-//     let link_way = document.querySelector(".gallery_info");
-
-//     for (let eleman of products) {
-
-//         link_way.innerHTML = `
-//                         <span class="infoWay">Home/${eleman.info.category} / ${eleman.firstname}</span>
-//                         <h2 class="productName">
-//                            ${eleman.firstname}
-//                         </h2>
-//                         <p class="price">${eleman.info.price}$ <br/     >Discount: ${eleman.info.discount}</p>
-//                         <span>Key feautures:</span>
-//                         <div class="feautures">
-//                             <ul class="feautures_ul">
-//                                                  <li class="feauture">${eleman.name}</li>
-//                                                  <li class="feauture"> ${eleman.info.status}</li>
-//                                                  <li class="feauture"> ${eleman.info.size}</li>
-//                                                 <li class="feauture"> ${eleman.info.brand}</li>
-//                             </ul>
-//                         </div>
-//                         `;
-
-//     }
-// }
 
 
