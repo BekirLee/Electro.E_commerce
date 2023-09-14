@@ -184,14 +184,14 @@ function info() {
 
 
     if (!productId) {
-        console.error("Ürün ID'si bulunamadı.");
+        console.error("Ürün ID'si bulunamadi.");
         return;
     }
 
     const product = items.find(p => p.id === parseInt(productId));
 
     if (!product) {
-        console.error("Ürün bulunamadı.");
+        console.error("Ürün bulunamadi.");
         return;
     }
 
