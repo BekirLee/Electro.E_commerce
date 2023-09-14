@@ -55,10 +55,25 @@
                 <li class="menu_link"><a href="">New arrivals</a></li>
                 <li class="menu_link"><a href="">Today's deal</a></li>
                 <li class="menu_link"><a href="">Gift cards</a></li>
-                <li class="menu_link">
-                    <a href="" class="number"> <i class="fa-solid fa-basket-shopping">
-                            <div class="num">1</div>
-                        </i> </a>
+                <li class="menu_link ">
+                    <!-- off-canvas-->
+                    <a class="btn btn-primary number" data-bs-toggle="offcanvas" data-bs-target="#WithBothOptions">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <div class="num">1</div>
+                    </a>
+
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="WithBothOptions">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                Backdrop with scrolling
+                            </h5>
+                            <button type="button" class="btn-close" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Try scrolling the rest of the page to see this option in action.</p>
+                        </div>
+                    </div>
                 </li>
                 <li class="menu_link"><a href="">Log in</a></li>
             </ul>
@@ -162,7 +177,7 @@
 
         <div class="container containerBorder">
             <div class="productsBox">
-             <!-- from js -->
+                <!-- from js -->
             </div>
 
 
@@ -504,7 +519,7 @@
             <div class="logo_side">
                 <img src="img/Transmart.svg.png" alt="">
             </div>
-            
+
             <div class="shop_side">
                 <ul class="shopSideItems">
                     <a href="">
@@ -532,7 +547,7 @@
                             Weekly deals
                         </li>
                     </a>
-                    
+
                 </ul>
             </div>
 
@@ -598,7 +613,7 @@
                 </ul>
             </div>
 
-            
+
         </div>
 
         <a href="#body" id="backtotop"><i class="fa-regular fa-circle-up"></i></a>

@@ -50,7 +50,7 @@ header {
     margin-right: 1rem;
 }
 
-main{
+main {
     margin-top: 120px;
 }
 
@@ -318,6 +318,18 @@ main{
     display: none;
 }
 
+.card button {
+    position: absolute;
+    left: 199px;
+    top: 20px;
+    color: rgb(82, 80, 80);
+    border: 1px solid grey;
+    border-radius: 50%;
+    padding: 6px;
+    background-color: #dbe2e2;
+    display: none;
+}
+
 
 .cards {
     display: grid !important;
@@ -387,6 +399,11 @@ main{
 
 
 .card:hover .fa-solid {
+    display: inline-block;
+    transition: 1s;
+}
+
+.card:hover button {
     display: inline-block;
     transition: 1s;
 }

@@ -185,12 +185,13 @@ function getProducts() {
         </div>`;
         elements.insertAdjacentHTML("beforeend", elementi);
     }
-    for (let count of productsSurfaceInfo) {
 
-        if (${count.firstname }==${product.name }){
+    // for (let count of productsSurfaceInfo) {
 
-        }
-    }
+    // if (${ count.firstname }== ${ product.name }) {
+
+    // }
+    // }
 }
 
 
@@ -203,7 +204,9 @@ function productInfo() {
         <div class="card" id="${element.id}">
             <img src="${element.info.img}" class="card-img-top" alt="...">
             <img src="${element.info.hover}" class="card-img-top img" alt="...">
-            <i class="fa-solid fa-basket-shopping"></i>
+            <button>  
+                <i class="fa-solid fa-basket-shopping basket-icon"></i>
+             </button>
             <span class="sale">Sale</span>
             <div class="card-body">
                 <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
@@ -223,3 +226,8 @@ function productInfo() {
     }
 }
 
+document.querySelector(".basket-icon").addEventListener("click", function () {
+
+    let basket = document.querySelector(".cards .card");
+    console.log(basket);
+});
