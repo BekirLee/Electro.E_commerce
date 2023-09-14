@@ -256,8 +256,12 @@ main {
     bottom: 1.8em;
     font-size: .9em;
     text-align: center;
+}
+
+.product .div {
     position: absolute;
-    left: 60px;
+    left: -11px;
+    width: 100%;
     top: 200px;
 }
 

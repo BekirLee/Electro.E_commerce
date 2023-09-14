@@ -1,15 +1,15 @@
 var mainProducts = [
     {
         id: 1,
-        category: "air-conditioner",
+        category: "Air-conditioner",
         name: "Air-conditioners",
         img: "img/airconditioner_image.jpg",
         href: "pages/products.html"
     },
     {
         id: 2,
-        category: "phone",
-        name: "Bills",
+        category: "Furnace",
+        name: "Furnace",
         img: "img/bill_image.jpg",
         href: "pages/products.html"
     },
@@ -23,7 +23,7 @@ var mainProducts = [
     {
         id: 4,
 
-        category: "phone",
+        category: "Laptops",
         name: "Laptops",
         img: "img/laptop_image.jpg",
         href: "pages/products.html"
@@ -31,15 +31,15 @@ var mainProducts = [
     {
         id: 5,
 
-        category: "phone",
-        name: "Kitchendevices",
+        category: "Kitchen",
+        name: "Kitchen",
         img: "img/kitchendevice_image.jpg",
         href: "pages/products.html"
     },
     {
         id: 6,
 
-        category: "phone",
+        category: "Refrigerators",
         name: "Refrigerators",
         img: "img/refrigerator_image.jpg",
         href: "pages/products.html"
@@ -47,14 +47,14 @@ var mainProducts = [
     {
         id: 7,
 
-        category: "phone",
+        category: "Tv",
         name: "Tv",
         img: "img/tv_image.jpg",
         href: "pages/products.html"
     },
     {
         id: 8,
-        category: "phone",
+        category: "Washingmachines",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
@@ -72,6 +72,7 @@ let productsSurfaceInfo = [
             img: "img/beardcleaner.jpg",
             hover: "img/beardsheaver.jpeg",
         },
+        category: "Kitchen",
         firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
         href: "pages/products.html"
     },
@@ -84,6 +85,7 @@ let productsSurfaceInfo = [
             img: "img/amazon_product.jpg",
             hover: "img/background_amazon_product.jpg",
         },
+        category: "Kitchen",
         firstname: "  Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room",
         href: "pages/products.html"
     },
@@ -96,6 +98,7 @@ let productsSurfaceInfo = [
             img: "img/amazon_product2.jpg",
             hover: "img/background_amazon_product.jpg",
         },
+        category: "Kitchen",
         firstname: "  Home Speaker 500: Smart Bluetooth Speaker with Alexa Voice Control Built-In, White",
         href: "pages/products.html"
     },
@@ -108,8 +111,8 @@ let productsSurfaceInfo = [
             img: "img/computer.jpg",
             hover: "img/background_computer.jpg",
         },
+        category: "Laptop",
         firstname: " 13 Ultrabook Gaming Laptop: Intel Core i7-1165G7 4 Core, NVIDIA GeForce GTX 1650 Ti Max-Q, 13.3″ 1080p 120Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB, Thunderbolt 4",
-        name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
         href: "pages/products.html"
     },
@@ -122,6 +125,7 @@ let productsSurfaceInfo = [
             img: "img/computer2.jpg",
             hover: "img/background_computer.jpg",
         },
+        category: "Laptop",
         firstname: "15.6″ FHD Display Laptop – Intel i7 – Intel HD Graphics 6000 , Webcam, WiFi, Bluetooth, HDMI, Windows 11,Grey",
         href: "pages/products.html"
     },
@@ -134,6 +138,7 @@ let productsSurfaceInfo = [
             img: "img/tablet.jpg",
             hover: "img/phone_image.jpg",
         },
+        category: "Laptop",
         firstname: "Note 10 Pro 128GB 6GB RAM Factory Unlocked (GSM ONLY) International Model",
         href: "pages/products.html"
     },
@@ -146,6 +151,7 @@ let productsSurfaceInfo = [
             img: "img/phone1.jpg",
             hover: "img/phonebackground_img.jpg",
         },
+        category: "phone",
         firstname: "5G Unlocked Smartphone,12GB RAM+256GB Storage120Hz Fluid Display Hasselblad Quad Camera 65W Ultra Fast Charge 50W Wireless Charge",
         href: "pages/products.html"
     },
@@ -158,6 +164,7 @@ let productsSurfaceInfo = [
             img: "img/phone2.jpg",
             hover: "img/phonebackground_img.jpg",
         },
+        category: "phone",
         firstname: "5G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
         href: "pages/products.html"
     },
@@ -166,32 +173,30 @@ let productsSurfaceInfo = [
 getProducts();
 productInfo();
 
-
 function getProducts() {
-    let elements = document.querySelector(".productsBox");
+    var elements = document.querySelector(".productsBox");
 
     if (!elements) {
-        console.error(".productsBox elementi.");
-        return; // Eğer eleman bulunamazsa fonksiyonu burada sonlandır.
+        console.error(".productsBox elementi bulunamadi.");
+        return;
     }
 
     for (var product of mainProducts) {
-        let elementi = `
+        // phone_count //new 
+        let productCount = productsSurfaceInfo.filter(x => x.category == product.category).length;
+        let element = `
         <div class="product" id="${product.id}" >
         <img src="${product.img}" alt="">
-        <h2>
-         ${product.name} <p>4 products</p>
-        </h2>
+        
+        <div class="div">
+          <h2>
+            ${product.name} <p>${productCount} products</p>
+          </h2>
+        </div>
+
         </div>`;
-        elements.insertAdjacentHTML("beforeend", elementi);
+        elements.insertAdjacentHTML("beforeend", element);
     }
-
-    // for (let count of productsSurfaceInfo) {
-
-    // if (${ count.firstname }== ${ product.name }) {
-
-    // }
-    // }
 }
 
 
@@ -226,8 +231,9 @@ function productInfo() {
     }
 }
 
-document.querySelector(".basket-icon").addEventListener("click", function () {
-
+document.querySelector(".basket-icon").addEventListener("click", function (event) {
     let basket = document.querySelector(".cards .card");
+    event.preventDefault();
+
     console.log(basket);
 });
