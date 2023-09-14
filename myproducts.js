@@ -175,7 +175,7 @@ function getProducts() {
         return; // Eğer eleman bulunamazsa fonksiyonu burada sonlandır.
     }
 
-    for (let product of mainProducts) {
+    for (var product of mainProducts) {
         let elementi = `
         <div class="product" id="${product.id}" >
         <img src="${product.img}" alt="">
@@ -184,6 +184,12 @@ function getProducts() {
         </h2>
         </div>`;
         elements.insertAdjacentHTML("beforeend", elementi);
+    }
+    for (let count of productsSurfaceInfo) {
+
+        if (${count.firstname }==${product.name }){
+
+        }
     }
 }
 

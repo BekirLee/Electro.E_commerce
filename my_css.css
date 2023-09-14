@@ -19,6 +19,13 @@ html {
     border-bottom: 1px solid grey;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
 
 .logo img {
     width: 125px;
@@ -41,6 +48,10 @@ html {
 
 .search form input {
     margin-right: 1rem;
+}
+
+main{
+    margin-top: 120px;
 }
 
 .main_menu {
@@ -565,7 +576,7 @@ html {
 }
 
 /* icons */
-#backtotop{
+#backtotop {
     position: fixed;
     right: 10px;
     bottom: 80px;
