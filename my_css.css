@@ -556,6 +556,10 @@
     margin: 0 0 0.2em;
 }
 
+.price_info{
+    text-decoration: line-through;
+}
+
 /* icons */
 .fa-star {
     color: orange;

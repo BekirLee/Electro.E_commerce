@@ -196,24 +196,25 @@ function info() {
     }
 
     good.innerHTML = `
-    <div data-id="${product.id}" class="gallery product-link">
+    <div data-id="${product.id}" class="gallery ">
         <div class="img-big-wrap img-thumbnail">
-        <a href="${product.info.img}" data-type="image" data-fslightbox="mygallery">
-            <img src="${product.info.img}" alt="">
+           <a href="${product.info.img}" data-type="image" data-fslightbox="mygallery">
+             <img src="${product.info.img}" alt="">
             </a>
-            </div>
-      <div class="thumbs-wrap pt-2 " style="text-align: center;">
+        </div>
+      
+        <div class="thumbs-wrap pt-2 " style="text-align: center;">
 
-      <a href="${product.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
+          <a href="${product.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg1}" alt="">
-            </a>
-            <a href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
+          </a>
+          <a href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg2}" alt="">
-        </a>
-        <a href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
+          </a>
+          <a href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg3}" alt="">
-            </a>
-    </div>
+          </a>
+        </div>
     </div > 
     `;
 
@@ -222,7 +223,8 @@ function info() {
                              <h2 class="productName">
                                 ${product.firstname}
                              </h2>
-                            <p class="price">${product.info.price}$ <br/     >Discount: ${product.info.discount}</p>
+                            <p class="price price_info">${product.info.price}$</p>
+                            <p>${product.info.discount}</p>
                            <span>Key feautures:</span>
                            <li class="feauture"> ${product.info.guarantee}</li>
                             <li class="feauture"> ${product.info.size}</li>
