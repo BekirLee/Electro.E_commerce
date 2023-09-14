@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     margin: 2rem;
 }
@@ -519,7 +523,7 @@
     text-align: center;
 }
 
-.gallery-wrap a{
+.gallery-wrap a {
     text-decoration: none;
 }
 
@@ -528,7 +532,7 @@
     margin-left: 2rem;
 }
 
-.gallery .img-big-wrap img{
+.gallery .img-big-wrap img {
     width: 100%;
 }
 
@@ -556,11 +560,19 @@
     margin: 0 0 0.2em;
 }
 
-.price_info{
+.price_info {
     text-decoration: line-through;
 }
 
 /* icons */
+#backtotop{
+    position: fixed;
+    right: 10px;
+    bottom: 80px;
+    color: #0573f0;
+    font-size: 30px;
+}
+
 .fa-star {
     color: orange;
 }
