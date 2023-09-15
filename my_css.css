@@ -280,7 +280,6 @@ main {
 }
 
 .containerSaleAndCase {
-    /* padding: 9px; */
     margin: 2rem;
 }
 
@@ -431,7 +430,6 @@ main {
 
 /* brand lists */
 .topBrands {
-    /* margin: 70px 20px 40px 20px; */
     margin: 4rem;
 }
 
@@ -443,7 +441,6 @@ main {
     border: 1px solid grey;
     padding: 0;
     background-color: #ffffff;
-    /* padding: 10px; */
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
@@ -474,8 +471,6 @@ main {
 
 .user {
     padding: 1rem;
-    /* border: 1px solid red; */
-    /* background-color: #dbe2e2; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     margin-bottom: 20px;
 }
@@ -510,7 +505,6 @@ main {
 .logo_side img {
     width: 125px;
     height: auto;
-    /* object-fit: cover; */
 }
 
 .needs a,
@@ -560,7 +554,6 @@ main {
 }
 
 .gallery_info {
-    /* text-align: left; */
     margin-left: 2rem;
 }
 
@@ -577,7 +570,6 @@ main {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    /* font-size: 1rem; */
     line-height: 1.6em;
 }
 

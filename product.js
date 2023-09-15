@@ -172,7 +172,6 @@ let items = [
 
 document.addEventListener("DOMContentLoaded", function () {
     info();
-    // linkWay();
 });
 
 
