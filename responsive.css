@@ -13,5 +13,32 @@
         color: #fff;
     }
 
+    .main_menu {
+        display: none;
+    }
+
+    .tv_background {
+        width: 100%;
+        margin-top: 121px !important;
+    }
+
+    .entertainment_system {
+        left: 518px !important;
+    }
+
+    .productsBox {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        overflow: hidden;
+    }
+
+    .containerSaleAndCase{
+        padding: 90px;
+    }
+
+    .saleAndCase {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
 
 }
