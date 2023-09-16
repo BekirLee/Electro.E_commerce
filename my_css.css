@@ -58,6 +58,7 @@ main {
     background-color: #0573f0;
 }
 
+
 .menu {
     display: flex;
     justify-content: space-between;
@@ -95,6 +96,7 @@ main {
     background-color: #0573f0 !important;
 }
 
+/* slick nav */
 .slick_nav {
     display: none;
     height: 50px;
@@ -103,7 +105,7 @@ main {
 }
 
 .menu-responsive {
-    position: relative;
+    /* position: relative; */
 }
 
 .menu_links {
@@ -122,8 +124,8 @@ main {
 
 
 .active {
-    width: 100%;
     display: block;
+    width: 100%;
     text-align: left;
     transition: 0.8s ease-out 0.3s;
 }
