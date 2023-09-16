@@ -47,6 +47,11 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .users {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media(max-width:785px) {
@@ -71,6 +76,25 @@
 
     .users {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
+}
+
+@media(min-width:989px) {
+    .entertainment_system {
+        top: 20px !important;
+        left: 548px !important;
+    }
+
+    .productsBox {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        overflow: hidden;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
