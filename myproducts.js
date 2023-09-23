@@ -204,9 +204,10 @@ function getProducts() {
 function productInfo() {
 
     let elementsInfo = document.querySelector(".cards");
+    // href="product.html?id=${element.id1}"
     for (let element of productsSurfaceInfo) {
-        let info = ` <a href="product.html?id=${element.id1}">
-        <div class="card" id="${element.id}">
+        let info = ` <a >
+        <div class="card product-item" id="${element.id}">
             <img src="${element.info.img}" class="card-img-top" alt="...">
             <img src="${element.info.hover}" class="card-img-top img" alt="...">
             <button>  

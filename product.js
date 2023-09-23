@@ -170,6 +170,8 @@ let items = [
 ]
 
 
+let favs = [];
+
 document.addEventListener("DOMContentLoaded", function () {
     info();
 });
@@ -197,20 +199,20 @@ function info() {
     good.innerHTML = `
     <div data-id="${product.id}" class="gallery ">
         <div class="img-big-wrap img-thumbnail">
-           <a href="${product.info.img}" data-type="image" data-fslightbox="mygallery">
+           <a target="_blank" href="${product.info.img}" data-type="image" data-fslightbox="mygallery">
              <img src="${product.info.img}" alt="">
             </a>
         </div>
       
         <div class="thumbs-wrap pt-2 " style="text-align: center;">
 
-          <a href="${product.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
+          <a target="_blank"  href="${product.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg1}" alt="">
           </a>
-          <a href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
+          <a target="_blank" href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg2}" alt="">
           </a>
-          <a href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
+          <a target="_blank" href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg3}" alt="">
           </a>
         </div>
@@ -232,3 +234,5 @@ function info() {
                         `;
 
 }
+
+
