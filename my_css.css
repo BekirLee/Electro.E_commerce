@@ -42,6 +42,29 @@ header {
     color: black;
 }
 
+.search {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.search ul {
+    display: flex;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.search ul li {
+    margin: 8px 8px 0px 8px;
+    list-style: none;
+}
+
+.search ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .search form {
     display: flex;
 }
@@ -61,9 +84,10 @@ main {
 
 .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0px;
+    padding: 0;
 }
 
 .menu li {
@@ -601,4 +625,20 @@ main {
 
 .fa-star {
     color: orange;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0573f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
