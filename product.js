@@ -236,3 +236,21 @@ function info() {
 }
 
 
+
+// backtotop 
+
+var backtotop_button = document.getElementById("backtotop");
+
+window.onscroll = function () {
+    scrollEvent();
+}
+
+function scrollEvent() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backtotop_button.style.opacity = 1;
+    }
+    else {
+        backtotop_button.style.opacity = 0;
+    }
+
+}
