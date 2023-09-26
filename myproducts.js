@@ -185,16 +185,17 @@ function getProducts() {
         // phone_count //new 
         let productCount = productsSurfaceInfo.filter(x => x.category == product.category).length;
         let element = `
-        <div class="product" id="${product.id}" >
-        <img src="${product.img}" alt="">
-        
-        <div class="div">
-          <h2>
-            ${product.name} <p>${productCount} products</p>
-          </h2>
-        </div>
-
-        </div>`;
+        <a href="productInfo.html">
+            <div class="product" id="${product.id}" >
+                <img src="${product.img}" alt="">
+                
+                <div class="div">
+                    <h2>
+                        ${product.name} <p>${productCount} products</p>
+                    </h2>
+                </div>
+            </div>
+        </a>`;
         elements.insertAdjacentHTML("beforeend", element);
     }
 }
