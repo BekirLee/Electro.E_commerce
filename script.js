@@ -24,6 +24,9 @@ products.forEach(product => {
 })
 
 
+
+// pervin teacher's codes
+
 function createFavsHtml(products) {
     let favs = document.querySelector('.offcanvas-body')
     for (let element of products) {
@@ -67,3 +70,6 @@ function showPage() {
 function myFunction() {
     timer = setTimeout(showPage, 3000);
 }
+
+
+// info_side_products

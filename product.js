@@ -169,6 +169,30 @@ let items = [
     },
 ]
 
+let info_side_products = [
+    {
+        id: 1,
+        id1: 2,
+        info: {
+            price: "$1,099.00",
+            discount: "$999.00",
+            brand: "Canon",
+            size: "Dimensions -69.5 x 75.0 x 169.0",
+            guarantee: "1 years warranty",
+            status: "Newest technology",
+            category: "Camera",
+            img: "img/",
+            hover: "img/phonebackground_img.jpg",
+            infoImg1: "img/phone_info1.jpg",
+            infoImg2: "img/phone1.jpg",
+            infoImg3: "img/phone_info2.jpg",
+        },
+        firstname: "6G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
+        img: "img/washingmachine_image.jpg",
+        href: "pages/.html"
+    },
+]
+
 
 let favs = [];
 

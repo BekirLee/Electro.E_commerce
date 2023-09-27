@@ -185,7 +185,7 @@ function getProducts() {
         // phone_count //new 
         let productCount = productsSurfaceInfo.filter(x => x.category == product.category).length;
         let element = `
-        <a href="productInfo.html">
+        <a href="./src/productInfo.html">
             <div class="product" id="${product.id}" >
                 <img src="${product.img}" alt="">
                 
