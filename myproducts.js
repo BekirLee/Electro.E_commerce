@@ -209,8 +209,10 @@ function productInfo() {
     for (let element of productsSurfaceInfo) {
         let info = ` <a >
         <div class="card product-item" id="${element.id}">
+        <div class="card-photo">
             <img src="${element.info.img}" class="card-img-top" alt="...">
             <img src="${element.info.hover}" class="card-img-top img" alt="...">
+        </div>    
             <button>  
                 <i class="fa-solid fa-basket-shopping basket-icon"></i>
              </button>
