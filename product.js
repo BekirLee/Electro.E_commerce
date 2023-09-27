@@ -172,25 +172,44 @@ let items = [
 let info_side_products = [
     {
         id: 1,
+        id1: 1,
+        info: {
+            price: "$49.00",
+            discount: "$44.00",
+            img: "../img/refrigerator_image2.jpeg",
+            hover: "../img/refrigerator_image4.jpeg",
+        },
+        category: "TV",
+        firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
+        href: "pages/products.html"
+    },
+    {
+        id: 2,
         id1: 2,
         info: {
-            price: "$1,099.00",
-            discount: "$999.00",
-            brand: "Canon",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "1 years warranty",
-            status: "Newest technology",
-            category: "Camera",
-            img: "img/",
-            hover: "img/phonebackground_img.jpg",
-            infoImg1: "img/phone_info1.jpg",
-            infoImg2: "img/phone1.jpg",
-            infoImg3: "img/phone_info2.jpg",
+            price: "$49.00",
+            discount: "$44.00",
+            img: "../img/refrigerator_image3.jpeg",
+            hover: "../img/refrigerator_image5.jpeg",
         },
-        firstname: "6G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/.html"
+        category: "Kitchen",
+        firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
+        href: "pages/products.html"
     },
+    {
+        id: 3,
+        id1: 3,
+        info: {
+            price: "$49.00",
+            discount: "$44.00",
+            img: "../img/camera_image4.jpeg",
+            hover: "../img/camera_image.jpeg",
+        },
+        category: "TV",
+        firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
+        href: "pages/products.html"
+    },
+
 ]
 
 
@@ -198,6 +217,7 @@ let favs = [];
 
 document.addEventListener("DOMContentLoaded", function () {
     info();
+    infoProductSide();
 });
 
 
@@ -277,4 +297,58 @@ function scrollEvent() {
         backtotop_button.style.opacity = 0;
     }
 
+}
+
+// info_side_products
+
+function infoProductSide() {
+    let elements = document.querySelector(".products_info .container");
+
+    for (product of info_side_products) {
+
+        let element = `  
+     
+         <a href="">
+            <div class="card product-item" id="${product.id}">
+                <div class="card-photo">
+                <img src="${product.info.img}" class="card-img-top" alt="...">
+            <img src="${product.info.hover}" class="card-img-top img" alt="...">
+
+                </div>
+                
+                <button>
+                        <i class="fa-solid fa-basket-shopping basket-icon"></i>
+                </button>
+                        <span class="sale">Sale</span>
+                        <div class="card-body">
+                        <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
+                        class="fa-regular fa-star fa-2xs"></i><i
+                        class="fa-regular fa-star fa-2xs"></i><i
+                                class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
+                        </h5>
+                        <p class="card-text">Iphone</p>
+                        <div class="price">
+                            <del>2000$</del>
+                            <span>4000$</span>
+                        </div>
+                        </div>
+                    </div>
+            </a>
+            `;
+        elements.insertAdjacentHTML("beforeend", element);
+    }
+}
+
+
+// loader for page
+
+var timer;
+
+function showPage() {
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".loader_box").style.display = "block";
+}
+
+function myFunction() {
+    timer = setTimeout(showPage, 1000);
 }

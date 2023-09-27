@@ -1,5 +1,3 @@
-
-
 document.querySelector(".slicknav_menu").addEventListener("click", function () {
     var menulinks = document.querySelector(".menu_links")
     menulinks.classList.toggle("active");
@@ -58,18 +56,3 @@ function createFavsHtml(products) {
 
 }
 
-// loader for page
-
-var timer;
-
-function showPage() {
-    document.querySelector(".loader").style.display = "none";
-    document.querySelector(".loader_box").style.display = "block";
-}
-
-function myFunction() {
-    timer = setTimeout(showPage, 3000);
-}
-
-
-// info_side_products

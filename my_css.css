@@ -365,6 +365,11 @@ main {
     overflow: hidden;
 }
 
+.products_info .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .card .fa-solid {
     position: absolute;
     left: 199px;
