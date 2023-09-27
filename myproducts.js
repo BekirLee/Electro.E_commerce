@@ -207,7 +207,7 @@ function productInfo() {
     let elementsInfo = document.querySelector(".cards");
     // href="product.html?id=${element.id1}"
     for (let element of productsSurfaceInfo) {
-        let info = ` <a >
+        let info = ` <a href="product.html?id=${element.id1}">
         <div class="card product-item" id="${element.id}">
         <div class="card-photo">
             <img src="${element.info.img}" class="card-img-top" alt="...">
