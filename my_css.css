@@ -355,7 +355,7 @@ main {
 }
 
 .card .card-photo img {
-    object-fit: contain;
+    object-fit: cover;
     height: 100%;
 }
 
@@ -686,9 +686,8 @@ main {
 .loader {
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 43%;
+    left: 45%;
     border: 10px solid #f3f3f3;
     border-radius: 50%;
     border-top: 10px solid #3498db;
