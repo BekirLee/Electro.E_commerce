@@ -6,25 +6,25 @@ document.querySelector(".slicknav_menu").addEventListener("click", function () {
 
 })
 
-    
+
 
 
 var products = document.querySelectorAll('.product-item')
 
 
-products.forEach(product =>{
-    product.addEventListener('click',(e)=>{
+products.forEach(product => {
+    product.addEventListener('click', (e) => {
         const id = e.target.parentElement.id
 
-        var currentProduct = mainProducts.find(x=>x.id = id);
+        var currentProduct = mainProducts.find(x => x.id = id);
         favs.push(currentProduct)
         console.log(favs)
         createFavsHtml(favs)
-})
+    })
 })
 
 
-function createFavsHtml(products){
+function createFavsHtml(products) {
     let favs = document.querySelector('.offcanvas-body')
     for (let element of products) {
         let info = ` <a href="javascript:void(0)">
@@ -49,8 +49,21 @@ function createFavsHtml(products){
             </div>
         </div>
     </a>`;
-    console.log(favs)
-    favs.insertAdjacentHTML("beforeend", info);
+        console.log(favs)
+        favs.insertAdjacentHTML("beforeend", info);
     }
 
+}
+
+// loader for page
+
+var timer;
+
+function showPage() {
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".loader_box").style.display = "block";
+}
+
+function myFunction() {
+    timer = setTimeout(showPage, 3000);
 }
