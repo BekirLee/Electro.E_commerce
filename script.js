@@ -7,27 +7,45 @@ document.querySelector(".slicknav_menu").addEventListener("click", function () {
 
 
 
-var products = document.querySelectorAll('.product-item')
+// var products = document.querySelectorAll('.product-item');
 
+
+// products.forEach(product => {
+//     product.addEventListener('click', (e) => {
+//         var id = parseInt(e.target.parentElement.id);
+//         var currentProduct = mainProducts.find(x => x.id == id);
+//         console.log(id);
+//         favs.push(currentProduct)
+//         console.log(favs)
+//         createFavsHtml(product)
+//     })
+// })
+
+var products = document.querySelectorAll('.product-item');
 
 products.forEach(product => {
     product.addEventListener('click', (e) => {
-        const id = e.target.parentElement.id
-
-        var currentProduct = mainProducts.find(x => x.id = id);
-        favs.push(currentProduct)
-        console.log(favs)
-        createFavsHtml(favs)
-    })
-})
+        const id = parseInt(e.target.parentElement.id);
+        var currentProduct = mainProducts.find(x => x.id == id);
+        
+        // Eğer bu ürün favs dizisinde değilse ekleyelim
+        if (!favs.some(item => item.id == currentProduct.id)) {
+            favs.push(currentProduct);
+            console.log(favs);
+            createFavsHtml(favs);
+        } else {
+            console.warn("Bu ürün zaten favs dizisinde!");
+        }
+    });
+});
 
 
 
 // pervin teacher's codes
 
-function createFavsHtml(products) {
-    let favs = document.querySelector('.offcanvas-body')
-    for (let element of products) {
+function createFavsHtml(favs) {
+    var favs = document.querySelector('.offcanvas-body')
+    for (var element of products) {
         let info = ` <a href="javascript:void(0)">
         <div class="card product-item" id="${element.id}">
             <img src="${element.img}" class="card-img-top" alt="...">
@@ -50,9 +68,8 @@ function createFavsHtml(products) {
             </div>
         </div>
     </a>`;
-        console.log(favs)
         favs.insertAdjacentHTML("beforeend", info);
     }
-
+    console.log(favs)
 }
 

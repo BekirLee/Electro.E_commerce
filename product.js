@@ -213,11 +213,8 @@ let info_side_products = [
 ]
 
 
-let favs = [];
-
 document.addEventListener("DOMContentLoaded", function () {
     info();
-    infoProductSide();
 });
 
 
@@ -225,7 +222,10 @@ function info() {
 
     let good = document.querySelector(".gallery-wrap");
     let feautures = document.querySelector(".feautures_ul");
+    let elements = document.querySelector(".products_info .container");
+    let products_info = document.querySelector(".info_side");
     const productId = new URLSearchParams(window.location.search).get('id');
+    const productid = new URLSearchParams(window.location.search).get('id');
 
 
     if (!productId) {
@@ -234,11 +234,42 @@ function info() {
     }
 
     const product = items.find(p => p.id === parseInt(productId));
+    const product2 = info_side_products.find(p => p.id === parseInt(productid));
+
 
     if (!product) {
         console.error("Ürün bulunamadi.");
         return;
     }
+
+    elements.innerHTML = `
+    <div data-id=${product2.id}>
+    <div class="card product-item" id="">
+       <div class="card-photo">
+       <img src="${product2.info.img}" class="card-img-top" alt="...">
+   <img src="${product2.info.hover}" class="card-img-top img" alt="...">
+
+       </div>
+       
+       <button>
+               <i class="fa-solid fa-basket-shopping basket-icon"></i>
+       </button>
+               <span class="sale">Sale</span>
+               <div class="card-body">
+               <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
+               class="fa-regular fa-star fa-2xs"></i><i
+               class="fa-regular fa-star fa-2xs"></i><i
+                       class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
+               </h5>
+               <p class="card-text">Iphone</p>
+               <div class="price">
+                   <del>2000$</del>
+                   <span>4000$</span>
+               </div>
+               </div>
+   </div>
+</div>
+    `;
 
     good.innerHTML = `
     <div data-id="${product.id}" class="gallery ">
@@ -293,7 +324,7 @@ window.onscroll = function () {
 }
 
 function scrollEvent() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
         backtotop_button.style.opacity = 1;
         header_fluid.style.height = "50px";
         main_menu.style.height = "49px"
@@ -305,75 +336,6 @@ function scrollEvent() {
     }
 
 }
-
-// info_side_products
-
-function infoProductSide() {
-    let elements = document.querySelector(".products_info .container");
-    let products_info = document.querySelector(".products_info.col-9");
-
-    const ItemId = new URLSearchParams(window.location.search).get('id');
-
-
-    if (!ItemId) {
-        console.error("Ürün ID'si bulunamadi.");
-        return;
-    }
-
-    const Item = info_side_products.find(p => p.id === parseInt(ItemId));
-
-    if (!Item) {
-        console.error("Ürün bulunamadi.");
-        return;
-    }
-
-    // products_info.innerHTML = `
-    // <h2>${product.category}</h2>
-    // `;
-
-
-    // products_info.innerHTML = `
-    // <h2></h2>
-
-    // `;
-
-
-    // for (let product of info_side_products) {
-
-    // let element =
-    elements.innerHTML= `  
-     
-        <div data-id=${Item.id}>
-             <div class="card product-item" id="">
-                <div class="card-photo">
-                <img src="${Item.info.img}" class="card-img-top" alt="...">
-            <img src="${Item.info.hover}" class="card-img-top img" alt="...">
-
-                </div>
-                
-                <button>
-                        <i class="fa-solid fa-basket-shopping basket-icon"></i>
-                </button>
-                        <span class="sale">Sale</span>
-                        <div class="card-body">
-                        <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i
-                                class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
-                        </h5>
-                        <p class="card-text">Iphone</p>
-                        <div class="price">
-                            <del>2000$</del>
-                            <span>4000$</span>
-                        </div>
-                        </div>
-            </div>
-        </div>
-                    `;
-    // elements.insertAdjacentHTML("beforeend", element);
-    // }
-}
-
 
 // loader for page
 

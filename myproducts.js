@@ -174,6 +174,9 @@ let productsSurfaceInfo = [
     },
 ]
 
+var favs = [];
+
+
 getProducts();
 productInfo();
 
@@ -211,7 +214,8 @@ function productInfo() {
     let elementsInfo = document.querySelector(".cards");
     // href="product.html?id=${element.id1}"
     for (let element of productsSurfaceInfo) {
-        let info = ` <a href="product.html?id=${element.id1}">
+        let info = `
+
         <div class="card product-item" id="${element.id}">
         <div class="card-photo">
             <img src="${element.info.img}" class="card-img-top" alt="...">
