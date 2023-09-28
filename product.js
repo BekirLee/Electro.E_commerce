@@ -283,18 +283,25 @@ function info() {
 
 // backtotop 
 
-var backtotop_button = document.getElementById("backtotop");
+let backtotop_button = document.getElementById("backtotop");
+let header_fluid = document.querySelector(".header_fluid");
+let main_menu = document.querySelector(".main_menu");
+
 
 window.onscroll = function () {
     scrollEvent();
 }
 
 function scrollEvent() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         backtotop_button.style.opacity = 1;
+        header_fluid.style.height = "50px";
+        main_menu.style.height = "49px"
     }
     else {
         backtotop_button.style.opacity = 0;
+        header_fluid.style.height = "70px";
+        main_menu.style.height = "53px"
     }
 
 }

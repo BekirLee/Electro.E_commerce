@@ -18,6 +18,7 @@ html {
     height: 70px;
     background-color: #0573f0;
     border-bottom: 1px solid grey;
+    transition: height .9s ease-in;
 }
 
 header {
@@ -86,6 +87,7 @@ main {
 
 .main_menu {
     background-color: #0573f0;
+    transition: height .9s ease-in;
 }
 
 
