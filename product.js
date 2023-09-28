@@ -169,62 +169,62 @@ let items = [
     },
 ]
 
-let info_side_products = [
-    {
-        id: 1,
-        id1: 1,
-        info: {
-            price: "$49.00",
-            discount: "$44.00",
-            img: "../img/refrigerator_image2.jpeg",
-            hover: "../img/refrigerator_image4.jpeg",
-        },
-        category: "TV",
-        firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
-        href: "pages/products.html"
-    },
-    {
-        id: 2,
-        id1: 2,
-        info: {
-            price: "$49.00",
-            discount: "$44.00",
-            img: "../img/refrigerator_image3.jpeg",
-            hover: "../img/refrigerator_image5.jpeg",
-        },
-        category: "Kitchen",
-        firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
-        href: "pages/products.html"
-    },
-    {
-        id: 3,
-        id1: 3,
-        info: {
-            price: "$49.00",
-            discount: "$44.00",
-            img: "../img/camera_image4.jpeg",
-            hover: "../img/camera_image.jpeg",
-        },
-        category: "TV",
-        firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
-        href: "pages/products.html"
-    },
+// let info_side_products = [
+//     {
+//         id: 1,
+//         id1: 1,
+//         info: {
+//             price: "$49.00",
+//             discount: "$44.00",
+//             img: "../img/refrigerator_image2.jpeg",
+//             hover: "../img/refrigerator_image4.jpeg",
+//         },
+//         category: "TV",
+//         firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
+//         href: "pages/products.html"
+//     },
+//     {
+//         id: 2,
+//         id1: 2,
+//         info: {
+//             price: "$49.00",
+//             discount: "$44.00",
+//             img: "../img/refrigerator_image3.jpeg",
+//             hover: "../img/refrigerator_image5.jpeg",
+//         },
+//         category: "Kitchen",
+//         firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
+//         href: "pages/products.html"
+//     },
+//     {
+//         id: 3,
+//         id1: 3,
+//         info: {
+//             price: "$49.00",
+//             discount: "$44.00",
+//             img: "../img/camera_image4.jpeg",
+//             hover: "../img/camera_image.jpeg",
+//         },
+//         category: "TV",
+//         firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
+//         href: "pages/products.html"
+//     },
 
-]
+// ]
 
 document.addEventListener("DOMContentLoaded", function () {
-    info();
 });
+info();
 
 
 function info() {
 
     let good = document.querySelector(".gallery-wrap");
     let feautures = document.querySelector(".feautures_ul");
-    let elements = document.querySelector(".products_info .container");
-    let products_info = document.querySelector(".info_side");
+    // let elements = document.querySelector(".products_info .container");
+    // let products_info = document.querySelector(".info_side");
     const productId = new URLSearchParams(window.location.search).get('id');
-    const productid = new URLSearchParams(window.location.search).get('id');
+    // const productid = new URLSearchParams(window.location.search).get('id');
 
 
     if (!productId) {
@@ -232,48 +232,43 @@ function info() {
         return;
     }
 
-
+    
     const product = items.find(p => p.id === parseInt(productId));
-    const product2 = info_side_products.find(p => p.id === parseInt(productid));
-
-    if (!product || !product2) {
-        console.error("Ürünlerden biri ya da ikisi bulunamadi.");
-        return;
-    }
+    // const product2 = info_side_products.find(p => p.id === parseInt(productid));
 
     if (!product) {
         console.error("Ürün bulunamadi.");
         return;
     }
 
-    elements.innerHTML = `
-    <div data-id=${product2.id}>
-    <div class="card product-item" id="">
-       <div class="card-photo">
-       <img src="${product2.info.img}" class="card-img-top" alt="...">
-   <img src="${product2.info.hover}" class="card-img-top img" alt="...">
+//     elements.innerHTML = `
+//     <div data-id=${product2.id}>
+//     <div class="card product-item" id="">
+//        <div class="card-photo">
+//        <img src="${product2.info.img}" class="card-img-top" alt="...">
+//    <img src="${product2.info.hover}" class="card-img-top img" alt="...">
 
-       </div>
+//        </div>
        
-       <button>
-               <i class="fa-solid fa-basket-shopping basket-icon"></i>
-       </button>
-               <span class="sale">Sale</span>
-               <div class="card-body">
-               <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-               class="fa-regular fa-star fa-2xs"></i><i
-               class="fa-regular fa-star fa-2xs"></i><i
-                       class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
-               </h5>
-               <p class="card-text">Iphone</p>
-               <div class="price">
-                   <del>2000$</del>
-                   <span>4000$</span>
-               </div>
-               </div>
-   </div>
-</div>
-    `;
+//        <button>
+//                <i class="fa-solid fa-basket-shopping basket-icon"></i>
+//        </button>
+//                <span class="sale">Sale</span>
+//                <div class="card-body">
+//                <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
+//                class="fa-regular fa-star fa-2xs"></i><i
+//                class="fa-regular fa-star fa-2xs"></i><i
+//                        class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
+//                </h5>
+//                <p class="card-text">Iphone</p>
+//                <div class="price">
+//                    <del>2000$</del>
+//                    <span>4000$</span>
+//                </div>
+//                </div>
+//    </div>
+// </div>
+//     `;
 
     good.innerHTML = `
     <div data-id="${product.id}" class="gallery ">
