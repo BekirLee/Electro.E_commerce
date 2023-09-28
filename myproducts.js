@@ -1,7 +1,7 @@
 var mainProducts = [
     {
         id: 1,
-        id1:1,
+        id1: 1,
         category: "Air-conditioner",
         name: "Air-conditioners",
         img: "img/airconditioner_image.jpg",
@@ -9,7 +9,7 @@ var mainProducts = [
     },
     {
         id: 2,
-        id1:2,
+        id1: 2,
         category: "Furnace",
         name: "Furnace",
         img: "img/bill_image.jpg",
@@ -17,7 +17,7 @@ var mainProducts = [
     },
     {
         id: 3,
-        id1:3,
+        id1: 3,
         category: "phone",
         name: "Iphone",
         img: "img/phone_image.jpg",
@@ -25,7 +25,7 @@ var mainProducts = [
     },
     {
         id: 4,
-        id1:4,
+        id1: 4,
         category: "Laptops",
         name: "Laptops",
         img: "img/laptop_image.jpg",
@@ -33,7 +33,7 @@ var mainProducts = [
     },
     {
         id: 5,
-        id1:5,
+        id1: 5,
         category: "Kitchen",
         name: "Kitchen",
         img: "img/kitchendevice_image.jpg",
@@ -41,7 +41,7 @@ var mainProducts = [
     },
     {
         id: 6,
-        id1:6,
+        id1: 6,
         category: "Refrigerators",
         name: "Refrigerators",
         img: "img/refrigerator_image.jpg",
@@ -49,7 +49,7 @@ var mainProducts = [
     },
     {
         id: 7,
-        id1:7,
+        id1: 7,
         category: "Tv",
         name: "Tv",
         img: "img/tv_image.jpg",
@@ -57,7 +57,7 @@ var mainProducts = [
     },
     {
         id: 8,
-        id1:8,
+        id1: 8,
         category: "Washingmachines",
         name: "Washingmachines",
         img: "img/washingmachine_image.jpg",
@@ -174,8 +174,6 @@ let productsSurfaceInfo = [
     },
 ]
 
-var favs = [];
-
 
 getProducts();
 productInfo();
@@ -215,7 +213,6 @@ function productInfo() {
     // href="product.html?id=${element.id1}"
     for (let element of productsSurfaceInfo) {
         let info = `
-
         <div class="card product-item" id="${element.id}">
         <div class="card-photo">
             <img src="${element.info.img}" class="card-img-top" alt="...">
@@ -238,7 +235,7 @@ function productInfo() {
                 </div>
             </div>
         </div>
-    </a>`;
+    `;
         elementsInfo.insertAdjacentHTML("beforeend", info);
     }
 }

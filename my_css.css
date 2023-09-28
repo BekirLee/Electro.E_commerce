@@ -443,6 +443,8 @@ header {
 .card .card-img-top,
 .card .img {
     transition: opacity 0.5s ease;
+        height: 200px;
+    object-fit: contain;
 }
 
 .card-photo .img {
@@ -461,7 +463,13 @@ header {
     opacity: 1;
 }
 
+.card_basket_photo:hover {
+    opacity: 1 !important;
+}
 
+.product-item:hover .card-img-top {
+    opacity: 1 !important;
+}
 
 .card:hover .fa-solid {
     display: inline-block;
