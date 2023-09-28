@@ -41,91 +41,138 @@ let info_side_products = [
 
 ]
 document.addEventListener("DOMContentLoaded", function () {
-    content();
+    // content();
+    productInfo();
 })
 
-function content() {
-    const productid = new URLSearchParams(window.location.search).get('id');
-    let elements = document.querySelector(".products_info .container");
-    const product2 = info_side_products.find(p => p.id === parseInt(productid));
+// function content() {
+//     const productid = new URLSearchParams(window.location.search).get('id');
+//     let elements = document.querySelector(".products_info .container");
+//     const product2 = info_side_products.find(p => p.id === parseInt(productid));
 
 
-    for (let element of info_side_products) {
-        let product = `
-        <div data-id=${element.id}>
-        <div class="card product-item" id="">
-           <div class="card-photo">
-           <img src="${element.info.img}" class="card-img-top" alt="...">
-       <img src="${element.info.hover}" class="card-img-top img" alt="...">
+//     for (let element of info_side_products) {
+//         let product = `
+//         <div data-id=${element.id}>
+//         <div class="card product-item" id="">
+//            <div class="card-photo">
+//            <img src="${element.info.img}" class="card-img-top" alt="...">
+//        <img src="${element.info.hover}" class="card-img-top img" alt="...">
+
+//            </div>
+
+//            <button>
+//                    <i class="fa-solid fa-basket-shopping basket-icon"></i>
+//            </button>
+//                    <span class="sale">Sale</span>
+//                    <div class="card-body">
+//                    <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
+//                    class="fa-regular fa-star fa-2xs"></i><i
+//                    class="fa-regular fa-star fa-2xs"></i><i
+//                            class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
+//                    </h5>
+//                    <p class="card-text">Iphone</p>
+//                    <div class="price">
+//                        <del>2000$</del>
+//                        <span>4000$</span>
+//                    </div>
+//                    </div>
+//        </div>
+//     </div>
+//         `;
+//         elements.insertAdjacentHTML("beforeend", product);
+//     }
+
+//     let info_side = document.querySelector(".products_info .info_side");
+
+//     let product_info_text = `
+//     <div class="basket_price" id=""><p> ${product2.category}</p></div>
+//     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quos velit reprehenderit harum
+//     quia,
+//     vero nam quibusdam, soluta tempore, asperiores deleniti? Error voluptates corrupti, et ut sit
+//     accusantium quibusdam blanditiis.
+//     </p>
+//     <span>Showing all number results</span>`;
+
+//     info_side.insertAdjacentHTML("beforeend", product_info_text);
+
+// }
+
+
+//     elements.innerHTML = `
+//     <div data-id=${product2.id}>
+//     <div class="card product-item" id="">
+//        <div class="card-photo">
+//        <img src="${product2.info.img}" class="card-img-top" alt="...">
+//    <img src="${product2.info.hover}" class="card-img-top img" alt="...">
+
+//        </div>
+
+//        <button>
+//                <i class="fa-solid fa-basket-shopping basket-icon"></i>
+//        </button>
+//                <span class="sale">Sale</span>
+//                <div class="card-body">
+//                <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
+//                class="fa-regular fa-star fa-2xs"></i><i
+//                class="fa-regular fa-star fa-2xs"></i><i
+//                        class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
+//                </h5>
+//                <p class="card-text">Iphone</p>
+//                <div class="price">
+//                    <del>2000$</del>
+//                    <span>4000$</span>
+//                </div>
+//                </div>
+//    </div>
+// </div>
+//     `;
+
+
+function productInfo() {
+    var offcanvas = document.querySelector('.offcanvas-body');
+
+    // for () { }
+
+    for (var product of info_side_products) {
+        var mainProducts = mainProducts.find(p => p.category === product.category);
+        if (mainProducts.id == product.id) {
+
+            let element = `
+            <div data-id="${product.id}">
+                <div class="card product-item">
+                    <div class="card-photo">
+                        <img src="${product.info.img}" class="card-img-top" alt="...">
+                        <img src="${product.info.hover}" class="card-img-top img" alt="...">
+                    </div>
     
-           </div>
-           
-           <button>
-                   <i class="fa-solid fa-basket-shopping basket-icon"></i>
-           </button>
-                   <span class="sale">Sale</span>
-                   <div class="card-body">
-                   <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-                   class="fa-regular fa-star fa-2xs"></i><i
-                   class="fa-regular fa-star fa-2xs"></i><i
-                           class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
-                   </h5>
-                   <p class="card-text">Iphone</p>
-                   <div class="price">
-                       <del>2000$</del>
-                       <span>4000$</span>
-                   </div>
-                   </div>
-       </div>
-    </div>
-        `;
-        elements.insertAdjacentHTML("beforeend", product);
+                    <button>
+                        <i class="fa-solid fa-basket-shopping basket-icon"></i>
+                    </button>
+    
+                    <span class="sale">Sale</span>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-regular fa-star fa-2xs"></i>
+                        </h5>
+                        <p class="card-text">${mainProduct.category}</p>
+                        <div class="price">
+                            <del>${product.info.price}$</del>
+                            <span>${product.info.discount}$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+
+            offcanvas.insertAdjacentHTML("beforeend", element);
+        }
+        else {
+            console.alert();
+        }
     }
 
-    let info_side = document.querySelector(".products_info .info_side");
 
-    let product_info_text = `
-    <div class="basket_price" id="${product2.id}"><p> ${product2.category}</p></div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quos velit reprehenderit harum
-    quia,
-    vero nam quibusdam, soluta tempore, asperiores deleniti? Error voluptates corrupti, et ut sit
-    accusantium quibusdam blanditiis.
-    </p>
-    <span>Showing all number results</span>`;
-    info_side.insertAdjacentHTML("beforeend", product_info_text);
-
-
-
-    //     elements.innerHTML = `
-    //     <div data-id=${product2.id}>
-    //     <div class="card product-item" id="">
-    //        <div class="card-photo">
-    //        <img src="${product2.info.img}" class="card-img-top" alt="...">
-    //    <img src="${product2.info.hover}" class="card-img-top img" alt="...">
-
-    //        </div>
-
-    //        <button>
-    //                <i class="fa-solid fa-basket-shopping basket-icon"></i>
-    //        </button>
-    //                <span class="sale">Sale</span>
-    //                <div class="card-body">
-    //                <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-    //                class="fa-regular fa-star fa-2xs"></i><i
-    //                class="fa-regular fa-star fa-2xs"></i><i
-    //                        class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
-    //                </h5>
-    //                <p class="card-text">Iphone</p>
-    //                <div class="price">
-    //                    <del>2000$</del>
-    //                    <span>4000$</span>
-    //                </div>
-    //                </div>
-    //    </div>
-    // </div>
-    //     `;
 }
-
 
 var timer;
 

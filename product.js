@@ -221,10 +221,7 @@ function info() {
 
     let good = document.querySelector(".gallery-wrap");
     let feautures = document.querySelector(".feautures_ul");
-    // let elements = document.querySelector(".products_info .container");
-    // let products_info = document.querySelector(".info_side");
     const productId = new URLSearchParams(window.location.search).get('id');
-    // const productid = new URLSearchParams(window.location.search).get('id');
 
 
     if (!productId) {
@@ -232,43 +229,13 @@ function info() {
         return;
     }
 
-    
+
     const product = items.find(p => p.id === parseInt(productId));
-    // const product2 = info_side_products.find(p => p.id === parseInt(productid));
 
     if (!product) {
         console.error("Ürün bulunamadi.");
         return;
     }
-
-//     elements.innerHTML = `
-//     <div data-id=${product2.id}>
-//     <div class="card product-item" id="">
-//        <div class="card-photo">
-//        <img src="${product2.info.img}" class="card-img-top" alt="...">
-//    <img src="${product2.info.hover}" class="card-img-top img" alt="...">
-
-//        </div>
-       
-//        <button>
-//                <i class="fa-solid fa-basket-shopping basket-icon"></i>
-//        </button>
-//                <span class="sale">Sale</span>
-//                <div class="card-body">
-//                <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-//                class="fa-regular fa-star fa-2xs"></i><i
-//                class="fa-regular fa-star fa-2xs"></i><i
-//                        class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
-//                </h5>
-//                <p class="card-text">Iphone</p>
-//                <div class="price">
-//                    <del>2000$</del>
-//                    <span>4000$</span>
-//                </div>
-//                </div>
-//    </div>
-// </div>
-//     `;
 
     good.innerHTML = `
     <div data-id="${product.id}" class="gallery ">
