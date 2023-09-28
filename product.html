@@ -17,100 +17,106 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body id="body">
-    <!-- header -->
-    <header>
+<body id="body" onload="myFunction()">
 
-        <div class="header_fluid">
-            <a href="index.html">
-                <div class="logo">
-                    <img src="img/Transmart.svg.png" alt="">
+    <!-- loader -->
+    <div class="loader"></div>
+    <div class="loader_box animate-bottom">
+
+        <!-- header -->
+        <header>
+
+            <div class="header_fluid">
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="img/Transmart.svg.png" alt="">
+                    </div>
+                </a>
+                <div class="search">
+                    <form class="form-inline my-2">
+                        <input class="form-control" type="search" placeholder="search in transmart.com">
+                        <button class="btn btn-outline-warning " type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+
+                    <ul class="search_ul">
+                        <li class="menu_link ">
+                            <!-- off-canvas-->
+                            <a class="btn btn-primary number" data-bs-toggle="offcanvas"
+                                data-bs-target="#WithBothOptions">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                <div class="num">1</div>
+                            </a>
+
+                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="WithBothOptions">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                        Backdrop with scrolling
+                                    </h5>
+                                    <button type="button" class="btn-close" aria-label="Close">
+                                    </button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <p>Try scrolling the rest of the page to see this option in action.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu_link"><a href="#">Log in</a></li>
+                    </ul>
                 </div>
-            </a>
-            <div class="search">
-                <form class="form-inline my-2">
-                    <input class="form-control" type="search" placeholder="search in transmart.com">
-                    <button class="btn btn-outline-warning " type="submit"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
 
-                <ul class="search_ul">
-                    <li class="menu_link ">
-                        <!-- off-canvas-->
-                        <a class="btn btn-primary number" data-bs-toggle="offcanvas" data-bs-target="#WithBothOptions">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                            <div class="num">1</div>
-                        </a>
 
-                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="WithBothOptions">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                                    Backdrop with scrolling
-                                </h5>
-                                <button type="button" class="btn-close" aria-label="Close">
-                                </button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <p>Try scrolling the rest of the page to see this option in action.</p>
-                            </div>
-                        </div>
+            </div>
+
+            <div class="main_menu">
+                <ul class="menu">
+                    <li class="menu_link dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <ul class="dropdown-menu menuBackcolor" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
                     </li>
-                    <li class="menu_link"><a href="#">Log in</a></li>
+                    <li class="menu_link"><a href="">Home apliances</a></li>
+                    <li class="menu_link"><a href="">Audi & video</a></li>
+                    <li class="menu_link"><a href="">Refrigrator </a></li>
+                    <li class="menu_link"><a href="">New arrivals</a></li>
+                    <li class="menu_link"><a href="">Today's deal</a></li>
+                    <li class="menu_link"><a href="">Gift cards</a></li>
+
                 </ul>
             </div>
 
+            <!-- slick nav -->
+            <div class="slick_nav">
+                <span class="slicknav_menu menu-responsive">
+                    <i class="fa-solid fa-bars bars ">
+                        <ul class="menu_links">
+                            <li id="1"><a href="#">Home</a></li>
+                            <li id="2"><a href="#">Shop</a></li>
+                            <li id="3"><a href="#">About</a></li>
+                            <li id="4"><a href="#">Latest</a></li>
+                            <li id="5"><a href="#">Blog</a></li>
+                            <li id="6"><a href="#">Pages</a></li>
+                            <li id="7"><a href="#">Contact</a></li>
+                        </ul>
+                    </i>
 
-        </div>
+                </span>
+            </div>
 
-        <div class="main_menu">
-            <ul class="menu">
-                <li class="menu_link dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown button
-                    </button>
-                    <ul class="dropdown-menu menuBackcolor" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="menu_link"><a href="">Home apliances</a></li>
-                <li class="menu_link"><a href="">Audi & video</a></li>
-                <li class="menu_link"><a href="">Refrigrator </a></li>
-                <li class="menu_link"><a href="">New arrivals</a></li>
-                <li class="menu_link"><a href="">Today's deal</a></li>
-                <li class="menu_link"><a href="">Gift cards</a></li>
-
-            </ul>
-        </div>
-
-        <!-- slick nav -->
-        <div class="slick_nav">
-            <span class="slicknav_menu menu-responsive">
-                <i class="fa-solid fa-bars bars ">
-                    <ul class="menu_links">
-                        <li id="1"><a href="#">Home</a></li>
-                        <li id="2"><a href="#">Shop</a></li>
-                        <li id="3"><a href="#">About</a></li>
-                        <li id="4"><a href="#">Latest</a></li>
-                        <li id="5"><a href="#">Blog</a></li>
-                        <li id="6"><a href="#">Pages</a></li>
-                        <li id="7"><a href="#">Contact</a></li>
-                    </ul>
-                </i>
-
-            </span>
-        </div>
-
-    </header>
+        </header>
 
 
-    <main>
-        <div class="all_product_gallery">
+        <main>
+            <div class="all_product_gallery">
 
-            <div class="gallery-wrap">
-                <!-- 
+                <div class="gallery-wrap">
+                    <!-- 
                 <div class="galery">
                     <div class="img-big-wrap img-thumbnail">
                         <a href="img/phone1.jpg" data-type="image" data-fslightbox="mygallery">
@@ -131,150 +137,150 @@
                     </div>
                 </div> -->
 
-            </div>
+                </div>
 
-            <div class="gall">
-                <div class="gallery_info">
-                    <!-- <span class="infoWay">Home/Smart Home / michrofone</span>
+                <div class="gall">
+                    <div class="gallery_info">
+                        <!-- <span class="infoWay">Home/Smart Home / michrofone</span>
                       <h2 class="productName">
                       Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room
                     </h2>
                     <p class="price">1234$</p> 
                     <span>Key feautures:</span> -->
-                    <div class="feautures">
-                        <ul class="feautures_ul">
+                        <div class="feautures">
+                            <ul class="feautures_ul">
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+        </main>
+
+
+        <!-- footer -->
+        <footer>
+            <div class="footerSides">
+
+                <div class="logo_side">
+                    <img src="img/Transmart.svg.png" alt="">
+                </div>
+
+                <div class="shop_side">
+                    <ul class="shopSideItems">
+                        <a href="">
+                            <li class="shopSideItem">
+                                Hot deals
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Categories
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Brands
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Rebates
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Weekly deals
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+
+                <div class="needs">
+                    <ul class="shopSideItems">
+                        <a href="">
+                            <li class="shopSideItem">
+                                Hot deals
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Categories
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Brands
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Rebates
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Weekly deals
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+
+                <div class="contact_side">
+                    <ul class="shopSideItems">
+                        <a href="">
+                            <li class="shopSideItem">
+                                Hot deals
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Categories
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Brands
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Rebates
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Weekly deals
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+
+
             </div>
 
-        </div>
-    </main>
+            <a href="#body" id="backtotop"><i class="fa-regular fa-circle-up"></i></a>
 
-
-    <!-- footer -->
-    <footer>
-        <div class="footerSides">
-
-            <div class="logo_side">
-                <img src="img/Transmart.svg.png" alt="">
+            <!-- down footer -->
+            <div class="downFooter">
+                <div class="copyWrite">
+                    © 2023. All rights reserved by Electronic Store.
+                </div>
+                <div class="footerIcons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-amazon-pay"></i>
+                </div>
             </div>
+        </footer>
 
-            <div class="shop_side">
-                <ul class="shopSideItems">
-                    <a href="">
-                        <li class="shopSideItem">
-                            Hot deals
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Categories
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Brands
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Rebates
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Weekly deals
-                        </li>
-                    </a>
-
-                </ul>
-            </div>
-
-            <div class="needs">
-                <ul class="shopSideItems">
-                    <a href="">
-                        <li class="shopSideItem">
-                            Hot deals
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Categories
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Brands
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Rebates
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Weekly deals
-                        </li>
-                    </a>
-
-                </ul>
-            </div>
-
-            <div class="contact_side">
-                <ul class="shopSideItems">
-                    <a href="">
-                        <li class="shopSideItem">
-                            Hot deals
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Categories
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Brands
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Rebates
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Weekly deals
-                        </li>
-                    </a>
-
-                </ul>
-            </div>
-
-
-        </div>
-
-        <a href="#body" id="backtotop"><i class="fa-regular fa-circle-up"></i></a>
-
-        <!-- down footer -->
-        <div class="downFooter">
-            <div class="copyWrite">
-                © 2023. All rights reserved by Electronic Store.
-            </div>
-            <div class="footerIcons">
-                <i class="fa-brands fa-cc-visa"></i>
-                <i class="fa-brands fa-cc-mastercard"></i>
-                <i class="fa-brands fa-cc-paypal"></i>
-                <i class="fa-brands fa-cc-amazon-pay"></i>
-            </div>
-        </div>
-    </footer>
-
-    <script src="fslightbox.js"></script>
-    <script src="product.js"></script>
+        <script src="fslightbox.js"></script>
+        <script src="product.js"></script>
 </body>
 
 </html>

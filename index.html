@@ -18,189 +18,195 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body id="body">
-    <!-- header -->
-    <header>
+<body id="body" onload="myFunction()">
 
-        <div class="header_fluid">
-            <a href="index.html">
-                <div class="logo">
-                    <img src="img/Transmart.svg.png" alt="">
+    <!-- loader -->
+    <div class="loader"></div>
+    <div class="loader_box animate-bottom">
+
+        <!-- header -->
+        <header>
+
+            <div class="header_fluid">
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="img/Transmart.svg.png" alt="">
+                    </div>
+                </a>
+                <div class="search">
+                    <form class="form-inline my-2">
+                        <input class="form-control" type="search" placeholder="search in transmart.com">
+                        <button class="btn btn-outline-warning " type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+
+                    <ul class="search_ul">
+                        <li class="menu_link ">
+                            <!-- off-canvas-->
+                            <a class="btn btn-primary number" data-bs-toggle="offcanvas"
+                                data-bs-target="#WithBothOptions">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                <div class="num">1</div>
+                            </a>
+
+                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="WithBothOptions">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                        Backdrop with scrolling
+                                    </h5>
+                                    <button type="button" class="btn-close" aria-label="Close">
+                                    </button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <p>Try scrolling the rest of the page to see this option in action.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu_link"><a href="#">Log in</a></li>
+                    </ul>
                 </div>
-            </a>
-            <div class="search">
-                <form class="form-inline my-2">
-                    <input class="form-control" type="search" placeholder="search in transmart.com">
-                    <button class="btn btn-outline-warning " type="submit"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
 
-                <ul class="search_ul">
-                    <li class="menu_link ">
-                        <!-- off-canvas-->
-                        <a class="btn btn-primary number" data-bs-toggle="offcanvas" data-bs-target="#WithBothOptions">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                            <div class="num">1</div>
-                        </a>
 
-                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="WithBothOptions">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                                    Backdrop with scrolling
-                                </h5>
-                                <button type="button" class="btn-close" aria-label="Close">
-                                </button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <p>Try scrolling the rest of the page to see this option in action.</p>
-                            </div>
-                        </div>
+            </div>
+
+            <div class="main_menu">
+                <ul class="menu">
+                    <li class="menu_link dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <ul class="dropdown-menu menuBackcolor" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
                     </li>
-                    <li class="menu_link"><a href="#">Log in</a></li>
+                    <li class="menu_link"><a href="">Home apliances</a></li>
+                    <li class="menu_link"><a href="">Audi & video</a></li>
+                    <li class="menu_link"><a href="">Refrigrator </a></li>
+                    <li class="menu_link"><a href="">New arrivals</a></li>
+                    <li class="menu_link"><a href="">Today's deal</a></li>
+                    <li class="menu_link"><a href="">Gift cards</a></li>
+
                 </ul>
             </div>
 
+            <!-- slick nav -->
+            <div class="slick_nav">
+                <span class="slicknav_menu menu-responsive">
+                    <i class="fa-solid fa-bars bars ">
+                        <ul class="menu_links">
+                            <li id="1"><a href="#">Home</a></li>
+                            <li id="2"><a href="#">Shop</a></li>
+                            <li id="3"><a href="#">About</a></li>
+                            <li id="4"><a href="#">Latest</a></li>
+                            <li id="5"><a href="#">Blog</a></li>
+                            <li id="6"><a href="#">Pages</a></li>
+                            <li id="7"><a href="#">Contact</a></li>
+                        </ul>
+                    </i>
 
-        </div>
+                </span>
+            </div>
 
-        <div class="main_menu">
-            <ul class="menu">
-                <li class="menu_link dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown button
-                    </button>
-                    <ul class="dropdown-menu menuBackcolor" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </header>
+
+        <main>
+            <div class="tv_background">
+                <img src="img/all-in-one-ecommerce-solution-featured-image.jpg" alt="">
+                <div class="entertainment_system">
+                    <img src="img/electronic-store-brand-logo-00.png" alt="">
+                    <h2>The best home entertainment system is here</h2>
+                    <p>Sit diam odio eget rhoncus volutpat est nibh velit posuere egestas.</p>
+                    <button class="btn btn-outline-primary">Shop</button>
+                </div>
+                <div class="services">
+                    <ul class="services_ul">
+                        <li class="service">
+                            <div class="service_items">
+                                <i class="fa-solid fa-truck"></i>
+                                <div class="textofService">
+                                    <h5>
+                                        Free shipping
+                                    </h5>
+                                    <p>
+                                        When you spend $80 or more
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </li>
+                        <li class="service">
+                            <div class="service_items">
+                                <i class="fa-solid fa-comment"></i>
+
+                                <div class="textofService">
+                                    <h5>
+                                        We are available 24/7
+                                    </h5>
+                                    <p>
+                                        Need help? contact us anytime
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        </li>
+                        <li class="service">
+                            <div class="service_items">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                <div class="textofService">
+                                    <h5>
+
+                                        Satisfied or return
+                                    </h5>
+                                    <p>
+                                        Easy 30-day return policy
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="service">
+                            <div class="service_items">
+                                <i class="fa-regular fa-credit-card"></i>
+                                <div class="textofService">
+                                    <h5>
+                                        100% secure payments
+                                    </h5>
+                                    <p>
+                                        Visa, Mastercard, Stripe, PayPal
+                                    </p>
+                                </div>
+                            </div>
+
+                        </li>
                     </ul>
-                </li>
-                <li class="menu_link"><a href="">Home apliances</a></li>
-                <li class="menu_link"><a href="">Audi & video</a></li>
-                <li class="menu_link"><a href="">Refrigrator </a></li>
-                <li class="menu_link"><a href="">New arrivals</a></li>
-                <li class="menu_link"><a href="">Today's deal</a></li>
-                <li class="menu_link"><a href="">Gift cards</a></li>
-
-            </ul>
-        </div>
-
-        <!-- slick nav -->
-        <div class="slick_nav">
-            <span class="slicknav_menu menu-responsive">
-                <i class="fa-solid fa-bars bars ">
-                    <ul class="menu_links">
-                        <li id="1"><a href="#">Home</a></li>
-                        <li id="2"><a href="#">Shop</a></li>
-                        <li id="3"><a href="#">About</a></li>
-                        <li id="4"><a href="#">Latest</a></li>
-                        <li id="5"><a href="#">Blog</a></li>
-                        <li id="6"><a href="#">Pages</a></li>
-                        <li id="7"><a href="#">Contact</a></li>
-                    </ul>
-                </i>
-
-            </span>
-        </div>
-
-    </header>
-
-    <main>
-        <div class="tv_background">
-            <img src="img/all-in-one-ecommerce-solution-featured-image.jpg" alt="">
-            <div class="entertainment_system">
-                <img src="img/electronic-store-brand-logo-00.png" alt="">
-                <h2>The best home entertainment system is here</h2>
-                <p>Sit diam odio eget rhoncus volutpat est nibh velit posuere egestas.</p>
-                <button class="btn btn-outline-primary">Shop</button>
-            </div>
-            <div class="services">
-                <ul class="services_ul">
-                    <li class="service">
-                        <div class="service_items">
-                            <i class="fa-solid fa-truck"></i>
-                            <div class="textofService">
-                                <h5>
-                                    Free shipping
-                                </h5>
-                                <p>
-                                    When you spend $80 or more
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </li>
-                    <li class="service">
-                        <div class="service_items">
-                            <i class="fa-solid fa-comment"></i>
-
-                            <div class="textofService">
-                                <h5>
-                                    We are available 24/7
-                                </h5>
-                                <p>
-                                    Need help? contact us anytime
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    </li>
-                    <li class="service">
-                        <div class="service_items">
-                            <i class="fa-solid fa-rotate-right"></i>
-                            <div class="textofService">
-                                <h5>
-
-                                    Satisfied or return
-                                </h5>
-                                <p>
-                                    Easy 30-day return policy
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="service">
-                        <div class="service_items">
-                            <i class="fa-regular fa-credit-card"></i>
-                            <div class="textofService">
-                                <h5>
-                                    100% secure payments
-                                </h5>
-                                <p>
-                                    Visa, Mastercard, Stripe, PayPal
-                                </p>
-                            </div>
-                        </div>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container containerBorder">
-            <div class="productsBox" id="productsBox">
-                <!-- from js -->
+                </div>
             </div>
 
+            <div class="container containerBorder">
+                <div class="productsBox" id="productsBox">
+                    <!-- from js -->
+                </div>
 
-        </div>
 
-        <div class="containerSaleAndCase">
-            <div class="saleAndCase">
-                <img src="img/electronic-store-promotional-banner-2.jpg" alt="">
-                <img src="img/electronic-store-promotional-banner-1.jpg" alt="">
             </div>
-        </div>
 
-        <div class="bestDeal">
-            <div class="container  containerBorder">
+            <div class="containerSaleAndCase">
+                <div class="saleAndCase">
+                    <img src="img/electronic-store-promotional-banner-2.jpg" alt="">
+                    <img src="img/electronic-store-promotional-banner-1.jpg" alt="">
+                </div>
+            </div>
 
-                <div class="cards mt-3">
-                    <!-- <a href="product.html">
+            <div class="bestDeal">
+                <div class="container  containerBorder">
+
+                    <div class="cards mt-3">
+                        <!-- <a href="product.html">
                             <div class="card">
                                 <img src="img/beardcleaner.jpg" class="card-img-top" alt="...">
                                 <img src="img/bill_image.jpg" class="card-img-top img" alt="...">
@@ -222,265 +228,271 @@
                                 </div>
                             </div>
                      </a> -->
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="topBrands">
+                <h4>Top Brands</h4>
+                <div class="brands">
+                    <ul class="brandList">
+                        <li class="brand-item"><img src="img/brand_item.jpg" alt=""></li>
+                        <li class="brand-item"><img src="img/brand-logo0.jpg" alt=""></li>
+                        <li class="brand-item"><img src="img/brand-logo3.jpg" alt=""></li>
+                        <li class="brand-item"><img src="img/brand-logo4.jpg" alt=""></li>
+                        <li class="brand-item"><img src="img/brand-logo5.jpg" alt=""></li>
+                        <li class="brand-item"><img src="img/brand-logo6_1.jpg  " alt=""></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="topBrands">
+                <h4>What everyone is saying?</h4>
+                <div class="">
+                    <div class="users">
+                        <div class="user">
+                            <span>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                            </span>
+                            <div class="user_comment">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad
+                                    veniam
+                                    velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
+                            </div>
+                            <div class="userInfo">
+                                <img src="img/penelopcruz.jpeg  " alt="">
+                                <h5> Penelope Cruz</h5>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <span>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                            </span>
+                            <div class="user_comment">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad
+                                    veniam
+                                    velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
+                            </div>
+                            <div class="userInfo">
+                                <img src="img/chrisevans.jpeg" alt="">
+                                <h5>Chris Evans</h5>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <span>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                            </span>
+                            <div class="user_comment">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad
+                                    veniam
+                                    velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
+                            </div>
+                            <div class="userInfo">
+                                <img src="img/anadearmas1.jpg" alt="">
+                                <h5> Ana de Armas</h5>
+                            </div>
+                        </div>
+
+                        <div class="user">
+                            <span>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                            </span>
+                            <div class="user_comment">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad
+                                    veniam
+                                    velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
+                            </div>
+                            <div class="userInfo">
+                                <img src="img/scarletjohannson.jpeg" alt="">
+                                <h5>Scarlet Johannson</h5>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <span>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                            </span>
+                            <div class="user_comment">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad
+                                    veniam
+                                    velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
+                            </div>
+                            <div class="userInfo">
+                                <img src="img/willsmith.jpg" alt="">
+                                <h5>Will Smith</h5>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <span>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                                <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
+                            </span>
+                            <div class="user_comment">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad
+                                    veniam
+                                    velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
+                            </div>
+                            <div class="userInfo">
+                                <img src="img/elizabtholsen.jpeg" alt="">
+                                <h5>Elizabeth Olsen</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- footer -->
+        <footer>
+
+            <div class="footerSides">
+
+                <div class="logo_side">
+                    <img src="img/Transmart.svg.png" alt="">
+                </div>
+
+                <div class="shop_side">
+                    <ul class="shopSideItems">
+                        <a href="">
+                            <li class="shopSideItem">
+                                Hot deals
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Categories
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Brands
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Rebates
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Weekly deals
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+
+                <div class="needs">
+                    <ul class="shopSideItems">
+                        <a href="">
+                            <li class="shopSideItem">
+                                Hot deals
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Categories
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Brands
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Rebates
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Weekly deals
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+
+                <div class="contact_side">
+                    <ul class="shopSideItems">
+                        <a href="">
+                            <li class="shopSideItem">
+                                Hot deals
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Categories
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Brands
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Rebates
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="shopSideItem">
+                                Weekly deals
+                            </li>
+                        </a>
+
+                    </ul>
                 </div>
 
 
             </div>
 
-        </div>
+            <a href="#body" id="backtotop"><i class="fa-regular fa-circle-up"></i></a>
 
-        <div class="topBrands">
-            <h4>Top Brands</h4>
-            <div class="brands">
-                <ul class="brandList">
-                    <li class="brand-item"><img src="img/brand_item.jpg" alt=""></li>
-                    <li class="brand-item"><img src="img/brand-logo0.jpg" alt=""></li>
-                    <li class="brand-item"><img src="img/brand-logo3.jpg" alt=""></li>
-                    <li class="brand-item"><img src="img/brand-logo4.jpg" alt=""></li>
-                    <li class="brand-item"><img src="img/brand-logo5.jpg" alt=""></li>
-                    <li class="brand-item"><img src="img/brand-logo6_1.jpg  " alt=""></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="topBrands">
-            <h4>What everyone is saying?</h4>
-            <div class="">
-                <div class="users">
-                    <div class="user">
-                        <span>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                        </span>
-                        <div class="user_comment">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad veniam
-                                velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
-                        </div>
-                        <div class="userInfo">
-                            <img src="img/penelopcruz.jpeg  " alt="">
-                            <h5> Penelope Cruz</h5>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <span>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                        </span>
-                        <div class="user_comment">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad veniam
-                                velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
-                        </div>
-                        <div class="userInfo">
-                            <img src="img/chrisevans.jpeg" alt="">
-                            <h5>Chris Evans</h5>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <span>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                        </span>
-                        <div class="user_comment">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad veniam
-                                velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
-                        </div>
-                        <div class="userInfo">
-                            <img src="img/anadearmas1.jpg" alt="">
-                            <h5> Ana de Armas</h5>
-                        </div>
-                    </div>
-
-                    <div class="user">
-                        <span>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                        </span>
-                        <div class="user_comment">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad veniam
-                                velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
-                        </div>
-                        <div class="userInfo">
-                            <img src="img/scarletjohannson.jpeg" alt="">
-                            <h5>Scarlet Johannson</h5>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <span>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                        </span>
-                        <div class="user_comment">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad veniam
-                                velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
-                        </div>
-                        <div class="userInfo">
-                            <img src="img/willsmith.jpg" alt="">
-                            <h5>Will Smith</h5>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <span>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                            <i class="fa-solid fa-star fa-2xs" style="color: #ff7b00;"></i>
-                        </span>
-                        <div class="user_comment">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto facilis, esse ad veniam
-                                velit perspiciatis sunt adipisci praesentium accusantium maiores.</p>
-                        </div>
-                        <div class="userInfo">
-                            <img src="img/elizabtholsen.jpeg" alt="">
-                            <h5>Elizabeth Olsen</h5>
-                        </div>
-                    </div>
+            <!-- down footer -->
+            <div class="downFooter">
+                <div class="copyWrite">
+                    © 2023. All rights reserved by Electronic Store.
+                </div>
+                <div class="footerIcons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-amazon-pay"></i>
                 </div>
             </div>
-        </div>
-        
-    </main>
+        </footer>
 
-    <!-- footer -->
-    <footer>
-
-        <div class="footerSides">
-
-            <div class="logo_side">
-                <img src="img/Transmart.svg.png" alt="">
-            </div>
-
-            <div class="shop_side">
-                <ul class="shopSideItems">
-                    <a href="">
-                        <li class="shopSideItem">
-                            Hot deals
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Categories
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Brands
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Rebates
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Weekly deals
-                        </li>
-                    </a>
-
-                </ul>
-            </div>
-
-            <div class="needs">
-                <ul class="shopSideItems">
-                    <a href="">
-                        <li class="shopSideItem">
-                            Hot deals
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Categories
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Brands
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Rebates
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Weekly deals
-                        </li>
-                    </a>
-
-                </ul>
-            </div>
-
-            <div class="contact_side">
-                <ul class="shopSideItems">
-                    <a href="">
-                        <li class="shopSideItem">
-                            Hot deals
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Categories
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Brands
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Rebates
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="shopSideItem">
-                            Weekly deals
-                        </li>
-                    </a>
-
-                </ul>
-            </div>
-
-
-        </div>
-
-        <a href="#body" id="backtotop"><i class="fa-regular fa-circle-up"></i></a>
-
-        <!-- down footer -->
-        <div class="downFooter">
-            <div class="copyWrite">
-                © 2023. All rights reserved by Electronic Store.
-            </div>
-            <div class="footerIcons">
-                <i class="fa-brands fa-cc-visa"></i>
-                <i class="fa-brands fa-cc-mastercard"></i>
-                <i class="fa-brands fa-cc-paypal"></i>
-                <i class="fa-brands fa-cc-amazon-pay"></i>
-            </div>
-        </div>
-    </footer>
-
-    <script src="myproducts.js"></script>
-    <script src="script.js"></script>
-    <script src="product.js"></script>
-    <script src="fslightbox.js"></script>
+        <script src="myproducts.js"></script>
+        <script src="script.js"></script>
+        <script src="product.js"></script>
+        <script src="fslightbox.js"></script>
 </body>
 
 </html>

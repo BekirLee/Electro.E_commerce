@@ -77,8 +77,8 @@ header {
 
 /* main */
 
-main {
-    margin: 124px 0px 0px 0px !important;
+.main {
+    margin: 200px 0px 0px 0px !important;
 }
 
 .main .products_info {
@@ -357,7 +357,7 @@ main {
 }
 
 .card .card-photo img {
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
 }
 
@@ -705,7 +705,7 @@ main {
 
 .loader_box {
     display: none;
-    margin-top: 230px;
+    margin-top: 124px;
 }
 
 .animate-bottom {

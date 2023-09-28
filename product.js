@@ -310,16 +310,44 @@ function scrollEvent() {
 
 function infoProductSide() {
     let elements = document.querySelector(".products_info .container");
+    let products_info = document.querySelector(".products_info.col-9");
 
-    for (product of info_side_products) {
+    const ItemId = new URLSearchParams(window.location.search).get('id');
 
-        let element = `  
+
+    if (!ItemId) {
+        console.error("Ürün ID'si bulunamadi.");
+        return;
+    }
+
+    const Item = info_side_products.find(p => p.id === parseInt(ItemId));
+
+    if (!Item) {
+        console.error("Ürün bulunamadi.");
+        return;
+    }
+
+    // products_info.innerHTML = `
+    // <h2>${product.category}</h2>
+    // `;
+
+
+    // products_info.innerHTML = `
+    // <h2></h2>
+
+    // `;
+
+
+    // for (let product of info_side_products) {
+
+    // let element =
+    elements.innerHTML= `  
      
-         <a href="">
-            <div class="card product-item" id="${product.id}">
+        <div data-id=${Item.id}>
+             <div class="card product-item" id="">
                 <div class="card-photo">
-                <img src="${product.info.img}" class="card-img-top" alt="...">
-            <img src="${product.info.hover}" class="card-img-top img" alt="...">
+                <img src="${Item.info.img}" class="card-img-top" alt="...">
+            <img src="${Item.info.hover}" class="card-img-top img" alt="...">
 
                 </div>
                 
@@ -339,11 +367,11 @@ function infoProductSide() {
                             <span>4000$</span>
                         </div>
                         </div>
-                    </div>
-            </a>
-            `;
-        elements.insertAdjacentHTML("beforeend", element);
-    }
+            </div>
+        </div>
+                    `;
+    // elements.insertAdjacentHTML("beforeend", element);
+    // }
 }
 
 
