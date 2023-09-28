@@ -66,13 +66,13 @@ var mainProducts = [
 ]
 
 
-let productsSurfaceInfo = [
+var productsSurfaceInfo = [
     {
         id: 1,
         id1: 1,
         info: {
-            price: 49,
-            discount: 44,
+            price: 49.00,
+            discount: 44.00,
             img: "img/beardcleaner.jpg",
             hover: "img/beardsheaver.jpeg",
         },
@@ -84,8 +84,8 @@ let productsSurfaceInfo = [
         id: 2,
         id1: 2,
         info: {
-            price: 249,
-            discount: 219,
+            price: 249.00,
+            discount: 219.00,
             img: "img/amazon_product.jpg",
             hover: "img/background_amazon_product.jpg",
         },
@@ -97,8 +97,8 @@ let productsSurfaceInfo = [
         id: 3,
         id1: 3,
         info: {
-            price: "$229.00",
-            discount: "$209.00",
+            price: 229.00,
+            discount: 209.00,
             img: "img/amazon_product2.jpg",
             hover: "img/background_amazon_product.jpg",
         },
@@ -110,8 +110,8 @@ let productsSurfaceInfo = [
         id: 4,
         id1: 4,
         info: {
-            price: "$1,499.00",
-            discount: "$1,399.00",
+            price: 1499.00,
+            discount: 1399.00,
             img: "img/computer.jpg",
             hover: "img/background_computer.jpg",
         },
@@ -124,8 +124,8 @@ let productsSurfaceInfo = [
         id: 5,
         id1: 5,
         info: {
-            price: '$1029.00',
-            discount: "$999.00",
+            price: 1029.00,
+            discount: 999.00,
             img: "img/computer2.jpg",
             hover: "img/background_computer.jpg",
         },
@@ -137,8 +137,8 @@ let productsSurfaceInfo = [
         id: 6,
         id1: 6,
         info: {
-            price: "$699.00",
-            discount: "$659.00",
+            price: 699.00,
+            discount: 659.00,
             img: "img/tablet.jpg",
             hover: "img/phone_image.jpg",
         },
@@ -150,8 +150,8 @@ let productsSurfaceInfo = [
         id: 7,
         id1: 7,
         info: {
-            price: "$1,299.00",
-            discount: "$1,199.00",
+            price: 1299.00,
+            discount: 1199.00,
             img: "img/phone1.jpg",
             hover: "img/phonebackground_img.jpg",
         },
@@ -163,8 +163,8 @@ let productsSurfaceInfo = [
         id: 8,
         id1: 8,
         info: {
-            price: "$1,099.00",
-            discount: "$999.00",
+            price: 1099.00,
+            discount: 999.00,
             img: "img/phone2.jpg",
             hover: "img/phonebackground_img.jpg",
         },
@@ -230,8 +230,8 @@ function productInfo() {
                 </h5>
                 <p class="card-text">${element.firstname}</p>
                 <div class="price">
-                    <del>${element.info.price}</del>
-                    <span>${element.info.discount}</span>
+                    <del>${element.info.price}$</del>
+                    <span>${element.info.discount}$</span>
                 </div>
             </div>
         </div>

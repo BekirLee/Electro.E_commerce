@@ -212,7 +212,6 @@ let info_side_products = [
 
 ]
 
-
 document.addEventListener("DOMContentLoaded", function () {
     info();
 });
@@ -233,9 +232,14 @@ function info() {
         return;
     }
 
+
     const product = items.find(p => p.id === parseInt(productId));
     const product2 = info_side_products.find(p => p.id === parseInt(productid));
 
+    if (!product || !product2) {
+        console.error("Ürünlerden biri ya da ikisi bulunamadi.");
+        return;
+    }
 
     if (!product) {
         console.error("Ürün bulunamadi.");
