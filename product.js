@@ -223,12 +223,10 @@ function info() {
     let feautures = document.querySelector(".feautures_ul");
     const productId = new URLSearchParams(window.location.search).get('id');
 
-
     if (!productId) {
         console.error("Ürün ID'si bulunamadi.");
         return;
     }
-
 
     const product = items.find(p => p.id === parseInt(productId));
 
@@ -237,6 +235,7 @@ function info() {
         return;
     }
 
+   
     good.innerHTML = `
     <div data-id="${product.id}" class="gallery ">
         <div class="img-big-wrap img-thumbnail">

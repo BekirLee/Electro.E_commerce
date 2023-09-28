@@ -7,7 +7,6 @@ products.forEach(product => {
     product.addEventListener('click', (e) => {
         let basketIcon = product.querySelector('.basket-icon');
         basketIcon.addEventListener('click', (e) => {
-            e.stopPropagation();  // Eğer üst elementlere event yayılmasını istemiyorsak bu satıra ihtiyacımız var.
             var id = parseInt(product.id);
             var currentProduct = productsSurfaceInfo.find(x => x.id == id);
             console.log(id);
@@ -29,11 +28,16 @@ products.forEach(product => {
 
 function createFavsHtml(productsSurfaceInfo) {
     let offcanvas = document.querySelector('.offcanvas-body');
+    var numberOfFavProduct = favs.length;
+    let fav_product = 0;
+    let icon_number = document.querySelector(".menu_link .number");
     offcanvas.innerHTML = '';
     let total = 0;
     let discount = 0;
     // Tüm ürünler yerine sadece belirli bir ürünü ekleyeceğiz.
     // let element = mainProducts;
+
+
 
     for (let element of productsSurfaceInfo) {
         total += element.info.price;
@@ -59,6 +63,11 @@ function createFavsHtml(productsSurfaceInfo) {
      </a>`;
         offcanvas.insertAdjacentHTML("beforeend", info);
     }
+
+    icon_number.innerHTML = `
+    <i class="fa-solid fa-basket-shopping"></i>
+    <div class="num">${numberOfFavProduct}</div>
+    `;
 
     let totalPriceInfo = `<div class="basket_price"><p>Price without discount: ${total}$</p></div>`;
     let discountPriceINfo = `<div class="basket_price"><p>Price with discount : ${discount}$</p></div>`;
