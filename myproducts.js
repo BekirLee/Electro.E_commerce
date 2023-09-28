@@ -71,8 +71,8 @@ let productsSurfaceInfo = [
         id: 1,
         id1: 1,
         info: {
-            price: "$49.00",
-            discount: "$44.00",
+            price: 49,
+            discount: 44,
             img: "img/beardcleaner.jpg",
             hover: "img/beardsheaver.jpeg",
         },
@@ -84,8 +84,8 @@ let productsSurfaceInfo = [
         id: 2,
         id1: 2,
         info: {
-            price: "$249.00",
-            discount: "$219.00",
+            price: 249,
+            discount: 219,
             img: "img/amazon_product.jpg",
             hover: "img/background_amazon_product.jpg",
         },

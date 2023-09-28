@@ -443,7 +443,7 @@ header {
 .card .card-img-top,
 .card .img {
     transition: opacity 0.5s ease;
-        height: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -730,4 +730,13 @@ header {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* offcanvas */
+.offcanvas-body .product-item {
+    border: none;
+}
+
+.basket_price {
+    color: #000;
 }
