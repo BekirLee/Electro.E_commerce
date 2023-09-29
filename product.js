@@ -169,49 +169,6 @@ let items = [
     },
 ]
 
-// let info_side_products = [
-//     {
-//         id: 1,
-//         id1: 1,
-//         info: {
-//             price: "$49.00",
-//             discount: "$44.00",
-//             img: "../img/refrigerator_image2.jpeg",
-//             hover: "../img/refrigerator_image4.jpeg",
-//         },
-//         category: "TV",
-//         firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
-//         href: "pages/products.html"
-//     },
-//     {
-//         id: 2,
-//         id1: 2,
-//         info: {
-//             price: "$49.00",
-//             discount: "$44.00",
-//             img: "../img/refrigerator_image3.jpeg",
-//             hover: "../img/refrigerator_image5.jpeg",
-//         },
-//         category: "Kitchen",
-//         firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
-//         href: "pages/products.html"
-//     },
-//     {
-//         id: 3,
-//         id1: 3,
-//         info: {
-//             price: "$49.00",
-//             discount: "$44.00",
-//             img: "../img/camera_image4.jpeg",
-//             hover: "../img/camera_image.jpeg",
-//         },
-//         category: "TV",
-//         firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
-//         href: "pages/products.html"
-//     },
-
-// ]
-
 document.addEventListener("DOMContentLoaded", function () {
 });
 info();
