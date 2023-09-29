@@ -18,7 +18,7 @@ products.forEach(product => {
                 console.log(favs);
                 createFavsHtml(currentProduct);
             } else {
-                console.warn("Bu ürün zaten favs dizisinde!");
+                console.warn("There is product like that in favs!");
             }
         })
 
@@ -29,8 +29,7 @@ products.forEach(product => {
 function createFavsHtml(productsSurfaceInfo) {
     let offcanvas = document.querySelector('.offcanvas-body');
     var numberOfFavProduct = favs.length;
-    let fav_product = 0;
-    let icon_number = document.querySelector(".menu_link .number");
+    let icon_number = document.querySelector(".menu_link .number .fa-basket-shopping");
     offcanvas.innerHTML = '';
     let total = 0;
     let discount = 0;
@@ -60,12 +59,11 @@ function createFavsHtml(productsSurfaceInfo) {
             </div>
             <div class="basket_price">
             </div>
-     </a>`;
+     </a>`; 
         offcanvas.insertAdjacentHTML("beforeend", info);
     }
 
     icon_number.innerHTML = `
-    <i class="fa-solid fa-basket-shopping"></i>
     <div class="num">${numberOfFavProduct}</div>
     `;
 
