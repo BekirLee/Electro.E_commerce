@@ -474,11 +474,11 @@ header {
     height: 300px !important;
 }
 
-.card:hover .card-img-top {
+.card-photo:hover .card-img-top {
     opacity: 0;
 }
 
-.card:hover .img {
+.card-photo:hover .img {
     opacity: 1;
 }
 
@@ -486,7 +486,7 @@ header {
     opacity: 1 !important;
 }
 
-.product-item:hover .card-img-top {
+.card-photo:hover .card-img-top {
     opacity: 1 !important;
 }
 
