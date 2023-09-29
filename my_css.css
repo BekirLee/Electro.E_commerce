@@ -53,12 +53,13 @@ header {
 .search ul {
     display: flex;
     text-align: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
 .search ul li {
-    margin: 8px 8px 0px 8px;
+    margin: 0px 8px 0px 8px;
     list-style: none;
 }
 
@@ -155,6 +156,15 @@ header {
     width: 170px;
 }
 
+.menu_link {
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in;
+}
+
+.menu_link:hover {
+    background-color: rgba(255, 166, 0, 0.772);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+}
 
 .active {
     display: block;
