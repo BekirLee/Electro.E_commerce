@@ -25,7 +25,6 @@ const categories = [
 var productsSurfaceInfo = [
     {
         id: 1,
-        id1: 1,
         info: {
             price: 49.00,
             discount: 44.00,
@@ -38,7 +37,6 @@ var productsSurfaceInfo = [
     },
     {
         id: 2,
-        id1: 2,
         info: {
             price: 249.00,
             discount: 219.00,
@@ -51,7 +49,6 @@ var productsSurfaceInfo = [
     },
     {
         id: 3,
-        id1: 3,
         info: {
             price: 229.00,
             discount: 209.00,
@@ -64,7 +61,6 @@ var productsSurfaceInfo = [
     },
     {
         id: 4,
-        id1: 4,
         info: {
             price: 1499.00,
             discount: 1399.00,
@@ -78,7 +74,6 @@ var productsSurfaceInfo = [
     },
     {
         id: 5,
-        id1: 5,
         info: {
             price: 1029.00,
             discount: 999.00,
@@ -91,7 +86,6 @@ var productsSurfaceInfo = [
     },
     {
         id: 6,
-        id1: 6,
         info: {
             price: 699.00,
             discount: 659.00,
@@ -104,7 +98,6 @@ var productsSurfaceInfo = [
     },
     {
         id: 7,
-        id1: 7,
         info: {
             price: 1299.00,
             discount: 1199.00,
@@ -117,7 +110,6 @@ var productsSurfaceInfo = [
     },
     {
         id: 8,
-        id1: 8,
         info: {
             price: 1099.00,
             discount: 999.00,
@@ -183,7 +175,7 @@ function productInfo() {
                         class="fa-regular fa-star fa-2xs"></i><i
                         class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
                 </h5>
-                <a href="product.html?id=${element.id1}">
+                <a href="product.html?id=${element.id}">
                 <p class="card-text">${element.firstname}</p>
                 <div class="price">
                     <del>${element.info.price}$</del>

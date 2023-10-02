@@ -11,6 +11,7 @@ const categories = [
         name: 'TV', mainPhoto: "",
     }
 ]
+
 let products = [
     {
         id: 1,
