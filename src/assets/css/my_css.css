@@ -721,7 +721,7 @@ header {
 
 /* loader */
 
-.loader {
+/* .loader {
     display: block;
     position: absolute;
     top: 43%;
@@ -732,12 +732,12 @@ header {
     width: 100px;
     height: 100px;
     animation: spin 2s linear infinite;
-}
-
+} */
+/* 
 .loader_box {
     display: none;
     margin-top: 124px;
-}
+} */
 
 .animate-bottom {
     position: relative;
