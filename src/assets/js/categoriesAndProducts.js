@@ -31,11 +31,11 @@ var productsSurfaceInfo = [
             price: 49.00,
             discount: 44.00,
             img: "./src/assets/img/beardcleaner.jpg",
-            hover: "./src/assets/beardsheaver.jpeg",
+            hover: "./src/assets/img/beardsheaver.jpeg",
         },
         category: "Kitchen",
         firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
-        href: "pages/products.html"
+        href: "../src/assets/pages/products.html"
     },
     {
         id: 2,
@@ -43,11 +43,12 @@ var productsSurfaceInfo = [
             price: 249.00,
             discount: 219.00,
             img: "./src/assets/img/amazon_product.jpg",
-            hover: "./src/assets/background_amazon_product.jpg",
+            hover: "./src/assets/img/background_amazon_product.jpg",
         },
         category: "Kitchen",
         firstname: "  Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room",
-        href: "pages/products.html"
+        href: "../src/assets/pages/products.html"
+
     },
     {
         id: 3,
@@ -55,11 +56,12 @@ var productsSurfaceInfo = [
             price: 229.00,
             discount: 209.00,
             img: "./src/assets/img/amazon_product2.jpg",
-            hover: "./src/assets/background_amazon_product.jpg",
+            hover: "./src/assets/img/background_amazon_product.jpg",
         },
         category: "Kitchen",
         firstname: "  Home Speaker 500: Smart Bluetooth Speaker with Alexa Voice Control Built-In, White",
-        href: "pages/products.html"
+        href: "../src/assets/pages/products.html"
+
     },
     {
         id: 4,
@@ -67,12 +69,13 @@ var productsSurfaceInfo = [
             price: 1499.00,
             discount: 1399.00,
             img: "./src/assets/img/computer.jpg",
-            hover: "./src/assets/background_computer.jpg",
+            hover: "./src/assets/img/background_computer.jpg",
         },
         category: "Laptop",
         firstname: " 13 Ultrabook Gaming Laptop: Intel Core i7-1165G7 4 Core, NVIDIA GeForce GTX 1650 Ti Max-Q, 13.3″ 1080p 120Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB, Thunderbolt 4",
         img: "./src/assets/img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        href: "../src/assets/pages/products.html"
+
     },
     {
         id: 5,
@@ -80,11 +83,12 @@ var productsSurfaceInfo = [
             price: 1029.00,
             discount: 999.00,
             img: "./src/assets/img/computer2.jpg",
-            hover: "./src/assets/background_computer.jpg",
+            hover: "./src/assets/img/background_computer.jpg",
         },
         category: "Laptop",
         firstname: "15.6″ FHD Display Laptop – Intel i7 – Intel HD Graphics 6000 , Webcam, WiFi, Bluetooth, HDMI, Windows 11,Grey",
-        href: "pages/products.html"
+        href: "../src/assets/pages/products.html"
+
     },
     {
         id: 6,
@@ -92,11 +96,12 @@ var productsSurfaceInfo = [
             price: 699.00,
             discount: 659.00,
             img: "./src/assets/img/tablet.jpg",
-            hover: "./src/assets/phone_image.jpg",
+            hover: "./src/assets/img/phone_image.jpg",
         },
         category: "Laptop",
         firstname: "Note 10 Pro 128GB 6GB RAM Factory Unlocked (GSM ONLY) International Model",
-        href: "pages/products.html"
+        href: "../src/assets/pages/products.html"
+
     },
     {
         id: 7,
@@ -104,11 +109,12 @@ var productsSurfaceInfo = [
             price: 1299.00,
             discount: 1199.00,
             img: "./src/assets/img/phone1.jpg",
-            hover: "./src/assets/phonebackground_img.jpg",
+            hover: "./src/assets/img/phonebackground_img.jpg",
         },
         category: "phone",
         firstname: "5G Unlocked Smartphone,12GB RAM+256GB Storage120Hz Fluid Display Hasselblad Quad Camera 65W Ultra Fast Charge 50W Wireless Charge",
-        href: "pages/products.html"
+        href: "../src/assets/pages/products.html"
+
     },
     {
         id: 8,
@@ -116,11 +122,12 @@ var productsSurfaceInfo = [
             price: 1099.00,
             discount: 999.00,
             img: "./src/assets/img/phone2.jpg",
-            hover: "./src/assets/phonebackground_img.jpg",
+            hover: "./src/assets/img/phonebackground_img.jpg",
         },
         category: "phone",
         firstname: "5G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
-        href: "pages/products.html"
+        href: "../src/assets/pages/products.html"
+
     },
 ]
 
@@ -165,10 +172,10 @@ function productInfo() {
         let info = `
         
         <div class="card product-item" id="${element.id}">
-        <div class="card-photo">
-            <img src="${element.info.img}" class="card-img-top" alt="...">
-            <img src="${element.info.hover}" class="card-img-top img" alt="...">
-        </div>    
+            <div class="card-photo">
+                <img src="${element.info.img}" class="card-img-top" alt="...">
+                <img src="${element.info.hover}" class="card-img-top img" alt="...">
+            </div>    
                 <i class="fa-solid fa-basket-shopping basket-icon"></i>
             <span class="sale">Sale</span>
             <div class="card-body">
@@ -178,11 +185,11 @@ function productInfo() {
                         class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
                 </h5>
                 <a href="product.html?id=${element.id}">
-                <p class="card-text">${element.firstname}</p>
-                <div class="price">
-                    <del>${element.info.price}$</del>
-                    <span>${element.info.discount}$</span>
-                </div>
+                    <p class="card-text">${element.firstname}</p>
+                    <div class="price">
+                        <del>${element.info.price}$</del>
+                        <span>${element.info.discount}$</span>
+                    </div>
                 </a>
             </div>
         </div>
