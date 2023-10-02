@@ -694,6 +694,10 @@ header {
     transition: opacity .9s ease-in;
 }
 
+.heart_full {
+    color: orange;
+}
+
 .fa-star {
     color: orange;
 }

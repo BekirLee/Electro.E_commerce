@@ -1,44 +1,37 @@
-let favs = [];
 
 
 var products = document.querySelectorAll('.product-item');
 
+let favs = [];
+
 products.forEach(product => {
-    product.addEventListener('click', (e) => {
-        let basketIcon = product.querySelector('.basket-icon');
-        basketIcon.addEventListener('click', (e) => {
-            var id = parseInt(product.id);
-            var currentProduct = productsSurfaceInfo.find(x => x.id == id);
-            console.log(id);
+    let basketIcon = product.querySelector('.basket-icon');
+    basketIcon.addEventListener('click', (e) => {
+        var id = parseInt(product.id);
+        var currentProduct = productsSurfaceInfo.find(x => x.id == id);
+
+        if (!favs.some(item => item.id == currentProduct.id)) {
             favs.push(currentProduct);
-            createFavsHtml(favs);
-
-            if (!favs.some(item => item.id == currentProduct.id)) {
-                favs.push(currentProduct);
-                console.log(favs);
-                createFavsHtml(currentProduct);
-            } else {
-                console.warn("There is product like that in favs!");
-            }
-        })
-
+            addProductToFavs();
+        } else {
+            alert("There is product like that in favs!");
+        }
     })
+
 })
 
 
-function createFavsHtml(productsSurfaceInfo) {
+function addProductToFavs() {
     let offcanvas = document.querySelector('.offcanvas-body');
     var numberOfFavProduct = favs.length;
     let icon_number = document.querySelector(".menu_link .number .fa-basket-shopping");
     offcanvas.innerHTML = '';
     let total = 0;
     let discount = 0;
-    // Tüm ürünler yerine sadece belirli bir ürünü ekleyeceğiz.
-    // let element = mainProducts;
 
+  
 
-
-    for (let element of productsSurfaceInfo) {
+    for (let element of favs) {
         total += element.info.price;
         discount += element.info.discount;
         let info = ` 
@@ -59,7 +52,7 @@ function createFavsHtml(productsSurfaceInfo) {
             </div>
             <div class="basket_price">
             </div>
-     </a>`; 
+     </a>`;
         offcanvas.insertAdjacentHTML("beforeend", info);
     }
 
@@ -75,12 +68,7 @@ function createFavsHtml(productsSurfaceInfo) {
     console.log(favs)
 }
 
-// ...
-// favs.push(currentProduct);
-// console.log(favs);
-// createFavsHtml(currentProduct);
-
-
+// 
 document.querySelector(".slicknav_menu").addEventListener("click", function () {
     var menulinks = document.querySelector(".menu_links")
     menulinks.classList.toggle("active");

@@ -1,28 +1,40 @@
-let items = [
+
+
+const categories = [
+    {
+        id: 14,
+        mainPhoto: "",
+        name: 'Phone'
+    },
+    {
+        id: 345,
+        name: 'TV', mainPhoto: "",
+    }
+]
+let products = [
     {
         id: 1,
-        id1: 1,
-        info: {
-            price: "$49.00",
-            discount: "$44.00",
-            brand: "Mitsubishi",
-            category: "Home",
-            img: "img/beardcleaner.jpg",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "12 years warranty",
-            status: "Newest technology",
-            hover: "img/beardsheaver.jpeg",
-            infoImg1: "img/amazon_product.jpg",
-            infoImg2: "img/amazon_product2.jpg",
-            infoImg3: "img/beardcleaner.jpg",
-        },
-        firstname: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        categoryid: 14,
+        title: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
+        price: "$49.00",
+        discount: "$44.00",
+        brand: "Mitsubishi",
+
+        img: "img/beardcleaner.jpg",
+        size: "Dimensions -69.5 x 75.0 x 169.0",
+        guarantee: "12 years warranty",
+        status: "Newest technology",
+        secondImage: "img/beardsheaver.jpeg",
+        mainPhoto: "img/washingmachine_image.jpg",
+        additionalPhotos: [
+            "img/amazon_product.jpg",
+            "img/amazon_product2.jpg",
+            "img/beardcleaner.jpg",
+        ],
     },
     {
         id: 2,
-        id1: 2,
+        categoryid:14,
         info: {
             price: "$249.00",
             discount: "$219.00",
@@ -175,24 +187,22 @@ info();
 
 
 function info() {
-
-    let good = document.querySelector(".gallery-wrap");
-    let feautures = document.querySelector(".feautures_ul");
     const productId = new URLSearchParams(window.location.search).get('id');
-
     if (!productId) {
-        console.error("Ürün ID'si bulunamadi.");
+        console.error("Id qeyd edilməyib.");
         return;
     }
+
 
     const product = items.find(p => p.id === parseInt(productId));
 
     if (!product) {
-        console.error("Ürün bulunamadi.");
+        console.error("Bu idyə uyğun məhsul tapılmadı");
         return;
     }
+    let good = document.querySelector(".gallery-wrap");
+    let feautures = document.querySelector(".feautures_ul");
 
-   
     good.innerHTML = `
     <div data-id="${product.id}" class="gallery ">
         <div class="img-big-wrap img-thumbnail">
@@ -203,13 +213,16 @@ function info() {
       
         <div class="thumbs-wrap pt-2 " style="text-align: center;">
 
+
+        // loop
           <a target="_blank"  href="${product.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg1}" alt="">
           </a>
           <a target="_blank" href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg2}" alt="">
           </a>
-          <a target="_blank" href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
+          <a
+           target="_blank" href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
             <img width="60" height="60" src="${product.info.infoImg3}" alt="">
           </a>
         </div>
@@ -224,6 +237,7 @@ function info() {
                             <p class="price price_info">${product.info.price}$</p>
                             <p>${product.info.discount}</p>
                            <span>Key feautures:</span>
+                           
                            <li class="feauture"> ${product.info.guarantee}</li>
                             <li class="feauture"> ${product.info.size}</li>
                             <li class="feauture"> ${product.info.brand}</li>
