@@ -1,4 +1,17 @@
 
+
+const categories = [
+    {
+        id: 14,
+        mainPhoto: "",
+        name: 'Phone'
+    },
+    {
+        id: 345,
+        name: 'TV', mainPhoto: "",
+    }
+]
+
 getProducts();
 
 function getProducts() {
