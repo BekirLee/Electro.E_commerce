@@ -184,7 +184,7 @@ function productInfo() {
                         class="fa-regular fa-star fa-2xs"></i><i
                         class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
                 </h5>
-                <a href="product.html?id=${element.id}">
+                <a href="./src/assets/js/product.html?id=${element.id}">
                     <p class="card-text">${element.firstname}</p>
                     <div class="price">
                         <del>${element.info.price}$</del>
