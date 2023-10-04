@@ -653,6 +653,11 @@ header {
     margin-left: 2rem;
 }
 
+.img-thumbnail img {
+    height: 440px;
+    object-fit: contain;
+}
+
 .gallery .img-big-wrap img {
     width: 100%;
 }

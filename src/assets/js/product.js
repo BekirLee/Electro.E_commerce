@@ -25,12 +25,12 @@ let products = [
         size: "Dimensions -69.5 x 75.0 x 169.0",
         guarantee: "12 years warranty",
         status: "Newest technology",
-        secondImage: ".src/assets/img/beardsheaver.jpeg",
-        mainPhoto: ".src/assets/img/washingmachine_image.jpg",
+        secondImage: "/src/assets/img/beardsheaver.jpeg",
+        mainPhoto: "/src/assets/img/washingmachine_image.jpg",
         additionalPhotos: [
-            ".src/assets/img/amazon_product.jpg",
-            // ".src/assets/img/amazon_product2.jpg",
-            // ".src/assets/img/beardcleaner.jpg",
+            "/src/assets/img/amazon_product2.jpg",
+            "/src/assets/img/amazon_product.jpg",
+            "/src/assets/img/beardcleaner.jpg",
         ],
     },
     {
@@ -44,12 +44,12 @@ let products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Home",
-        img: "./src/assets/img/amazon_product.jpg",
+        img: "/src/assets/img/amazon_product.jpg",
         // hover: "./src/assets/img/background_amazon_product.jpg",
         additionalPhotos: [
-            "./src/assets/img/amazon_product.jpg",
-            "./src/assets/img/amazon_product2.jpg",
-            "./src/assets/img/amazon_product2.jpg",
+            "/src/assets/img/amazon_product.jpg",
+            "/src/assets/img/amazon_product2.jpg",
+            "/src/assets/img/amazon_product2.jpg",
         ],
         title: "Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room",
         // img: "./src/assets/img/washingmachine_image.jpg",
@@ -67,12 +67,12 @@ let products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Home",
-        img: "./src/assets/img/amazon_product2.jpg",
+        img: "/src/assets/img/amazon_product2.jpg",
         // hover: "./src/assets/img/background_amazon_product.jpg",
         additionalPhotos: [
-            "./src/assets/img/amazon_product2.jpg",
-            "./src/assets/img/amazon_product.jpg",
-            "./src/assets/img/amazon_product2.jpg",
+            "/src/assets/img/amazon_product2.jpg",
+            "/src/assets/img/amazon_product.jpg",
+            "/src/assets/img/amazon_product2.jpg",
         ],
 
 
@@ -92,13 +92,13 @@ let products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Laptop",
-        img: "./src/assets/img/computer.jpg",
+        img: "/src/assets/img/computer.jpg",
         // hover: "./src/assets/img/background_computer.jpg",
 
         additionalPhotos: [
-            "./src/assets/img/computer2.jpg",
-            "./src/assets/img/laptop_image.jpg",
-            "./src/assets/img/computer.jpg",
+            "/src/assets/img/computer2.jpg",
+            "/src/assets/img/laptop_image.jpg",
+            "/src/assets/img/computer.jpg",
 
         ],
 
@@ -118,12 +118,12 @@ let products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Laptop",
-        img: "./src/assets/img/computer2.jpg",
+        img: "/src/assets/img/computer2.jpg",
         // hover: "./src/assets/img/background_computer.jpg",
         additionalPhotos: [
-            "./src/assets/img/laptop_image.jpg",
-            "./src/assets/img/computer.jpg",
-            "./src/assets/img/computer2.jpg",
+            "/src/assets/img/laptop_image.jpg",
+            "/src/assets/img/computer.jpg",
+            "/src/assets/img/computer2.jpg",
 
         ],
 
@@ -145,12 +145,12 @@ let products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Phone and Tablet",
-        img: "./src/assets/img/tablet.jpg",
+        img: "/src/assets/img/tablet.jpg",
         // hover: "./src/assets/img/phone_image.jpg",
         additionalPhotos: [
-            "./src/assets/img/phone_image.jpg",
-            "./src/assets/img/phone_info2.jpg",
-            "./src/assets/img/phone2.jpg",
+            "/src/assets/img/phone_image.jpg",
+            "/src/assets/img/phone_info2.jpg",
+            "/src/assets/img/phone2.jpg",
 
         ],
 
@@ -171,13 +171,13 @@ let products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Phone and Tablet",
-        img: "./src/assets/img/phone1.jpg",
+        img: "/src/assets/img/phone1.jpg",
         // hover: "./src/assets/img/phonebackground_img.jpg",
         additionalPhotos: [
 
-            "./src/assets/img/phone_info1.jpg",
-            "./src/assets/img/phone_image.jpg",
-            "./src/assets/img/phone2.jpg",
+            "/src/assets/img/phone_info1.jpg",
+            "/src/assets/img/phone_image.jpg",
+            "/src/assets/img/phone2.jpg",
         ],
 
         title: "5G Unlocked Smartphone,12GB RAM+256GB Storage120Hz Fluid Display Hasselblad Quad Camera 65W Ultra Fast Charge 50W Wireless Charge",
@@ -196,13 +196,13 @@ let products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Phone and Tablet",
-        img: "./src/assets/img/phone2.jpg",
+        img: "/src/assets/img/phone2.jpg",
         // hover: "./src/assets/img/phonebackground_img.jpg",
         additionalPhotos: [
 
-            "./src/assets/img/phone_info1.jpg",
-            "./src/assets/img/phone1.jpg",
-            "./src/assets/img/phone_info2.jpg",
+            "/src/assets/img/phone_info1.jpg",
+            "/src/assets/img/phone1.jpg",
+            "/src/assets/img/phone_info2.jpg",
         ],
 
 
@@ -233,7 +233,6 @@ function info() {
     }
     let good = document.querySelector(".gallery-wrap");
     let feautures = document.querySelector(".feautures_ul");
-    let additionalPhotosDiv = document.querySelector(".additionalPhotos")
 
     good.innerHTML = `
     <div data-id="${product.id}" class="gallery ">
@@ -246,21 +245,34 @@ function info() {
 
         <div class="thumbs-wrap pt-2 additionalPhotos" style="text-align: center;">
 
-
-        <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
-        <img width="60" height="60" src="${product.additionalPhotos}" alt="">
-    
         
         </div>    
         `;
-        // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
-        // <img width="60" height="60" src="${product.additionalPhotos}" alt=""> 
-    
-        // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
-        // <img width="60" height="60" src="${product.additionalPhotos}" alt="">
+
+    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
+    // <img width="60" height="60" src="${product.additionalPhotos}" alt="">
+
+    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
+    // <img width="60" height="60" src="${product.additionalPhotos}" alt=""> 
+
+    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
+    // <img width="60" height="60" src="${product.additionalPhotos}" alt="">
+
+
 
     // additionalPhotosDiv.innerHTML = '';
 
+    let additionalPhotos = document.querySelector(".additionalPhotos")
+    let htmlOutput = '';
+    product.additionalPhotos.forEach(photoUrl => {
+        htmlOutput += `
+            <a target="_blank" href="${photoUrl}" data-type="image" data-fslightbox="mygallery">
+                <img width="60" height="60" src="${photoUrl}" alt="">
+            </a>
+        `;
+    });
+
+    document.querySelector('.additionalPhotos').innerHTML = htmlOutput;
 
     // product.additionalPhotos.forEach(photoUrl => {
     //     let anchor = `
@@ -296,8 +308,10 @@ function info() {
 
 }
 
+// function els() {
 
 
+// }
 // backtotop 
 
 let backtotop_button = document.getElementById("backtotop");
