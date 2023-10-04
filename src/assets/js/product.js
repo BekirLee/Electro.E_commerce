@@ -8,183 +8,213 @@ const categories = [
     },
     {
         id: 345,
-        name: 'TV', mainPhoto: "",
+        mainPhoto: "",
+        name: 'TV',
     }
 ]
 
 let products = [
     {
         id: 1,
-        categoryid: 14,
+        categoryid: 1,
         title: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
         price: "$49.00",
         discount: "$44.00",
         brand: "Mitsubishi",
-
-        img: "img/beardcleaner.jpg",
+        img: ".src/assets/img/beardcleaner.jpg",
         size: "Dimensions -69.5 x 75.0 x 169.0",
         guarantee: "12 years warranty",
         status: "Newest technology",
-        secondImage: "img/beardsheaver.jpeg",
-        mainPhoto: "img/washingmachine_image.jpg",
+        secondImage: ".src/assets/img/beardsheaver.jpeg",
+        mainPhoto: ".src/assets/img/washingmachine_image.jpg",
         additionalPhotos: [
-            "img/amazon_product.jpg",
-            "img/amazon_product2.jpg",
-            "img/beardcleaner.jpg",
+            ".src/assets/img/amazon_product.jpg",
+            ".src/assets/img/amazon_product2.jpg",
+            ".src/assets/img/beardcleaner.jpg",
         ],
     },
     {
         id: 2,
-        categoryid:14,
-        info: {
-            price: "$249.00",
-            discount: "$219.00",
-            brand: "Canon",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "12 years warranty",
-            status: "Newest technology",
-            category: "Home",
-            img: "img/amazon_product.jpg",
-            hover: "img/background_amazon_product.jpg",
-            infoImg1: "img/amazon_product.jpg",
-            infoImg2: "img/amazon_product2.jpg",
-            infoImg3: "img/amazon_product2.jpg",
-        },
-        firstname: "Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        categoryid: 2,
+
+        price: "$249.00",
+        discount: "$219.00",
+        brand: "Canon",
+        size: "Dimensions -69.5 x 75.0 x 169.0",
+        guarantee: "12 years warranty",
+        status: "Newest technology",
+        category: "Home",
+        img: "img/amazon_product.jpg",
+        // hover: "img/background_amazon_product.jpg",
+        additionalPhotos: [
+            "img/amazon_product.jpg",
+            "img/amazon_product2.jpg",
+            "img/amazon_product2.jpg",
+        ],
+        title: "Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room",
+        // img: "img/washingmachine_image.jpg",
+        // href: "pages/products.html"
     },
     {
         id: 3,
-        id1: 3,
-        info: {
-            price: "$229.00",
-            discount: "$209.00",
-            brand: "Mitsubishi",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "12 years warranty",
-            status: "Newest technology",
-            category: "Home",
-            img: "img/amazon_product2.jpg",
-            hover: "img/background_amazon_product.jpg",
-            infoImg1: "img/amazon_product2.jpg",
-            infoImg2: "img/amazon_product.jpg",
-            infoImg3: "img/amazon_product2.jpg",
-        },
-        firstname: "  Home Speaker 500: Smart Bluetooth Speaker with Alexa Voice Control Built-In, White",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        categoryid: 3,
+
+
+        price: "$229.00",
+        discount: "$209.00",
+        brand: "Mitsubishi",
+        size: "Dimensions -69.5 x 75.0 x 169.0",
+        guarantee: "12 years warranty",
+        status: "Newest technology",
+        category: "Home",
+        img: "img/amazon_product2.jpg",
+        // hover: "img/background_amazon_product.jpg",
+        additionalPhotos: [
+            "img/amazon_product2.jpg",
+            "img/amazon_product.jpg",
+            "img/amazon_product2.jpg",
+        ],
+
+
+        title: "  Home Speaker 500: Smart Bluetooth Speaker with Alexa Voice Control Built-In, White",
+        // img: "img/washingmachine_image.jpg",
+        // href: "pages/products.html"
     },
     {
         id: 4,
-        id1: 4,
-        info: {
-            price: "$1,499.00",
-            discount: "$1,399.00",
-            brand: "Intel",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "12 years warranty",
-            status: "Newest technology",
-            category: "Laptop",
-            img: "img/computer.jpg",
-            hover: "img/background_computer.jpg",
-            infoImg1: "img/computer2.jpg",
-            infoImg2: "img/laptop_image.jpg",
-            infoImg3: "img/computer.jpg",
-        },
-        firstname: " 13 Ultrabook Gaming Laptop: Intel Core i7-1165G7 4 Core, NVIDIA GeForce GTX 1650 Ti Max-Q, 13.3″ 1080p 120Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB, Thunderbolt 4",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        categoryid: 4,
+
+
+        price: "$1,499.00",
+        discount: "$1,399.00",
+        brand: "Intel",
+        size: "Dimensions -69.5 x 75.0 x 169.0",
+        guarantee: "12 years warranty",
+        status: "Newest technology",
+        category: "Laptop",
+        img: "img/computer.jpg",
+        // hover: "img/background_computer.jpg",
+
+        additionalPhotos: [
+            "img/computer2.jpg",
+            "img/laptop_image.jpg",
+            "img/computer.jpg",
+
+        ],
+
+        title: " 13 Ultrabook Gaming Laptop: Intel Core i7-1165G7 4 Core, NVIDIA GeForce GTX 1650 Ti Max-Q, 13.3″ 1080p 120Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB, Thunderbolt 4",
+        // img: "img/washingmachine_image.jpg",
+        // href: "pages/products.html"
     },
     {
         id: 5,
-        id1: 5,
-        info: {
-            price: '$1029.00',
-            discount: "$999.00",
-            brand: "Intel",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "12 years warranty",
-            status: "Newest technology",
-            category: "Laptop",
-            img: "img/computer2.jpg",
-            hover: "img/background_computer.jpg",
-            infoImg1: "img/laptop_image.jpg",
-            infoImg2: "img/computer.jpg",
-            infoImg3: "img/computer2.jpg",
-        },
-        firstname: "15.6″ FHD Display Laptop Intel i7  Intel HD Graphics 6000 , Webcam, WiFi, Bluetooth, HDMI, Windows 11,Grey",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        categoryid: 5,
+
+
+        price: '$1029.00',
+        discount: "$999.00",
+        brand: "Intel",
+        size: "Dimensions -69.5 x 75.0 x 169.0",
+        guarantee: "12 years warranty",
+        status: "Newest technology",
+        category: "Laptop",
+        img: "img/computer2.jpg",
+        // hover: "img/background_computer.jpg",
+        additionalPhotos: [
+            "img/laptop_image.jpg",
+            "img/computer.jpg",
+            "img/computer2.jpg",
+
+        ],
+
+
+
+        title: "15.6″ FHD Display Laptop Intel i7  Intel HD Graphics 6000 , Webcam, WiFi, Bluetooth, HDMI, Windows 11,Grey",
+        // img: "img/washingmachine_image.jpg",
+        // href: "pages/products.html"
     },
     {
         id: 6,
-        id1: 6,
-        info: {
-            price: "$699.00",
-            discount: "$659.00",
-            brand: "Samsung",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "12 years warranty",
-            status: "Newest technology",
-            category: "Phone and Tablet",
-            img: "img/tablet.jpg",
-            hover: "img/phone_image.jpg",
-            infoImg1: "img/phone_image.jpg",
-            infoImg2: "img/phone_info2.jpg",
-            infoImg3: "img/phone2.jpg",
-        },
-        firstname: "Note 10 Pro 128GB 6GB RAM Factory Unlocked (GSM ONLY) International Model",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        categoryid: 6,
+
+
+        price: "$699.00",
+        discount: "$659.00",
+        brand: "Samsung",
+        size: "Dimensions -69.5 x 75.0 x 169.0",
+        guarantee: "12 years warranty",
+        status: "Newest technology",
+        category: "Phone and Tablet",
+        img: "img/tablet.jpg",
+        // hover: "img/phone_image.jpg",
+        additionalPhotos: [
+            "img/phone_image.jpg",
+            "img/phone_info2.jpg",
+            "img/phone2.jpg",
+
+        ],
+
+
+        title: "Note 10 Pro 128GB 6GB RAM Factory Unlocked (GSM ONLY) International Model",
+        // img: "img/washingmachine_image.jpg",
+        // href: "pages/products.html"
     },
     {
         id: 7,
-        id1: 7,
-        info: {
-            price: "$1,299.00",
-            discount: "$1,199.00",
-            brand: "Apple",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "12 years warranty",
-            status: "Newest technology",
-            category: "Phone and Tablet",
-            img: "img/phone1.jpg",
-            hover: "img/phonebackground_img.jpg",
-            infoImg1: "img/phone_info1.jpg",
-            infoImg2: "img/phone_image.jpg",
-            infoImg3: "img/phone2.jpg",
-        },
-        firstname: "5G Unlocked Smartphone,12GB RAM+256GB Storage120Hz Fluid Display Hasselblad Quad Camera 65W Ultra Fast Charge 50W Wireless Charge",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        categoryid: 7,
+
+
+        price: "$1,299.00",
+        discount: "$1,199.00",
+        brand: "Apple",
+        size: "Dimensions -69.5 x 75.0 x 169.0",
+        guarantee: "12 years warranty",
+        status: "Newest technology",
+        category: "Phone and Tablet",
+        img: "img/phone1.jpg",
+        // hover: "img/phonebackground_img.jpg",
+        additionalPhotos: [
+
+            "img/phone_info1.jpg",
+            "img/phone_image.jpg",
+            "img/phone2.jpg",
+        ],
+
+        title: "5G Unlocked Smartphone,12GB RAM+256GB Storage120Hz Fluid Display Hasselblad Quad Camera 65W Ultra Fast Charge 50W Wireless Charge",
+        // img: "img/washingmachine_image.jpg",
+        // href: "pages/products.html"
     },
     {
         id: 8,
-        id1: 8,
-        info: {
-            price: "$1,099.00",
-            discount: "$999.00",
-            brand: "Apple",
-            size: "Dimensions -69.5 x 75.0 x 169.0",
-            guarantee: "12 years warranty",
-            status: "Newest technology",
-            category: "Phone and Tablet",
-            img: "img/phone2.jpg",
-            hover: "img/phonebackground_img.jpg",
-            infoImg1: "img/phone_info1.jpg",
-            infoImg2: "img/phone1.jpg",
-            infoImg3: "img/phone_info2.jpg",
-        },
-        firstname: "6G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
-        img: "img/washingmachine_image.jpg",
-        href: "pages/products.html"
+        categoryid: 8,
+
+
+        price: "$1,099.00",
+        discount: "$999.00",
+        brand: "Apple",
+        size: "Dimensions -69.5 x 75.0 x 169.0",
+        guarantee: "12 years warranty",
+        status: "Newest technology",
+        category: "Phone and Tablet",
+        img: "img/phone2.jpg",
+        // hover: "img/phonebackground_img.jpg",
+        additionalPhotos: [
+
+            "img/phone_info1.jpg",
+            "img/phone1.jpg",
+            "img/phone_info2.jpg",
+        ],
+
+
+        title: "6G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
+        // img: "img/washingmachine_image.jpg",
+        // href: "pages/products.html"
     },
 ]
 
 document.addEventListener("DOMContentLoaded", function () {
+    info();
 });
-info();
 
 
 function info() {
@@ -195,7 +225,7 @@ function info() {
     }
 
 
-    const product = items.find(p => p.id === parseInt(productId));
+    const product = products.find(p => p.id === parseInt(productId));
 
     if (!product) {
         console.error("Bu idyə uyğun məhsul tapılmadı");
@@ -203,47 +233,81 @@ function info() {
     }
     let good = document.querySelector(".gallery-wrap");
     let feautures = document.querySelector(".feautures_ul");
+    let additionalPhotosDiv = document.querySelector(".additionalPhotos")
 
     good.innerHTML = `
     <div data-id="${product.id}" class="gallery ">
+
         <div class="img-big-wrap img-thumbnail">
-           <a target="_blank" href="${product.info.img}" data-type="image" data-fslightbox="mygallery">
-             <img src="${product.info.img}" alt="">
+           <a target="_blank" href="${product.img}" data-type="image" data-fslightbox="mygallery">
+             <img src="${product.img}" alt="">
             </a>
         </div>
-      
-        <div class="thumbs-wrap pt-2 " style="text-align: center;">
+        `;
+    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
+    // <img width="60" height="60" src="${product.additionalPhotos}" alt="">
+
+    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
+    // <img width="60" height="60" src="${product.additionalPhotos}" alt=""> 
+
+    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
+    // <img width="60" height="60" src="${product.additionalPhotos}" alt="">
 
 
-        // loop
-          <a target="_blank"  href="${product.info.infoImg1}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${product.info.infoImg1}" alt="">
-          </a>
-          <a target="_blank" href="${product.info.infoImg2}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${product.info.infoImg2}" alt="">
-          </a>
-          <a
-           target="_blank" href="${product.info.infoImg3}" data-type="image" data-fslightbox="mygallery">
-            <img width="60" height="60" src="${product.info.infoImg3}" alt="">
-          </a>
-        </div>
-    </div > 
-    `;
+    additionalPhotosDiv.innerHTML = '';
+
+    // Her bir resim URL'si için HTML oluşturup div'in içine ekliyoruz
+    product.additionalPhotos.forEach(photoUrl => {
+        let anchor = `
+            <a target="_blank" href="${photoUrl}" data-type="image" data-fslightbox="mygallery">
+                <img width="60" height="60" src="${photoUrl}" alt="">
+            </a>
+        `;
+        additionalPhotosDiv.innerHTML += anchor;
+    });
+    // Bu kod ile product.additionalPhotos dizisi içerisindeki her bir resim URL'si için belirttiğiniz yapıda bir <a> elemanı oluşturuluyor ve additionalPhotos sınıfına sahip div' in içine ekleniyor.
+
+
+
+
+
+
+
+    // additionalPhotos.insertAdjacentHTML("beforeend", additionalPhoto);
+
+
+
+    // for (let i of products) {
+    //     let additionalPhoto =
+    //         `
+    //         <a target="_blank"  href="${i.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
+    //         <img width="60" height="60" src="${i.additionalPhotos}" alt="">
+    //     }
+    //     `;
+    //     additionalPhotos.insertAdjacentHTML("beforeend", additionalPhoto);
+    // }
+
+
+    // <div class="thumbs-wrap pt-2 additionalPhotos" style="text-align: center;">
+    // // loop
+
+    // </div>
 
     feautures.innerHTML = `
-                         <span class="infoWay">Home/${product.info.category} / ${product.firstname}</span>
+    <span class="infoWay"> 
+    Home / ${product.category} / ${product.title}</span >
                              <h2 class="productName">
-                                ${product.firstname}
+                                ${product.title}
                              </h2>
-                            <p class="price price_info">${product.info.price}$</p>
-                            <p>${product.info.discount}</p>
+                            <p class="price price_info">${product.price}$</p>
+                            <p>${product.discount}</p>
                            <span>Key feautures:</span>
                            
-                           <li class="feauture"> ${product.info.guarantee}</li>
-                            <li class="feauture"> ${product.info.size}</li>
-                            <li class="feauture"> ${product.info.brand}</li>
-                            <li class="feauture"> ${product.info.status}</li>
-                        `;
+                           <li class="feauture"> ${product.guarantee}</li>
+                            <li class="feauture"> ${product.size}</li>
+                            <li class="feauture"> ${product.brand}</li>
+                            <li class="feauture"> ${product.status}</li>
+`;
 
 }
 
