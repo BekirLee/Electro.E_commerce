@@ -132,10 +132,10 @@ var productsSurfaceInfo = [
 ]
 
 
-getProducts();
+getCategory();
 productInfo();
 
-function getProducts() {
+function getCategory() {
     var elements = document.querySelector(".productsBox");
 
     if (!elements) {
@@ -147,7 +147,7 @@ function getProducts() {
         // phone_count //new 
         let productCount = productsSurfaceInfo.filter(x => x.categoryid == category.id).length;
         let element = `
-        <a href="./src/productInfo.html?id=${category.id}">
+        <a href=src/pages/productInfo.html?id=${category.id}">
             <div class="product" id="${category.id}" >
                 <img src="${category.img}" alt="">
                 
