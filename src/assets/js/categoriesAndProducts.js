@@ -27,6 +27,7 @@ const categories = [
 var productsSurfaceInfo = [
     {
         id: 1,
+        categoryId: 1,
         info: {
             price: 49.00,
             discount: 44.00,
@@ -39,6 +40,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 2,
+        categoryId: 2,
         info: {
             price: 249.00,
             discount: 219.00,
@@ -52,6 +54,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 3,
+        categoryId: 3,
         info: {
             price: 229.00,
             discount: 209.00,
