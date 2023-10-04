@@ -355,6 +355,11 @@ header {
     height: auto;
 }
 
+.card-text {
+    height: 46px;
+    overflow: hidden;
+}
+
 /* today's deal */
 .productDeal h2 {
     text-transform: uppercase;

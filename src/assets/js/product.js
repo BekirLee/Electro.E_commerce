@@ -249,19 +249,6 @@ function info() {
         </div>    
         `;
 
-    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
-    // <img width="60" height="60" src="${product.additionalPhotos}" alt="">
-
-    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
-    // <img width="60" height="60" src="${product.additionalPhotos}" alt=""> 
-
-    // <a target="_blank"  href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
-    // <img width="60" height="60" src="${product.additionalPhotos}" alt="">
-
-
-
-    // additionalPhotosDiv.innerHTML = '';
-
     let additionalPhotos = document.querySelector(".additionalPhotos")
     let htmlOutput = '';
     product.additionalPhotos.forEach(photoUrl => {
@@ -273,21 +260,6 @@ function info() {
     });
 
     document.querySelector('.additionalPhotos').innerHTML = htmlOutput;
-
-    // product.additionalPhotos.forEach(photoUrl => {
-    //     let anchor = `
-    //         <a target="_blank" href="${photoUrl}" data-type="image" data-fslightbox="mygallery">
-    //             <img width="60" height="60" src="${photoUrl}" alt="">
-    //         </a>
-    //     `;
-    //     additionalPhotosDiv.textContent += anchor;
-    // });
-
-    // additionalPhotosDiv.innerHTML = `
-    // <a target="_blank" href="${product.additionalPhotos}" data-type="image" data-fslightbox="mygallery">
-    //     <img width="60" height="60" src="${product.additionalPhotos}" alt="">
-    // </a>
-    // `;
 
 
     feautures.innerHTML = `
@@ -308,10 +280,7 @@ function info() {
 
 }
 
-// function els() {
 
-
-// }
 // backtotop 
 
 let backtotop_button = document.getElementById("backtotop");
