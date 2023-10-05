@@ -68,17 +68,39 @@ productInfo();
 function productInfo() {
     let info_side_category=document.querySelector(".info_side");
     let  categoryproducts=document.querySelector(".container .products");
-    let price_info=new URLSearchParams(window.location.search).get('id');
-    let product=mainCategories.find(p=>p.name === parseInt(price_info));
-    
 
-            info_side_category=`
-            ${product.id}`;
-     
-     
+    const productId = new URLSearchParams(window.location.search).get('id');
+    if (!productId) {
+        console.error("CategoryElment Idsi qeyd edilməyib.");
+        return;
+    }
 
-        // let product_name=mainCategories.filter(x=>x.name);
+
+    const product = mainCategories.find(p => p.id === parseInt(productId));
+
+    if (!product) {
+        console.error("Bu idyə uyğun məhsul tapılmadı");
+        return;
+    }
+
+        
+    info_side_category.innerHTML=`
+        <div id="${product.id}">
+        ${product.name}
+   
+        </div>`;
+        
+     categoryproducts.innerHTML=`
+     <div id="" >
+     ${}
+     </div>
+     `;
+
 }
+     
+     
+
+// }
 
 // function getQueryParam(param) {
         //     let urlParams = new URLSearchParams(window.location.search);

@@ -231,6 +231,7 @@ function info() {
         console.error("Bu idyə uyğun məhsul tapılmadı");
         return;
     }
+    
     let good = document.querySelector(".gallery-wrap");
     let feautures = document.querySelector(".feautures_ul");
 
