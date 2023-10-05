@@ -1,6 +1,6 @@
 
 
-var mainCategories = [
+var categories = [
     {
         id: 1,
         categoryId: 1,
@@ -23,8 +23,6 @@ var mainCategories = [
     },
 
 ]
-
-
 
 var productsSurfaceInfo = [
     {
@@ -148,7 +146,7 @@ function getCategory() {
         return;
     }
 
-    for (var category of mainCategories) {
+    for (var category of categories) {
         // phone_count //new 
         let productCount = productsSurfaceInfo.filter(x => x.categoryId == category.id).length;
         let element = `
