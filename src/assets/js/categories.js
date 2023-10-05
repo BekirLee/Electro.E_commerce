@@ -3,7 +3,7 @@ let categories = [
     {
         id: 1,
         mainPhoto: "src/assets/img/amazon_product.jpg",
-        name: 'Phone',
+        name: 'phone',
         img: "/src/assets/img/airconditioner_image.jpg",
     },
     {
@@ -31,7 +31,7 @@ let categories = [
 var productsSurfaceInfo = [
     {
         id: 1,
-        categoryId: 1,
+        categoryId: 3,
         info: {
             price: 49.00,
             discount: 44.00,
@@ -44,7 +44,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 2,
-        categoryId: 1,
+        categoryId: 3,
         info: {
             price: 249.00,
             discount: 219.00,
@@ -58,7 +58,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 3,
-        categoryId: 1,
+        categoryId: 3,
         info: {
             price: 229.00,
             discount: 209.00,
@@ -115,7 +115,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 7,
-        categoryId: 3,
+        categoryId: 1,
         info: {
             price: 1299.00,
             discount: 1199.00,
@@ -129,7 +129,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 8,
-        categoryId: 3,
+        categoryId: 1,
         info: {
             price: 1099.00,
             discount: 999.00,
@@ -179,11 +179,18 @@ function productInfo() {
         // for(let item of mainCategories){
 
             // let product
-            productCategory=`
-            <div id="${categoryproduct.categoryId }">
-            <img src="${categoryproduct.img}" alt="">
+            let id=productsSurfaceInfo.find(x=>x.categoryId);
+// for(){
+    
+          if(product.id=id){
+            // console.log("hell")
+            productCategory.innerHTML=`
+            <div class="">
+                categoryId=${id.categoryId}
             </div>
             `;
+          }
+// }
             // productCategory.insertAdjacentHTML("beforeend",product);
         // }
     
