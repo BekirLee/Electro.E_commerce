@@ -1,14 +1,16 @@
 
 
-const categories = [
+var mainCategories = [
     {
         id: 1,
+        categoryId: 1,
         mainPhoto: "",
         name: 'Phone',
         img: "./src/assets/img/airconditioner_image.jpg",
     },
     {
         id: 2,
+        categoryId: 1,
         mainPhoto: "",
         name: 'TV',
         img: "./src/assets/img/airconditioner_image.jpg",
@@ -146,9 +148,9 @@ function getCategory() {
         return;
     }
 
-    for (var category of categories) {
+    for (var category of mainCategories) {
         // phone_count //new 
-        let productCount = productsSurfaceInfo.filter(x => x.categoryid == category.id).length;
+        let productCount = productsSurfaceInfo.filter(x => x.categoryId == category.id).length;
         let element = `
         <a href=src/pages/productInfo.html?id=${category.id}">
             <div class="product" id="${category.id}" >
