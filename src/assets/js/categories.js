@@ -39,23 +39,23 @@ let mainCategories = [
     {
         id: 1,
         categoryId: 1,
-        mainPhoto: "",
+        mainPhoto: "src/assets/img/amazon_product.jpg",
         name: 'Phone',
-        img: "./src/assets/img/airconditioner_image.jpg",
+        img: "/src/assets/img/airconditioner_image.jpg",
     },
     {
         id: 2,
         categoryId: 2,
         mainPhoto: "",
         name: 'TV',
-        img: "./src/assets/img/airconditioner_image.jpg",
+        img: "/src/assets/img/airconditioner_image.jpg",
     },
     {
         id: 3,
         categoryId: 3,
         mainPhoto: "",
         name: "Air-conditioners",
-        img: "./src/assets/img/airconditioner_image.jpg",
+        img: "/src/assets/img/airconditioner_image.jpg",
     },
 
 ]
@@ -67,9 +67,10 @@ productInfo();
 
 function productInfo() {
     let info_side_category=document.querySelector(".info_side");
-    let  categoryproducts=document.querySelector(".container .products");
+    let productCategory=document.querySelector("#products");
 
     const productId = new URLSearchParams(window.location.search).get('id');
+    // const productCategoryId = new URLSearchParams(window.location.search).get('categoryId');
     if (!productId) {
         console.error("CategoryElment Idsi qeyd edilməyib.");
         return;
@@ -77,6 +78,7 @@ function productInfo() {
 
 
     const product = mainCategories.find(p => p.id === parseInt(productId));
+    // const categoryproduct = mainCategories.find(p => p.id === parseInt(productCategoryId));
 
     if (!product) {
         console.error("Bu idyə uyğun məhsul tapılmadı");
@@ -90,11 +92,17 @@ function productInfo() {
    
         </div>`;
         
-     categoryproducts.innerHTML=`
-     <div id="" >
-     ${}
-     </div>
-     `;
+
+        for(let item of mainCategories){
+
+            let product=`
+            <div id="${item.categoryId == }">
+            <img src="${item.img}" alt="">
+            </div>
+            `;
+            productCategory.insertAdjacentHTML("beforeend",product);
+        }
+    
 
 }
      
