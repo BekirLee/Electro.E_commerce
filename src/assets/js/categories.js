@@ -31,7 +31,7 @@ let categories = [
 var productsSurfaceInfo = [
     {
         id: 1,
-        categoryId: 3,
+        categoryId: 2,
         info: {
             price: 49.00,
             discount: 44.00,
@@ -44,7 +44,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 2,
-        categoryId: 3,
+        categoryId: 2,
         info: {
             price: 249.00,
             discount: 219.00,
@@ -145,15 +145,15 @@ var productsSurfaceInfo = [
 
 
 
-
+document.addEventListener("DOMContentLoaded",function(){
 productInfo();
+})
 
 function productInfo() {
     let info_side_category=document.querySelector(".info_side");
     let productCategory=document.querySelector("#products");
 
     const productId = new URLSearchParams(window.location.search).get('id');
-    const productCategoryId = new URLSearchParams(window.location.search).get('categoryId');
     if (!productId) {
         console.error("CategoryElement Idsi qeyde edilməyib.");
         return;
@@ -161,7 +161,7 @@ function productInfo() {
 
 
     const product = categories.find(p => p.id === parseInt(productId));
-    const categoryproduct = categories.find(p => p.id === parseInt(productCategoryId));
+    const productcategory = productsSurfaceInfo.find(p => p.categoryId === parseInt(product.id));
 
     if (!product) {
         console.error("Bu idyə uyğun məhsul tapılmadı");
@@ -176,26 +176,36 @@ function productInfo() {
         </div>`;
         
 
-        // for(let item of mainCategories){
 
-            // let product
-            let id=productsSurfaceInfo.find(x=>x.categoryId);
-// for(){
+            // let id=productsSurfaceInfo.find(x=>x.categoryId);
     
-          if(product.id=id){
-            // console.log("hell")
-            productCategory.innerHTML=`
-            <div class="">
-                categoryId=${id.categoryId}
-            </div>
-            `;
-          }
-// }
-            // productCategory.insertAdjacentHTML("beforeend",product);
-        // }
+        
+            // // console.log("hell")
+            // productCategory.innerHTML=`
+            // <div class="">
+            //     categoryId=${productcategory.categoryId}
+            //     <img src="${productcategory.img}" >
+            // </div>
+            // `;
+
+            let similarProducts = productsSurfaceInfo.filter(p => p.categoryId == product.id);
+
+            console.log("mm")
+            for (let sm of similarProducts) {
+                let s = `
+                    <div class="">
+                    categoryId=${sm.categoryId}
+                    <img src="${sm.info.img}"> 
+                    </div>
+                `;
+                productCategory.insertAdjacentHTML("beforeend", s);
+            }
+          
+
     
 
 }
+
      
      
 
