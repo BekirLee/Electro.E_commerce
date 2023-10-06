@@ -9,6 +9,8 @@ products.forEach(product => {
         var id = parseInt(product.id);
         var currentProduct = productsSurfaceInfo.find(x => x.id == id);
 
+
+
         if (!favs.some(item => item.id == currentProduct.id)) {
             favs.push(currentProduct);
             addProductToFavs();
@@ -33,9 +35,9 @@ function addProductToFavs() {
     for (let element of favs) {
         total += element.info.price;
         discount += element.info.discount;
-        let info = ` 
+        var info = ` 
         <a href="javascript:void(0)">
-            <div class="card product-item" id="${element.id}">
+            <div class="product-item" id="${element.id}">
                 <div class="off-canvas_photo">
                     <img src="${element.info.img}" class="card-img-top card_basket_photo photo_width" style=height:200px alt="...">
                 </div>      
@@ -43,6 +45,7 @@ function addProductToFavs() {
                     <div class="price">
                          <del>${element.info.price}$</del>
                     <span>${element.info.discount} $</span>
+                    <i class="fa-solid fa-square-minus minus_icon"></i>
                     </div>
                 </div>
             </div>
@@ -60,9 +63,32 @@ function addProductToFavs() {
     <div class=" withDiscount"><p>Total price after discount : ${discount}$</p></
     </div>
     `;
-    // let discountPriceINfo = `<div class="basket_price withDiscount"><p>Price with discount : ${discount}$</p></div>`;
+
     offcanvas.insertAdjacentHTML("beforeend", totalPriceInfo);
-    // offcanvas.insertAdjacentHTML("beforeend", discountPriceINfo);
+
+    let minus = document.querySelector(".minus_icon");
+    // deleteFav()
+
+    // function deleteFav() {
+
+
+
+
+        minus.addEventListener("click", function () {
+
+            console.log("click yapildi")
+            // Örneğin 30 değerini silmek istiyoruz.
+            let silinecekIndeks = favs.indexOf(currentProduct);
+
+            if (silinecekIndeks !== -1) {
+                favs.splice(silinecekIndeks, 1);
+                // console.log("Yeni dizi:", dizi);
+            }
+
+        })
+
+    // }
+    // })
 
     console.log(favs)
 }
@@ -73,4 +99,39 @@ document.querySelector(".slicknav_menu").addEventListener("click", function () {
     menulinks.classList.toggle("active");
 
 })
+
+
+// backtotop 
+
+let backtotop_button = document.getElementById("backtotop");
+let header_fluid = document.querySelector(".header_fluid");
+let main_menu = document.querySelector(".main_menu");
+
+
+window.onscroll = function () {
+    scrollEvent();
+}
+
+function scrollEvent() {
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        backtotop_button.style.opacity = 1;
+        header_fluid.style.height = "50px";
+        main_menu.style.height = "49px"
+    }
+    else {
+        backtotop_button.style.opacity = 0;
+        header_fluid.style.height = "70px";
+        main_menu.style.height = "53px"
+    }
+
+}
+
+// loader for page
+
+function myFunction() {
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".loader_box").style.display = "block";
+}
+
+// deleting element
 

@@ -391,11 +391,6 @@ header {
     overflow: hidden;
 }
 
-/* .products_info .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-} */
-
 .card .fa-solid {
     position: absolute;
     left: 199px;
@@ -419,7 +414,6 @@ header {
     background-color: #dbe2e2;
     display: none;
 }
-
 
 .cards {
     display: grid !important;
@@ -720,6 +714,12 @@ header {
 
 .orange_color {
     background-color: orange;
+}
+
+.minus_icon {
+    display: block !important;
+    color: #3498db;
+    cursor: pointer;
 }
 
 .withDiscount p {
