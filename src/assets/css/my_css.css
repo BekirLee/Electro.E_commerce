@@ -800,10 +800,14 @@ header {
     cursor: text;
 }
 
+.off_canvas_margin_bottom {
+    margin-bottom: 50px !important;
+}
+
 .basket_price {
     color: #000;
     position: fixed;
-    bottom: 15px;
+    bottom: 5px;
 }
 
 .off-canvas_photo {

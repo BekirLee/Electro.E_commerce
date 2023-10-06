@@ -231,7 +231,7 @@ function info() {
         console.error("Bu idyə uyğun məhsul tapılmadı");
         return;
     }
-    
+
     let good = document.querySelector(".gallery-wrap");
     let feautures = document.querySelector(".feautures_ul");
 
@@ -317,5 +317,8 @@ function showPage() {
 }
 
 function myFunction() {
-    timer = setTimeout(showPage, 1000);
+    document.addEventListener("DOMContentLoaded", function () {
+        showPage();
+    })
+    // timer = setTimeout(showPage, 1000);
 }
