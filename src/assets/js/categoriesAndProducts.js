@@ -6,20 +6,50 @@ var categories = [
         categoryId: 1,
         mainPhoto: "",
         name: 'Phone',
-        img: "./src/assets/img/airconditioner_image.jpg",
+        img: "/src/assets/img/phone_image.jpg",
     },
     {
         id: 2,
         categoryId: 1,
         mainPhoto: "",
         name: 'TV',
-        img: "./src/assets/img/airconditioner_image.jpg",
+        img: "/src/assets/img/tv_image.jpg",
     },
     {
         id: 3,
         mainPhoto: "",
         name: "Air-conditioners",
-        img: "./src/assets/img/airconditioner_image.jpg",
+        img: "/src/assets/img/airconditioner_image.jpg",
+    },
+    {
+        id: 4,
+        mainPhoto: "",
+        name: "Kitchen",
+        img: "/src/assets/img/kitchen0.jpg",
+    },
+    {
+        id: 5,
+        mainPhoto: "",
+        name: "Home",
+        img: "/src/assets/img/airconditioner_image.jpg",
+    },
+    {
+        id: 6,
+        mainPhoto: "",
+        name: "",
+        img: "/src/assets/img/airconditioner_image.jpg",
+    },
+    {
+        id: 7,
+        mainPhoto: "",
+        name: "Laptop",
+        img: "/src/assets/img/airconditioner_image.jpg",
+    },
+    {
+        id: 8,
+        mainPhoto: "",
+        name: "",
+        img: "/src/assets/img/airconditioner_image.jpg",
     },
 
 ]
