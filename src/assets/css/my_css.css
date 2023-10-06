@@ -391,10 +391,10 @@ header {
     overflow: hidden;
 }
 
-.products_info .container {
+/* .products_info .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
+} */
 
 .card .fa-solid {
     position: absolute;
@@ -694,6 +694,11 @@ header {
     text-decoration: line-through;
 }
 
+#products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 /* icons */
 #backtotop {
     opacity: 0;
@@ -713,7 +718,7 @@ header {
     color: orange;
 }
 
-.orange_color{
+.orange_color {
     background-color: orange;
 }
 

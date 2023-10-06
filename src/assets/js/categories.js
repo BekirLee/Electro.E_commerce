@@ -166,7 +166,7 @@ function productInfo() {
                     <div class="card-body">
                         <h5 class="card-title">
                         <i class="fa-regular fa-star fa-2xs"></i>
-                        <i class="fa-regular fa-star fa-2xs orange_color"></i>
+                        <i class="fa-regular fa-star fa-2xs" style="color:orange"></i>
                         <i class="fa-regular fa-star fa-2xs"></i>
                         <i class="fa-regular fa-star fa-2xs"></i>
                         <i class="fa-regular fa-star fa-2xs"></i>
