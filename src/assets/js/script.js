@@ -46,8 +46,7 @@ function addProductToFavs() {
                     </div>
                 </div>
             </div>
-            <div class="basket_price">
-            </div>
+          
         </a>`;
         offcanvas.insertAdjacentHTML("beforeend", info);
     }
@@ -56,10 +55,14 @@ function addProductToFavs() {
     <div class="num">${numberOfFavProduct}</div>
     `;
 
-    let totalPriceInfo = `<div class="basket_price withDiscount"><p>Price without discount: ${total}$</p></div>`;
-    let discountPriceINfo = `<div class="basket_price withDiscount"><p>Price with discount : ${discount}$</p></div>`;
+    let totalPriceInfo = `  <div class="basket_price">
+    <div class=" withoutDiscount"><p>Price without discount: ${total}$</p></div>
+    <div class=" withDiscount"><p>Total price after discount : ${discount}$</p></
+    </div>
+    `;
+    // let discountPriceINfo = `<div class="basket_price withDiscount"><p>Price with discount : ${discount}$</p></div>`;
     offcanvas.insertAdjacentHTML("beforeend", totalPriceInfo);
-    offcanvas.insertAdjacentHTML("beforeend", discountPriceINfo);
+    // offcanvas.insertAdjacentHTML("beforeend", discountPriceINfo);
 
     console.log(favs)
 }

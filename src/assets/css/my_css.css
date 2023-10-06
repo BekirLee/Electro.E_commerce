@@ -722,12 +722,16 @@ header {
     background-color: orange;
 }
 
-.withDiscount {
+.withDiscount p {
     /* position: fixed; */
+    margin: 0px !important;
+    padding: 3px;
 }
 
-.withoutDiscount{
+.withoutDiscount p {
     /* position: fixed; */
+    padding: 3px;
+    margin: 0px;
 }
 
 /* scroll bar */
@@ -792,8 +796,14 @@ header {
     padding: 20px;
 }
 
+.offcanvas-body a {
+    cursor: text;
+}
+
 .basket_price {
     color: #000;
+    position: fixed;
+    bottom: 15px;
 }
 
 .off-canvas_photo {
