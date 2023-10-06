@@ -722,6 +722,14 @@ header {
     background-color: orange;
 }
 
+.withDiscount {
+    /* position: fixed; */
+}
+
+.withoutDiscount{
+    /* position: fixed; */
+}
+
 /* scroll bar */
 ::-webkit-scrollbar {
     width: 5px;
@@ -778,8 +786,25 @@ header {
 /* offcanvas */
 .offcanvas-body .product-item {
     border: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 20px;
 }
 
 .basket_price {
     color: #000;
+}
+
+.off-canvas_photo {
+    text-align: left;
+    height: 90px;
+}
+
+.off-canvas_photo img {
+    height: 90px !important;
+}
+
+.photo_width {
+    width: auto !important;
 }

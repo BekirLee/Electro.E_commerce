@@ -28,7 +28,7 @@ function addProductToFavs() {
     let total = 0;
     let discount = 0;
 
-  
+
 
     for (let element of favs) {
         total += element.info.price;
@@ -36,13 +36,10 @@ function addProductToFavs() {
         let info = ` 
         <a href="javascript:void(0)">
             <div class="card product-item" id="${element.id}">
-            <img src="${element.info.img}" class="card-img-top card_basket_photo" alt="...">
-                 <div class="card-body">
-                    <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
-                    </h5>
+                <div class="off-canvas_photo">
+                    <img src="${element.info.img}" class="card-img-top card_basket_photo photo_width" style=height:200px alt="...">
+                </div>      
+                <div class="card-body">
                     <div class="price">
                          <del>${element.info.price}$</del>
                     <span>${element.info.discount} $</span>
@@ -51,7 +48,7 @@ function addProductToFavs() {
             </div>
             <div class="basket_price">
             </div>
-     </a>`;
+        </a>`;
         offcanvas.insertAdjacentHTML("beforeend", info);
     }
 
@@ -59,8 +56,8 @@ function addProductToFavs() {
     <div class="num">${numberOfFavProduct}</div>
     `;
 
-    let totalPriceInfo = `<div class="basket_price"><p>Price without discount: ${total}$</p></div>`;
-    let discountPriceINfo = `<div class="basket_price"><p>Price with discount : ${discount}$</p></div>`;
+    let totalPriceInfo = `<div class="basket_price withDiscount"><p>Price without discount: ${total}$</p></div>`;
+    let discountPriceINfo = `<div class="basket_price withDiscount"><p>Price with discount : ${discount}$</p></div>`;
     offcanvas.insertAdjacentHTML("beforeend", totalPriceInfo);
     offcanvas.insertAdjacentHTML("beforeend", discountPriceINfo);
 
