@@ -713,6 +713,10 @@ header {
     color: orange;
 }
 
+.orange_color{
+    background-color: orange;
+}
+
 /* scroll bar */
 ::-webkit-scrollbar {
     width: 5px;

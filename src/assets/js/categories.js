@@ -164,10 +164,12 @@ function productInfo() {
                         <i class="fa-solid fa-basket-shopping basket-icon"></i>
                     <span class="sale">Sale</span>
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-                                class="fa-regular fa-star fa-2xs"></i><i
-                                class="fa-regular fa-star fa-2xs"></i><i
-                                class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
+                        <h5 class="card-title">
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs orange_color"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
+                        <i class="fa-regular fa-star fa-2xs"></i>
                         </h5>
                             <p class="card-text">${item.text}</p>
                             <div class="price">
