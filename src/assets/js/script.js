@@ -73,3 +73,15 @@ document.querySelector(".slicknav_menu").addEventListener("click", function () {
     menulinks.classList.toggle("active");
 
 })
+
+var timer;
+
+function showPage() {
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".loader_box").style.display = "block";
+}
+
+
+function myFunction() {
+    timer = setTimeout(showPage, 1000);
+}
