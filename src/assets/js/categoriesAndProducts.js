@@ -25,13 +25,13 @@ var categories = [
         id: 4,
         mainPhoto: "",
         name: "Kitchen",
-        img: "/src/assets/img/kitchen0.jpg",
+        img: "/src/assets/img/kitchen1.avif",
     },
     {
         id: 5,
         mainPhoto: "",
         name: "Home",
-        img: "/src/assets/img/airconditioner_image.jpg",
+        img: "/src/assets/img/kitchendevice_image.jpg",
     },
     {
         id: 6,
@@ -43,7 +43,7 @@ var categories = [
         id: 7,
         mainPhoto: "",
         name: "Laptop",
-        img: "/src/assets/img/airconditioner_image.jpg",
+        img: "/src/assets/img/computer5.jpeg",
     },
     {
         id: 8,

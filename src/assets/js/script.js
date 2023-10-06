@@ -1,5 +1,4 @@
 
-
 var products = document.querySelectorAll('.product-item');
 
 let favs = [];
