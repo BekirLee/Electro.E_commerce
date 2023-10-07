@@ -8,14 +8,15 @@ products.forEach(product => {
     basketIcon.addEventListener('click', (e) => {
         var id = parseInt(product.id);
         var currentProduct = productsSurfaceInfo.find(x => x.id == id);
-        alertify.alert('Ready!');   
 
 
         if (!favs.some(item => item.id == currentProduct.id)) {
             favs.push(currentProduct);
+            alertify.message('Added product');
             addProductToFavs();
         } else {
-            alert("There is product like that in favs!");
+            // alert("There is product like that in favs!");
+            alertify.warning("There is product like that in favs!")
         }
     })
 

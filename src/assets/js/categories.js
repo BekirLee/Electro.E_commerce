@@ -182,10 +182,3 @@ function productInfo() {
         productCategory.insertAdjacentHTML("beforeend", items);
     }
 }
-
-// <div class="">
-// categoryId=${item.categoryId}
-// <img src="${item.photo}">
-// </div>
-
-
