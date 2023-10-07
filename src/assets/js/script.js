@@ -45,7 +45,7 @@ function addProductToFavs() {
                     <div class="price">
                          <del>${element.info.price}$</del>
                     <span>${element.info.discount} $</span>
-                    <i class="fa-solid fa-square-minus minus_icon"></i>
+                    <i id="${element.id}" class="fa-solid fa-square-minus minus_icon"></i>
                     </div>
                 </div>
             </div>
@@ -67,28 +67,19 @@ function addProductToFavs() {
     offcanvas.insertAdjacentHTML("beforeend", totalPriceInfo);
 
     let minus = document.querySelector(".minus_icon");
-    // deleteFav()
 
-    // function deleteFav() {
-
-
-
-
+    let minusIcons = document.querySelectorAll(".minus_icon");
+    minusIcons.forEach(minus => {   
         minus.addEventListener("click", function () {
+            let id = parseInt(minus.getAttribute('id')); // idni int. edir
+            let index = favs.find(item => item.id == id); // favsin icinden indexi tapir
 
-            console.log("click yapildi")
-            // Örneğin 30 değerini silmek istiyoruz.
-            let silinecekIndeks = favs.indexOf(currentProduct);
-
-            if (silinecekIndeks !== -1) {
-                favs.splice(silinecekIndeks, 1);
-                // console.log("Yeni dizi:", dizi);
+            if (index !== -1) {
+                favs.splice(index, 1);
+                addProductToFavs(); // Call this function again to refresh the UI
             }
-
-        })
-
-    // }
-    // })
+        });
+    });
 
     console.log(favs)
 }
