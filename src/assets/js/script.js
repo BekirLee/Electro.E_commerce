@@ -8,7 +8,7 @@ products.forEach(product => {
     basketIcon.addEventListener('click', (e) => {
         var id = parseInt(product.id);
         var currentProduct = productsSurfaceInfo.find(x => x.id == id);
-
+        alertify.alert('Ready!');   
 
 
         if (!favs.some(item => item.id == currentProduct.id)) {
@@ -66,10 +66,8 @@ function addProductToFavs() {
 
     offcanvas.insertAdjacentHTML("beforeend", totalPriceInfo);
 
-    let minus = document.querySelector(".minus_icon");
-
     let minusIcons = document.querySelectorAll(".minus_icon");
-    minusIcons.forEach(minus => {   
+    minusIcons.forEach(minus => {
         minus.addEventListener("click", function () {
             let id = parseInt(minus.getAttribute('id')); // idni int. edir
             let index = favs.find(item => item.id == id); // favsin icinden indexi tapir
@@ -77,6 +75,11 @@ function addProductToFavs() {
             if (index !== -1) {
                 favs.splice(index, 1);
                 addProductToFavs(); // Call this function again to refresh the UI
+
+                // let productElement = document.getElementById(id.toString());
+                // if (productElement) {
+                //     productElement.parentElement.remove();
+                // }
             }
         });
     });
