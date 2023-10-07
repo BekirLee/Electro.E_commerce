@@ -231,10 +231,3 @@ function productInfo() {
         elementsInfo.insertAdjacentHTML("beforeend", info);
     }
 }
-
-document.querySelector(".basket-icon").addEventListener("click", function (event) {
-    let basket = document.querySelector(".cards .card");
-    event.preventDefault();
-
-    console.log(basket);
-});

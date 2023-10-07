@@ -3,6 +3,14 @@ var products = document.querySelectorAll('.product-item');
 
 let favs = [];
 
+
+document.querySelector(".basket-icon").addEventListener("click", function (event) {
+    let basket = document.querySelector(".cards .card");
+    event.preventDefault();
+
+    console.log(basket);
+});
+
 products.forEach(product => {
     let basketIcon = product.querySelector('.basket-icon');
     basketIcon.addEventListener('click', (e) => {
@@ -12,7 +20,7 @@ products.forEach(product => {
 
         if (!favs.some(item => item.id == currentProduct.id)) {
             favs.push(currentProduct);
-            alertify.message('Added product');
+            alertify.success('Added product');
             addProductToFavs();
         } else {
             // alert("There is product like that in favs!");
