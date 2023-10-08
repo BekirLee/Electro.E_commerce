@@ -128,13 +128,3 @@ function scrollEvent() {
     }
 
 }
-
-// loader for page
-
-function myFunction() {
-    document.querySelector(".loader").style.display = "none";
-    document.querySelector(".loader_box").style.display = "block";
-}
-
-// deleting element
-

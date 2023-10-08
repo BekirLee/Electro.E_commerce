@@ -21,10 +21,33 @@ let categories = [
     {
         id: 4,
         mainPhoto: "",
-        name: "Air-conditioners",
-        photo: "/src/assets/img/camera_image2.jpeg",
+        name: "Kitchen",
+        photo: "/src/assets/img/kitchen_image.jpg",
     },
-
+    {
+        id: 5,
+        mainPhoto: "",
+        name: "Home",
+        photo: "/src/assets/img/kitchendevice_image.jpg",
+    },
+    {
+        id: 6,
+        mainPhoto: "",
+        name: "HeadPhones",
+        photo: "/src/assets/img/headphone1.png",
+    },
+    {
+        id: 7,
+        mainPhoto: "",
+        name: "Laptop",
+        photo: "/src/assets/img/laptop_image3.webp ",
+    },
+    {
+        id: 8,
+        mainPhoto: "",
+        name: "Refrigerators",
+        photo: "src/assets/img/refrigerator_image.jpg",
+    },
 ]
 
 
@@ -182,3 +205,37 @@ function productInfo() {
         productCategory.insertAdjacentHTML("beforeend", items);
     }
 }
+
+
+document.querySelector(".slicknav_menu").addEventListener("click", function () {
+    var menulinks = document.querySelector(".menu_links")
+    menulinks.classList.toggle("active");
+
+})
+
+
+// backtotop 
+
+let backtotop_button = document.getElementById("backtotop");
+let header_fluid = document.querySelector(".header_fluid");
+let main_menu = document.querySelector(".main_menu");
+
+
+window.onscroll = function () {
+    scrollEvent();
+}
+
+function scrollEvent() {
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        backtotop_button.style.opacity = 1;
+        header_fluid.style.height = "50px";
+        main_menu.style.height = "49px"
+    }
+    else {
+        backtotop_button.style.opacity = 0;
+        header_fluid.style.height = "70px";
+        main_menu.style.height = "53px"
+    }
+
+}
+

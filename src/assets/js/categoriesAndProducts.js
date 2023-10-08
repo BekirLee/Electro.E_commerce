@@ -25,7 +25,7 @@ var categories = [
         id: 4,
         mainPhoto: "",
         name: "Kitchen",
-        img: "/src/assets/img/kitchen1.avif",
+        img: "/src/assets/img/kitchen_image.jpg",
     },
     {
         id: 5,
@@ -36,20 +36,20 @@ var categories = [
     {
         id: 6,
         mainPhoto: "",
-        name: "",
-        img: "/src/assets/img/airconditioner_image.jpg",
+        name: "HeadPhones",
+        img: "/src/assets/img/headphone1.png",
     },
     {
         id: 7,
         mainPhoto: "",
         name: "Laptop",
-        img: "/src/assets/img/computer5.jpeg",
+        img: "/src/assets/img/laptop_image3.webp ",
     },
     {
         id: 8,
         mainPhoto: "",
-        name: "",
-        img: "/src/assets/img/airconditioner_image.jpg",
+        name: "Refrigerators",
+        img: "src/assets/img/refrigerator_image.jpg",
     },
 
 ]

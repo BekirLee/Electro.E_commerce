@@ -1,11 +1,7 @@
-var timer;
+window.addEventListener('load', function () {
+    let loader = document.querySelector(".loader");
+    let loader_box = document.querySelector(".loader_box");
 
-function showPage() {
-    document.querySelector(".loader").style.display = "none";
-    document.querySelector(".loader_box").style.display = "block";
-}
-
-
-function myFunction() {
-    timer = setTimeout(showPage, 1000);
-}
+    loader.style.display = 'none';
+    loader_box.style.display = 'block';
+});
