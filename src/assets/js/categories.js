@@ -64,7 +64,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 2,
-        categoryId: 2,
+        categoryId: 4,
         price: 249.00,
         discount: 219.00,
         photo: "/src/assets/img/amazon_product.jpg",
@@ -75,7 +75,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 3,
-        categoryId: 3,
+        categoryId: 4,
         price: 229.00,
         discount: 209.00,
         photo: "/src/assets/img/amazon_product2.jpg",
@@ -137,6 +137,82 @@ var productsSurfaceInfo = [
         hoverPhoto: "/src/assets/img/phonebackground_img.jpg",
         category: "phone",
         text: "5G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
+
+    },
+    {
+        id: 9,
+        categoryId: 8,
+        price: 1199.00,
+        discount: 999.00,
+        photo: "/src/assets/img/refrigerator_image3.jpeg",
+        hoverPhoto: "/src/assets/img/refrigerator_image1.jpeg",
+        category: "Refrigerators",
+        text: "Refrigerator of -13 degree cold in it for all kind of food"
+    },
+    {
+        id: 10,
+        categoryId: 8,
+        price: 1199.00,
+        discount: 999.00,
+        photo: "/src/assets/img/refrigerator_image4.jpeg",
+        hoverPhoto: "/src/assets/img/refrigerator_image5.jpeg",
+        category: "Refrigerators",
+        text: "Refrigerator of -13 degree cold in it for all kind of food",
+
+    },
+    {
+        id: 11,
+        categoryId: 6,
+        price: 599.00,
+        discount: 499.00,
+        photo: "/src/assets/img/headphone.png",
+        hoverPhoto: "/src/assets/img/headphone1.png",
+        category: "HeadPhones",
+        text: "Wifi Wireless Headphone Apple",
+
+    },
+    {
+        id: 12,
+        categoryId: 7,
+        price: 1599.00,
+        discount: 1499.00,
+        photo: "/src/assets/img/computer2.jpg",
+        hoverPhoto: "/src/assets/img/laptop_image.jpg",
+        category: "Laptop",
+        text: "13 Ultrabook Gaming Laptop: Intel Core i7-1165G7 4 Core, NVIDIA GeForce GTX 1650 Ti Max-Q, 13.3″ 1080p 120Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB, Thunderbolt 4",
+
+    },
+    {
+        id: 13,
+        categoryId: 7,
+        price: 1299.00,
+        discount: 1099.00,
+        photo: "/src/assets/img/laptop_image.jpg",
+        hoverPhoto: "/src/assets/img/laptop_image3.webp",
+        category: "Laptop",
+        text: "13 Ultrabook Gaming Laptop: Intel Core i7-1165G7 4 Core, NVIDIA GeForce GTX 1650 Ti Max-Q, 13.3″ 1080p 120Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB, Thunderbolt 4",
+
+    },
+    {
+        id: 14,
+        categoryId: 3,
+        price: 799.00,
+        discount: 599.00,
+        photo: "/src/assets/img/airconditioner_image.jpg",
+        hoverPhoto: "/src/assets/img/airconditioner1.jpg",
+        category: "Air-conditioners",
+        text: "Summer is waiting for this air-conditioner to cool itself",
+
+    },
+    {
+        id: 15,
+        categoryId: 3,
+        price: 799.00,
+        discount: 599.00,
+        photo: "/src/assets/img/airconditioner3.jpg",
+        hoverPhoto: "/src/assets/img/airconditioner2.jpeg",
+        category: "Air-conditioners",
+        text: "Summer is waiting for this air-conditioner to cool itself",
 
     },
 ]

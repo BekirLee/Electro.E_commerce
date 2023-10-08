@@ -98,6 +98,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 4,
+        categoryId: 4,
         info: {
             price: 1499.00,
             discount: 1399.00,
@@ -112,6 +113,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 5,
+        categoryId: 4,
         info: {
             price: 1029.00,
             discount: 999.00,
@@ -125,6 +127,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 6,
+        categoryId: 4,
         info: {
             price: 699.00,
             discount: 659.00,
@@ -138,6 +141,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 7,
+        categoryId: 5,
         info: {
             price: 1299.00,
             discount: 1199.00,
@@ -151,6 +155,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 8,
+        categoryId: 5,
         info: {
             price: 1099.00,
             discount: 999.00,
