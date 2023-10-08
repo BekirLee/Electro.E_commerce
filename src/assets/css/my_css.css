@@ -391,7 +391,7 @@ header {
     overflow: hidden;
 }
 
-.card .fa-solid {
+.card .fa-heart {
     position: absolute;
     left: 199px;
     top: 20px;
@@ -489,7 +489,7 @@ header {
     opacity: 1 !important;
 }
 
-.card:hover .fa-solid {
+.card:hover .fa-heart {
     display: inline-block;
     transition: 1s;
 }

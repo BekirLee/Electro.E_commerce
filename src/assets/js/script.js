@@ -4,7 +4,7 @@ var products = document.querySelectorAll('.product-item');
 let favs = [];
 
 
-document.querySelector(".basket-icon").addEventListener("click", function (event) {
+document.querySelector(".fa-heart").addEventListener("click", function (event) {
     let basket = document.querySelector(".cards .card");
     event.preventDefault();
 
@@ -12,11 +12,11 @@ document.querySelector(".basket-icon").addEventListener("click", function (event
 });
 
 products.forEach(product => {
-    let basketIcon = product.querySelector('.basket-icon');
+    let basketIcon = product.querySelector('.fa-heart');
     basketIcon.addEventListener('click', (e) => {
         var id = parseInt(product.id);
         var currentProduct = productsSurfaceInfo.find(x => x.id == id);
-
+        basketIcon.style.color = "red";
 
         if (!favs.some(item => item.id == currentProduct.id)) {
             favs.push(currentProduct);

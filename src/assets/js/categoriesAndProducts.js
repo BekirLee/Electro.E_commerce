@@ -70,7 +70,7 @@ var productsSurfaceInfo = [
     },
     {
         id: 2,
-        categoryId: 2,
+        categoryId: 4,
         info: {
             price: 249.00,
             discount: 219.00,
@@ -214,7 +214,7 @@ function productInfo() {
                 <img src="${element.info.img}" class="card-img-top" alt="...">
                 <img src="${element.info.hover}" class="card-img-top img" alt="...">
             </div>    
-                <i class="fa-solid fa-basket-shopping basket-icon"></i>
+            <i class="fa-regular fa-heart"></i>
             <span class="sale">Sale</span>
             <div class="card-body">
                 <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
