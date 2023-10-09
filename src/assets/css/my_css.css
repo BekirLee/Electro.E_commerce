@@ -124,6 +124,8 @@ header {
 
 .num {
     position: absolute;
+    width: 15px;
+    height: 17px;
     top: 0;
     left: 23px;
     font-size: 8px;
@@ -318,7 +320,7 @@ header {
     text-align: center;
 }
 
-.product .div {
+.product .prduct_count {
     position: absolute;
     left: -11px;
     width: 100%;
@@ -459,7 +461,7 @@ header {
 .categories a {
     text-decoration: none;
     color: #3498db;
-    
+
 }
 
 /*  */
@@ -715,6 +717,10 @@ header {
 }
 
 .fa-star {
+    /* color: orange; */
+}
+
+.fa-star:hover {
     color: orange;
 }
 

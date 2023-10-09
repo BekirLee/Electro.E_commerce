@@ -189,7 +189,7 @@ function getCategory() {
             <div class="product" id="${category.id}" >
                 <img src="${category.img}" alt="">
                 
-                <div class="div">
+                <div class="prduct_count">
                     <h2>
                         ${category.name} <p>${productCount} products</p>
                     </h2>
