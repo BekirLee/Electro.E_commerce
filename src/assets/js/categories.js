@@ -251,14 +251,15 @@ function productInfo() {
 
 
     let similarProducts = productsSurfaceInfo.filter(p => p.categoryId == product.id);
+    let categories_link = document.querySelector(".categories");
 
-    for (let item of similarProducts) {
-        let items = `
+    for (let items of similarProducts) {
+        let item = `
                   
-                    <div class="card product-item" id="${item.categoryId}">
+                    <div class="card product-item" id="${items.categoryId}">
                     <div class="card-photo">
-                        <img src="${item.photo}" class="card-img-top" alt="...">
-                        <img src="${item.hoverPhoto}" class="card-img-top img" alt="...">
+                        <img src="${items.photo}" class="card-img-top" alt="...">
+                        <img src="${items.hoverPhoto}" class="card-img-top img" alt="...">
                     </div>    
                     <span class="sale">Sale</span>
                     <div class="card-body">
@@ -269,15 +270,25 @@ function productInfo() {
                         <i class="fa-regular fa-star fa-2xs"></i>
                         <i class="fa-regular fa-star fa-2xs"></i>
                         </h5>
-                            <p class="card-text">${item.text}</p>
+                            <p class="card-text">${items.text}</p>
                             <div class="price">
-                                <del>${item.price}$</del>
-                                <span>${item.discount}$</span>
+                                <del>${items.price}$</del>
+                                <span>${items.discount}$</span>
                             </div>
                     </div>
                 </div>
                 `;
-        productCategory.insertAdjacentHTML("beforeend", items);
+        productCategory.insertAdjacentHTML("beforeend", item);
+    }
+
+
+    for (let links of categories) {
+        let link = `
+        <a href="src/pages/productInfo.html?id=${links.id}">
+            <p class="categorie">${links.name}</p>
+         </a> 
+         `;
+        categories_link.insertAdjacentHTML("beforeend", link);
     }
 }
 
