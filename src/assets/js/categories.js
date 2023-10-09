@@ -264,11 +264,7 @@ function productInfo() {
                     <span class="sale">Sale</span>
                     <div class="card-body">
                         <h5 class="card-title">
-                        <i class="fa-regular fa-star fa-2xs"></i>
-                        <i class="fa-regular fa-star fa-2xs" style="color:orange"></i>
-                        <i class="fa-regular fa-star fa-2xs"></i>
-                        <i class="fa-regular fa-star fa-2xs"></i>
-                        <i class="fa-regular fa-star fa-2xs"></i>
+                      
                         </h5>
                             <p class="card-text">${items.text}</p>
                             <div class="price">
@@ -284,7 +280,7 @@ function productInfo() {
 
     for (let links of categories) {
         let link = `
-        <a href="src/pages/productInfo.html?id=${links.id}">
+        <a href="productInfo.html?id=${links.id}">
             <p class="categorie">${links.name}</p>
          </a> 
          `;

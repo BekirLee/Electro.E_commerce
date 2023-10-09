@@ -456,6 +456,12 @@ header {
     font-weight: 700;
 }
 
+.categories a {
+    text-decoration: none;
+    color: #3498db;
+    
+}
+
 /*  */
 
 .card .card-img-top,
