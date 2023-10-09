@@ -214,8 +214,7 @@ let products = [
 
 document.addEventListener("DOMContentLoaded", function () {
     info();
-    get();
-
+    rateProduct();
 });
 
 
@@ -279,22 +278,24 @@ function info() {
                             <li class="feauture"> ${product.size}</li>
                             <li class="feauture"> ${product.brand}</li>
                             <li class="feauture"> ${product.status}</li>
-                            <i id="star" class="fa-solid fa-star orange"></i>
-                            <i id="star" class="fa-solid fa-star orange"></i>
-                            <i id="star" class="fa-solid fa-star orange"></i>
-                            <i id="star" class="fa-solid fa-star orange"></i>
-                            <i id="star" class="fa-solid fa-star orange"></i>
+                                <i id="" class="fa-solid fa-star  black star">
+                                <i id="" class="fa-solid fa-star  black star">
+                                <i id="" class="fa-solid fa-star  black star">
+                                <i id="" class="fa-solid fa-star  black star">
+                                <i id="" class="fa-solid fa-star  black star"></i></i></i></i></i>
                             `;
 
 }
 
-function get() {
-    let starIcon = document.querySelector(".fa-star");
-    let orange = document.querySelector(".orange");
-    let star = document.getElementById("star");
+// rate product 
+function rateProduct() {
+    // let starIcon = document.querySelector(".fa-star");
+    let stars = document.querySelectorAll(".fa-star");
+    let star = document.querySelectorAll(".star");
 
-    starIcon.addEventListener("click", function () {
-        star.classList.remove("orange");
-        starIcon.style.color = "orange";
+    stars.forEach(star => {
+        star.addEventListener("click", function () {
+            star.classList.toggle("orange");
+        });
     });
 }

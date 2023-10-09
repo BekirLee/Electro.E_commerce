@@ -716,18 +716,20 @@ header {
     color: orange;
 }
 
-.fa-star {
-    /* color: orange; */
-}
+/*rating side  */
 
-.orange {
-    color: black;
-}
-
-.orange:hover {
+.black:hover {
     color: orange;
 }
 
+.black {
+    color: black;
+}
+
+.orange {
+    color: orange;
+}
+/*  */
 .orange_color {
     background-color: orange;
 }
