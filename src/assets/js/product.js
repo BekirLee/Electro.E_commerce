@@ -277,6 +277,11 @@ function info() {
                             <li class="feauture"> ${product.size}</li>
                             <li class="feauture"> ${product.brand}</li>
                             <li class="feauture"> ${product.status}</li>
+                            <i class="fa-solid fa-star" style="color: #f9d806;"></i>
+                            <i class="fa-solid fa-star" style="color: #f9d806;"></i>
+                            <i class="fa-solid fa-star" style="color: #f9d806;"></i>
+                            <i class="fa-solid fa-star" style="color: #f9d806;"></i>
+                            <i class="fa-solid fa-star" style="color: #f9d806;"></i>
 `;
 
 }

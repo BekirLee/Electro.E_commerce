@@ -260,7 +260,6 @@ function productInfo() {
                         <img src="${item.photo}" class="card-img-top" alt="...">
                         <img src="${item.hoverPhoto}" class="card-img-top img" alt="...">
                     </div>    
-                        <i class="fa-solid fa-basket-shopping basket-icon"></i>
                     <span class="sale">Sale</span>
                     <div class="card-body">
                         <h5 class="card-title">
