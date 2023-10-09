@@ -720,7 +720,11 @@ header {
     /* color: orange; */
 }
 
-.fa-star:hover {
+.orange {
+    color: black;
+}
+
+.orange:hover {
     color: orange;
 }
 

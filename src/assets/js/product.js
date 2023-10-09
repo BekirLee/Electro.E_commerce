@@ -214,6 +214,8 @@ let products = [
 
 document.addEventListener("DOMContentLoaded", function () {
     info();
+    get();
+
 });
 
 
@@ -277,20 +279,22 @@ function info() {
                             <li class="feauture"> ${product.size}</li>
                             <li class="feauture"> ${product.brand}</li>
                             <li class="feauture"> ${product.status}</li>
-                            <i class="fa-solid fa-star"></i>
+                            <i id="star" class="fa-solid fa-star orange"></i>
+                            <i id="star" class="fa-solid fa-star orange"></i>
+                            <i id="star" class="fa-solid fa-star orange"></i>
+                            <i id="star" class="fa-solid fa-star orange"></i>
+                            <i id="star" class="fa-solid fa-star orange"></i>
                             `;
-    // <i class="fa-solid fa-star" style="color: #f9d806;"></i>
-    // <i class="fa-solid fa-star" style="color: #f9d806;"></i>
-    // <i class="fa-solid fa-star" style="color: #f9d806;"></i>
-    // <i class="fa-solid fa-star" style="color: #f9d806;"></i>
 
 }
 
-
-function rateClick() {
+function get() {
     let starIcon = document.querySelector(".fa-star");
+    let orange = document.querySelector(".orange");
+    let star = document.getElementById("star");
 
     starIcon.addEventListener("click", function () {
-        style.color = "orange";
+        star.classList.remove("orange");
+        starIcon.style.color = "orange";
     });
 }
