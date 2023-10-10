@@ -290,8 +290,7 @@ function info() {
 // rate product 
 function rateProduct() {
     // let starIcon = document.querySelector(".fa-star");
-    let stars = document.querySelectorAll(".fa-star");
-    let star = document.querySelectorAll(".star");
+    let stars = document.querySelectorAll(".star");
 
     stars.forEach(star => {
         star.addEventListener("click", function () {

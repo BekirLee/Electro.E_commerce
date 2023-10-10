@@ -219,12 +219,6 @@ function productInfo() {
             <i class="fa-regular fa-heart"></i>
             <span class="sale">Sale</span>
             <div class="card-body">
-                <h5 class="card-title"><i class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i
-                        class="fa-regular fa-star fa-2xs"></i><i class="fa-regular fa-star fa-2xs"></i>
-                </h5>
-              
                     <p class="card-text">${element.firstname}</p>
                     <div class="price">
                         <del>${element.info.price}$</del>
