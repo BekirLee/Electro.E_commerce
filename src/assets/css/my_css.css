@@ -362,6 +362,10 @@ header {
     overflow: hidden;
 }
 
+.some {
+    margin-top: 160px;
+}
+
 /* today's deal */
 .productDeal h2 {
     text-transform: uppercase;
@@ -729,6 +733,7 @@ header {
 .orange {
     color: orange;
 }
+
 /*  */
 .orange_color {
     background-color: orange;

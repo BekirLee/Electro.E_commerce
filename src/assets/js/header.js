@@ -142,74 +142,43 @@ var productsSurfaceInfo = [
 ]
 
 
-
-const productId = new URLSearchParams(window.location.search).get('id');
-if (!productId) {
-    console.error("CategoryElement Idsi qeyde edilməyib.");
-    return;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    getElements();
+})
 
 
-const product = header_tag_names.find(p => p.id === parseInt(productId));
-// const productcategory = productsSurfaceInfo.find(p => p.categoryId === parseInt(product.id));
+function getElements() {
 
-if (!product) {
-    console.error("Bu idyə uyğun məhsul tapılmadı");
-    return;
-}
+    let productId = new URLSearchParams(window.location.search).get('id');
+    // if (!productId) {
+    //     console.error("CategoryElement Idsi qeyde edilməyib.");
+    //     return;
+    // }
 
-getElements();
 
-function getElements(){
+    let product = header_tag_names.find(p => p.id === parseInt(productId));
+    let productcategory = productsSurfaceInfo.find(p => p.id === parseInt(product.id));
 
-    let products = header_tag_names.find(p => p.id == product.id);
-    let menu = document.querySelector(".menu");
-    
-    for (let links of products) {
-        
-        let item = `
-        <a href="src/assets/pages/header_links_page.html?id="${links.id}">
-            <li class="menu_link">
-                ${links.name}
-            </li>
-        </a>
-        `;
-        menu.insertAdjacentHTML("beforeend", item);
-    }  
+    // if (!product) {
+    //     console.error("Bu idyə uyğun məhsul tapılmadı");
+    //     return;
+    // }
 
-    let elements = document.querySelector(".header_link_products");
+    // let products = header_tag_names.find(p => p.id == product.id);
 
-    for(let item of productsSurfaceInfo){
-       let element=`<div>
-        ${item.name}
+
+
+    let elements = document.querySelector(".some");
+
+    elements.innerHTML = `<h3 id="${product.id}">${product.name} </h3>`;
+
+
+    for (let info of productcategory) {
+        let infos = `
+        <div class="" id="${info.categoryId}">
+          ${info.name}
         </div>`;
-        elements.insertAdjacentHTML("beforeend",element);
+        elements.insertAdjacentHTML("beforeend", infos);
     }
 }
-
-// getCategory();
-
-// function getCategory() {
-  
-//     if (!elements) {
-//         console.error(".header_link_products elementi bulunamadi.");
-//         return;
-//     }
-
-//     for (var category of productsSurfaceInfo) {
-//         let productCount = productsSurfaceInfo.filter(x => x.categoryId == category.id).length;
-//         let element = `
-//             <div class="product" id="${category.id}" >
-//                 <img src="${category.img}" alt="">
-                
-//                 <div class="prduct_count">
-//                     <h2>
-//                         ${category.name}
-//                     </h2>
-//                 </div>
-//             </div>
-//         `;
-//         elements.insertAdjacentHTML("beforeend", element);
-//     }
-// }
 
