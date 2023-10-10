@@ -27,6 +27,7 @@ let header_tag_names = [
 ]
 
 
+
 const productId = new URLSearchParams(window.location.search).get('id');
 if (!productId) {
     console.error("CategoryElement Idsi qeyde edilməyib.");
@@ -47,7 +48,7 @@ let menu = document.querySelector(".menu");
 for (let links of products) {
 
     let item = `
-    <a href="src/assets/pages/header_links_page.html?id="${links.id1}">
+    <a href="src/assets/pages/header_links_page.html?id="${links.id}">
         <li class="menu_link">
             ${links.name}
         </li>
