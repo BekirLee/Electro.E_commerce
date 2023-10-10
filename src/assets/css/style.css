@@ -63,25 +63,9 @@ body {
 
 .colLeft {
     display: flex;
-    /* justify-content: center !important; */
     align-items: center !important;
     padding: 3%;
     height: 321px;
-}
-
-.col-8 {
-    /* position: relative;
-    right:  80%; */
-    /* top: 70%;
-    transform: translate(-50%, -50%); */
-}
-
-.some {
-
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
 }
 
 .card-width {
@@ -117,7 +101,6 @@ body {
 
 .facebok_inner-text img {
     height: 106px;
-    /* margin: -28px */
 }
 
 
@@ -139,7 +122,6 @@ body {
 
 .m {
     margin-top: 177px;
-    /* height: 172px; */
     position: absolute;
     top: 80%;
     flex-direction: row !important;
@@ -164,11 +146,11 @@ body {
     padding: 0px !important;
 }
 
-.brdr{
+.brdr {
     border-bottom: 1px solid #8a8d91;
 }
 
-.first_li{
+.first_li {
     list-style: none;
     color: #8a8d91;
     margin-bottom: 0px;
@@ -177,7 +159,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.footer_ul_1 li  {
+.footer_ul_1 li {
     list-style: none;
     color: #8a8d91;
     margin-left: 10px;
@@ -195,12 +177,12 @@ body {
     display: inline-block;
 }
 
-.footer_ul_1 a{
+.footer_ul_1 a {
     text-decoration: none;
     color: #8a8d91 !important;
 }
 
-.footer_ul_1 i{
+.footer_ul_1 i {
     color: #828486;
     background-color: rgba(209, 212, 217, 0.788);
     border: 1px solid #8a8d91;
