@@ -201,9 +201,9 @@ let menu = document.querySelector(".menu");
 for (let links of header_tag_names) {
 
     let item = `
-    <a href="src/pages/header_links_page.html?id="${links.id}">
+    <a href="src/pages/header_links_page.html?id=${links.id}">
         <li class="menu_link">
-            ${links.name}
+             ${links.name}
         </li>
     </a>
     `;
