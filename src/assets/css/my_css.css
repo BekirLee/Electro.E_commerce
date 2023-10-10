@@ -173,8 +173,8 @@ header {
 }
 
 .menu_link:hover {
-    background-color: rgba(255, 166, 0, 0.772);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    /* background-color: rgba(255, 166, 0, 0.772); */
+    box-shadow: 4px 2px 2px 4px rgba(0, 0, 0.1, 0.15);
 }
 
 .active {

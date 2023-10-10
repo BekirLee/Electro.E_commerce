@@ -1,5 +1,4 @@
 
-
 var categories = [
     {
         id: 1,
@@ -197,6 +196,14 @@ let header_tag_names = [
     },
 ]
 
+
+// 
+
+getCategory();
+productInfo();
+
+// headerSide
+
 let menu = document.querySelector(".menu");
 for (let links of header_tag_names) {
 
@@ -209,10 +216,6 @@ for (let links of header_tag_names) {
     `;
     menu.insertAdjacentHTML("beforeend", item);
 }
-// 
-
-getCategory();
-productInfo();
 
 function getCategory() {
     var elements = document.querySelector(".productsBox");
