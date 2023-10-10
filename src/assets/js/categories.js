@@ -235,7 +235,7 @@ function productInfo() {
 
 
     const product = categories.find(p => p.id === parseInt(productId));
-    const productcategory = productsSurfaceInfo.find(p => p.categoryId === parseInt(product.id));
+    // const productcategory = productsSurfaceInfo.find(p => p.categoryId === parseInt(product.id));
 
     if (!product) {
         console.error("Bu idyə uyğun məhsul tapılmadı");
