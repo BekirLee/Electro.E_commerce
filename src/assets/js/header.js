@@ -208,19 +208,17 @@ function getElements() {
 
 
     let product = header_tag_names.find(p => p.id === parseInt(productId));
-    let productcategory = productsSurfaceInfo.filter(p => p.id === parseInt(product.id));
+    let productcategory = productsSurfaceInfo.filter(p => p.categoryId === parseInt(product.id));
 
     if (!product) {
         console.error("Bu idyə uyğun məhsul tapılmadı");
         return;
     }
 
-    let products = header_tag_names.find(p => p.id == product.id);
+    // let products = header_tag_names.find(p => p.id == product.id);
 
-
-
-    let elements = document.querySelector(".some");
-    let elementler = document.querySelector(".other");
+    let elements = document.querySelector(".header_links_mainText");
+    let elementler = document.querySelector(".header_links_products");
 
     elements.innerHTML = `<h3 id="${product.id}">${product.name} </h3>`;
 

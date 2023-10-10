@@ -362,8 +362,13 @@ header {
     overflow: hidden;
 }
 
-.some {
+.header_links_mainText {
     margin-top: 160px;
+}
+
+.header_links_products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* today's deal */
