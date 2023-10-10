@@ -364,11 +364,16 @@ header {
 
 .header_links_mainText {
     margin-top: 160px;
+    margin-bottom: 50px;
 }
 
 .header_links_products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.headerLinks_item {
+    color: #dbe2e2 !important;
 }
 
 /* today's deal */

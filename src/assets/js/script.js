@@ -117,11 +117,11 @@ window.onscroll = function () {
 
 function scrollEvent() {
     let bodyheight = document.body.scrollHeight;
-    let scrollHalfBody = bodyheight / 2;
+    let scrollHalfBody = bodyheight / 4;
 
     if (document.body.scrollTop > scrollHalfBody || document.documentElement.scrollTop > scrollHalfBody) {
         backtotop_button.style.opacity = 1;
-        header_fluid.style.height = "50px";
+        header_fluid.style.height = "55px";
         main_menu.style.display = "none";
     }
     else {

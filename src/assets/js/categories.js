@@ -308,16 +308,19 @@ window.onscroll = function () {
 }
 
 function scrollEvent() {
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+    let bodyheight = document.body.scrollHeight;
+    let scrollHalfBody = bodyheight / 4;
+
+    if (document.body.scrollTop > scrollHalfBody || document.documentElement.scrollTop > scrollHalfBody) {
         backtotop_button.style.opacity = 1;
-        header_fluid.style.height = "50px";
-        main_menu.style.height = "49px"
+        header_fluid.style.height = "55px";
+        main_menu.style.display = "none";
     }
     else {
         backtotop_button.style.opacity = 0;
         header_fluid.style.height = "70px";
+        main_menu.style.display = "block";
         main_menu.style.height = "53px"
     }
 
 }
-
