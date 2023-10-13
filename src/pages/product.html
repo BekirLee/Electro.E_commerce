@@ -20,8 +20,13 @@
 <body id="body">
 
     <!-- loader -->
-    <div class="loader"></div>
-    <div class="loader_box animate-bottom">
+    <div class="loader active">
+        <div class="loader-item">
+            <div class="loader-icon"></div>
+        </div>
+    </div>
+
+    <div class=" animate-bottom">
 
         <!-- header -->
         <header>
@@ -112,7 +117,7 @@
         </header>
 
 
-        <main>
+        <main class="container">
             <div class="all_product_gallery">
 
                 <div class="gallery-wrap">
@@ -279,9 +284,11 @@
             </div>
         </footer>
 
-        <script src="/src/assets/js/fslightbox.js"></script>
-        <script src="/src/assets/js/product.js"></script>
-        <script src="/src/assets/js/loader.js"></script>
+    </div>
+    <script src="../assets/js/productsList.js"></script>
+    <script src="/src/assets/js/fslightbox.js"></script>
+    <script src="/src/assets/js/product.js"></script>
+    <script src="/src/assets/js/loader.js"></script>
 </body>
 
 </html>

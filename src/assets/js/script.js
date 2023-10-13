@@ -1,5 +1,5 @@
 
-var products = document.querySelectorAll('.product-item');
+var productsList = document.querySelectorAll('.product-item');
 
 let favs = [];
 
@@ -11,11 +11,11 @@ document.querySelector(".fa-heart").addEventListener("click", function (event) {
     console.log(basket);
 });
 
-products.forEach(product => {
+productsList.forEach(product => {
     let basketIcon = product.querySelector('.fa-heart');
     basketIcon.addEventListener('click', (e) => {
         var id = parseInt(product.id);
-        var currentProduct = productsSurfaceInfo.find(x => x.id == id);
+        var currentProduct = products.find(x => x.id == id);
         basketIcon.style.color = "red";
 
         if (!favs.some(item => item.id == currentProduct.id)) {
@@ -42,25 +42,25 @@ function addProductToFavs() {
 
 
     for (let element of favs) {
-        total += element.info.price;
-        discount += element.info.discount;
-        var info = ` 
+        total += +element.price;
+        discount += +element.discount;
+        var item = ` 
         <a href="javascript:void(0)">
             <div class="product-item" id="${element.id}">
                 <div class="off-canvas_photo">
-                    <img src="${element.info.img}" class="card-img-top card_basket_photo photo_width" style=height:200px alt="...">
+                    <img src="${element.photo}" class="card-img-top card_basket_photo photo_width" style=height:200px alt="...">
                 </div>      
                 <div class="card-body">
                     <div class="price">
-                         <del>${element.info.price}$</del>
-                    <span>${element.info.discount} $</span>
+                         <del>${element.price}$</del>
+                    <span>${element.discount} $</span>
                     <i id="${element.id}" class="fa-solid fa-square-minus minus_icon"></i>
                     </div>
                 </div>
             </div>
           
         </a>`;
-        offcanvas.insertAdjacentHTML("beforeend", info);
+        offcanvas.insertAdjacentHTML("beforeend", item);
     }
 
     icon_number.innerHTML = `
@@ -69,33 +69,33 @@ function addProductToFavs() {
 
     let totalPriceInfo = `  <div class="basket_price">
     <div class=" withoutDiscount"><p>Price without discount: ${total}$</p></div>
-    <div class=" withDiscount"><p>Total price after discount : ${discount}$</p></
+    <div class=" withDiscount"><p>Total price after discount : ${discount}$</p>
     </div>
     `;
 
     offcanvas.insertAdjacentHTML("beforeend", totalPriceInfo);
 
-    let minusIcons = document.querySelectorAll(".minus_icon");
+    let      = document.querySelectorAll(".minus_icon");
     minusIcons.forEach(minus => {
         minus.addEventListener("click", function () {
             let id = parseInt(minus.getAttribute('id')); // idni int. edir
-            let index = favs.find(item => item.id == id); // favsin icinden indexi tapir
-
-            if (index !== -1) {
-                favs.splice(index, 1);
-                addProductToFavs(); // Call this function again to refresh the UI
-
-                // let productElement = document.getElementById(id.toString());
-                // if (productElement) {
-                //     productElement.parentElement.remove();
-                // }
-            }
+            deleteproductFromFavs(id)
         });
     });
-
-    console.log(favs)
 }
 
+
+
+
+
+function deleteproductFromFavs(id) {
+    let currentProduct = favs.find(item => item.id == id); // favsin icinden indexi tapir
+
+    if (currentProduct) {
+        favs.splice(currentProduct, 1);
+        addProductToFavs(); // Call this function again to refresh the UI
+    }
+}
 // 
 document.querySelector(".slicknav_menu").addEventListener("click", function () {
     var menulinks = document.querySelector(".menu_links")

@@ -13,15 +13,15 @@ html {
 
 .header_fluid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: 70px;
-    background-color: #0573f0;
-    border-bottom: 1px solid grey;
-    transition: height .9s ease-in;
+    transition: height .2s ease-in;
 }
 
 header {
+    height: 70px;
+    border-bottom: 1px solid grey;
+    background-color: #0573f0;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -91,13 +91,13 @@ header {
 
 .main_menu {
     background-color: #0573f0;
-    transition: height .9s ease-in;
+    transition: height .2s ease-in;
 }
 
 
 .menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 0px;
     padding: 0;
@@ -482,7 +482,7 @@ header {
 
 .card .card-img-top,
 .card .img {
-    transition: opacity 0.5s ease;
+    transition: opacity 0.2s ease;
     height: 200px;
     object-fit: contain;
 }
@@ -513,12 +513,12 @@ header {
 
 .card:hover .fa-heart {
     display: inline-block;
-    transition: 1s;
+    transition: .2s;
 }
 
 .card:hover button {
     display: inline-block;
-    transition: 1s;
+    transition: .21s;
 }
 
 .sale {
@@ -723,7 +723,7 @@ header {
     bottom: 15px;
     color: orange;
     font-size: 30px;
-    transition: opacity .9s ease-in;
+    transition: opacity .2s ease-in;
 }
 
 .heart_full {
@@ -787,22 +787,39 @@ header {
 /* loader */
 
 .loader {
-    display: block;
-    position: absolute;
-    top: 43%;
-    left: 45%;
-    border: 10px solid #f3f3f3;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 123123;
+    left: 0;
+    background: #fff;
+    position: fixed;
+
+}
+.loader .loader-icon{
+  
+    border: 5px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 10px solid #3498db;
-    width: 100px;
-    height: 100px;
+    transform: translate(-50%,-50%);
+    border-top: 5px solid #3498db;
+    width: 60px;
+    height: 60px;
     animation: spin 2s linear infinite;
 }
 
-.loader_box {
-    display: none;
-    margin-top: 124px;
+.loader .loader-item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
+
+.loader.active{
+    display: block;
+}
+
+
 
 .animate-bottom {
     position: relative;
