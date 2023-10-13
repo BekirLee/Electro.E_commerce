@@ -838,9 +838,11 @@ header {
 }
 
 .basket_price {
-    color: #000;
+    background-color: rgb(8, 96, 173);
+    color: #fff;
     position: fixed;
     bottom: 5px;
+    border-radius: 5px;
 }
 
 .off-canvas_photo {
