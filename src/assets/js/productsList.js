@@ -1,7 +1,4 @@
 
-
-
-
 var products = [
     {
         id: 1,
@@ -10,7 +7,7 @@ var products = [
         price: "49.00",
         discount: "44.00",
         brand: "Mitsubishi",
-       photo: "/src/assets/img/beardcleaner.jpg",
+        photo: "/src/assets/img/beardcleaner.jpg",
         size: "Dimensions -69.5 x 75.0 x 169.0",
         guarantee: "12 years warranty",
         status: "Newest technology",
@@ -32,20 +29,17 @@ var products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Home",
-       photo: "/src/assets/img/amazon_product.jpg",
+        photo: "/src/assets/img/amazon_product.jpg",
         additionalPhotos: [
             "/src/assets/img/amazon_product.jpg",
             "/src/assets/img/amazon_product2.jpg",
             "/src/assets/img/amazon_product2.jpg",
         ],
         title: "Smart Speaker with Alexa Voice Control Built-in Compact Size with Incredible Sound for Any Room",
-     
     },
     {
         id: 3,
         categoryId: 3,
-
-
         price: "229.00",
         discount: "209.00",
         brand: "Mitsubishi",
@@ -53,24 +47,17 @@ var products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Home",
-       photo: "/src/assets/img/amazon_product2.jpg",
-        // hover: "./src/assets/img/background_amazon_product.jpg",
+        photo: "/src/assets/img/amazon_product2.jpg",
         additionalPhotos: [
             "/src/assets/img/amazon_product2.jpg",
             "/src/assets/img/amazon_product.jpg",
             "/src/assets/img/amazon_product2.jpg",
         ],
-
-
         title: "  Home Speaker 500: Smart Bluetooth Speaker with Alexa Voice Control Built-In, White",
-        //photo: "./src/assets/img/washingmachine_image.jpg",
-        // href: "pages/products.html"
     },
     {
         id: 4,
         categoryId: 4,
-
-
         price: "1,499.00",
         discount: "1,399.00",
         brand: "Intel",
@@ -78,19 +65,14 @@ var products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Laptop",
-       photo: "/src/assets/img/computer.jpg",
-        // hover: "./src/assets/img/background_computer.jpg",
-
+        photo: "/src/assets/img/computer.jpg",
         additionalPhotos: [
             "/src/assets/img/computer2.jpg",
             "/src/assets/img/laptop_image.jpg",
             "/src/assets/img/computer.jpg",
 
         ],
-
         title: " 13 Ultrabook Gaming Laptop: Intel Core i7-1165G7 4 Core, NVIDIA GeForce GTX 1650 Ti Max-Q, 13.3″ 1080p 120Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB, Thunderbolt 4",
-        //photo: "./src/assets/img/washingmachine_image.jpg",
-        // href: "pages/products.html"
     },
     {
         id: 5,
@@ -104,20 +86,14 @@ var products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Laptop",
-       photo: "/src/assets/img/computer2.jpg",
-        // hover: "./src/assets/img/background_computer.jpg",
+        photo: "/src/assets/img/computer2.jpg",
         additionalPhotos: [
             "/src/assets/img/laptop_image.jpg",
             "/src/assets/img/computer.jpg",
             "/src/assets/img/computer2.jpg",
 
         ],
-
-
-
         title: "15.6″ FHD Display Laptop Intel i7  Intel HD Graphics 6000 , Webcam, WiFi, Bluetooth, HDMI, Windows 11,Grey",
-        //photo: "./src/assets/img/washingmachine_image.jpg",
-        // href: "pages/products.html"
     },
     {
         id: 6,
@@ -129,7 +105,7 @@ var products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Phone and Tablet",
-       photo: "/src/assets/img/tablet.jpg",
+        photo: "/src/assets/img/tablet.jpg",
         additionalPhotos: [
             "/src/assets/img/phone_image.jpg",
             "/src/assets/img/phone_info2.jpg",
@@ -148,7 +124,7 @@ var products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Phone and Tablet",
-       photo: "/src/assets/img/phone1.jpg",
+        photo: "/src/assets/img/phone1.jpg",
         additionalPhotos: [
             "/src/assets/img/phone_info1.jpg",
             "/src/assets/img/phone_image.jpg",
@@ -156,7 +132,7 @@ var products = [
         ],
 
         title: "5G Unlocked Smartphone,12GB RAM+256GB Storage120Hz Fluid Display Hasselblad Quad Camera 65W Ultra Fast Charge 50W Wireless Charge",
-    
+
     },
     {
         id: 8,
@@ -168,7 +144,7 @@ var products = [
         guarantee: "12 years warranty",
         status: "Newest technology",
         category: "Phone and Tablet",
-       photo: "/src/assets/img/phone2.jpg",
+        photo: "/src/assets/img/phone2.jpg",
         additionalPhotos: [
 
             "/src/assets/img/phone_info1.jpg",
@@ -178,7 +154,6 @@ var products = [
 
 
         title: "6G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
-        //photo: "./src/assets/img/washingmachine_image.jpg",
-        // href: "pages/products.html"
+
     },
 ]
