@@ -23,7 +23,6 @@ productsList.forEach(product => {
             alertify.success('Added product');
             addProductToFavs();
         } else {
-            // alert("There is product like that in favs!");
             alertify.warning("There is product like that in favs!")
         }
     })

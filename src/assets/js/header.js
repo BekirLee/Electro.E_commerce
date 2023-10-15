@@ -50,7 +50,6 @@ function getElements() {
         return;
     }
 
-    // let products = header_tag_names.find(p => p.id == product.id);
 
     let elements = document.querySelector(".header_links_mainText");
     let elementler = document.querySelector(".header_links_products");
