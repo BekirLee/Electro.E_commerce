@@ -192,7 +192,6 @@ header {
 }
 
 .bars {
-    /* display: none; */
     display: block;
     color: #fff;
     font-size: 24px;
@@ -266,7 +265,6 @@ header {
 
 .services_ul li .service_items {
     display: flex;
-    /* align-items: center; */
 }
 
 .textofService {
@@ -754,13 +752,11 @@ header {
 }
 
 .withDiscount p {
-    /* position: fixed; */
     margin: 0px !important;
     padding: 3px;
 }
 
 .withoutDiscount p {
-    /* position: fixed; */
     padding: 3px;
     margin: 0px;
 }
