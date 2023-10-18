@@ -26,70 +26,74 @@
     <div class="loader"></div>
     <div class="loader_box animate-bottom">
 
+      
         <header>
 
             <div class="header_fluid">
-                <a href="/index.html">
-                    <div class="logo">
-                        <img src="/src/assets/img/logo_ecommerce.png" alt="">
+                <div class="d-flex justify-content-between container my-0">
+                    <a href="index.html">
+                        <div class="logo pt-3">
+                            <img src="/src/assets/img/logo_ecommerce.png" alt="">
+                        </div>
+                    </a>
+                    <div class="search">
+                        <form class="form-inline my-2">
+                            <input class="form-control" type="search" placeholder="search in transmart.com">
+                            <button class="btn btn-outline-warning " type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+
+                        <ul class="search_ul">
+                            <li class="menu_link ">
+                                <!-- off-canvas-->
+                                <a class="btn btn-primary number" data-bs-toggle="offcanvas"
+                                    data-bs-target="#WithBothOptions">
+                                    <i class="fa-solid fa-basket-shopping">
+
+                                    </i>
+                                    <!-- <div class="num">1</div>  -->
+                                </a>
+
+                                <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="WithBothOptions">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                            Backdrop with scrolling
+                                        </h5>
+                                        <button type="button" class="btn-close" aria-label="Close">
+                                        </button>
+                                    </div>
+                                    <div class="offcanvas-body off_canvas_margin_bottom">
+                                        <p>Try scrolling the rest of the page to see this option in action.</p>
+                                        <!-- off-canvas body -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu_link"><a href="/src/pages/login.html">Log in</a></li>
+                        </ul>
                     </div>
-                </a>
-                <div class="search">
-                    <form class="form-inline my-2">
-                        <input class="form-control" type="search" placeholder="search in transmart.com">
-                        <button class="btn btn-outline-warning " type="submit"><i
-                                class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
 
-                    <ul class="search_ul">
-                        <li class="menu_link ">
-                            <!-- off-canvas-->
-                            <a class="btn btn-primary number" data-bs-toggle="offcanvas"
-                                data-bs-target="#WithBothOptions">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <!-- <div class="num">1</div> -->
-                            </a>
-
-                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" id="WithBothOptions">
-                                <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                                        Backdrop with scrolling
-                                    </h5>
-                                    <button type="button" class="btn-close" aria-label="Close">
-                                    </button>
-                                </div>
-                                <div class="offcanvas-body ">
-                                    <p>Try scrolling the rest of the page to see this option in action.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menu_link"><a href="#">Log in</a></li>
-                    </ul>
                 </div>
 
 
             </div>
 
             <div class="main_menu">
-                <ul class="menu">
-                    <li class="menu_link dropdown">
+
+                <ul class="menu container">
+                    <div class=" dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown button
                         </button>
                         <ul class="dropdown-menu menuBackcolor" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="/src/pages/header_links_page.html">Action</a></li>
+                            <li><a class="dropdown-item" href="/src/pages/header_links_page.html">Another action</a>
+                            </li>
+                            <li><a class="dropdown-item" href="/src/pages/header_links_page.html">Something else
+                                    here</a>
+                            </li>
                         </ul>
-                    </li>
-                    <li class="menu_link"><a href="">Home apliances</a></li>
-                    <li class="menu_link"><a href="">Audi & video</a></li>
-                    <li class="menu_link"><a href="">Refrigrator </a></li>
-                    <li class="menu_link"><a href="">New arrivals</a></li>
-                    <li class="menu_link"><a href="">Today's deal</a></li>
-                    <li class="menu_link"><a href="">Gift cards</a></li>
-
+                    </div>
                 </ul>
             </div>
 
@@ -113,8 +117,8 @@
 
         </header>
 
-        <main class="main row">
-            <div class="container col-2">
+        <main class="main row container">
+            <div class=" col-2">
                 <h4>Categories</h4>
                 <div class="categories">
                     <!-- <a href="/index.html">

@@ -4,13 +4,13 @@ var categories = [
         id: 1,
         mainPhoto: "src/assets/img/amazon_product.jpg",
         name: 'Phone',
-        photo: "/src/assets/img/camera_image2.jpeg",
+        photo: "/src/assets/img/phone1.jpg",
     },
     {
         id: 2,
         mainPhoto: "",
         name: 'TV',
-        photo: "/src/assets/img/camera_image4.jpeg",
+        photo: "/src/assets/img/tv_image.jpg",
     },
     {
         id: 3,

@@ -1,8 +1,5 @@
 
-
-
-// 
-let header_tag_names = [
+var header_tag_names = [
     {
         id: 1,
         name: "Home Apliances",
