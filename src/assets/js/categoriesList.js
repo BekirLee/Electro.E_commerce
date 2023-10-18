@@ -1,10 +1,10 @@
 
-var  categories = [
+var categories = [
     {
         id: 1,
         mainPhoto: "src/assets/img/amazon_product.jpg",
         name: 'Phone',
-        photo: "/src/assets/img/airconditioner_image.jpg",
+        photo: "/src/assets/img/camera_image2.jpeg",
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ var  categories = [
         id: 3,
         mainPhoto: "",
         name: "Air-conditioners",
-        photo: "/src/assets/img/camera_image2.jpeg",
+        photo: "/src/assets/img/airconditioner_image.jpg",
     },
     {
         id: 4,

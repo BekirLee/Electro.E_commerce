@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function info() {
     const productId = new URLSearchParams(window.location.search).get('id');
     if (!productId) {
-        console.error("Id qeyd edilməyib.");
+        // console.error("Id qeyd edilməyib.");
         return;
     }
 
