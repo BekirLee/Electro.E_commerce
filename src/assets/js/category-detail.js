@@ -1,4 +1,29 @@
-
+let header_tag_names = [
+    {
+        id: 1,
+        name: "Home Apliances",
+    },
+    {
+        id: 2,
+        name: "Audio & Video",
+    },
+    {
+        id: 3,
+        name: "Refrigator",
+    },
+    {
+        id: 4,
+        name: "New arrivals",
+    },
+    {
+        id: 5,
+        name: "Today's deal",
+    },
+    {
+        id: 6,
+        name: "Gift cards",
+    },
+]
 
 
 
@@ -29,12 +54,11 @@ function productInfo() {
 
     info_side_category.innerHTML = `
         <div id="${currentcategory.id}">
-        ${currentcategory.name}
-   
+             ${currentcategory.name}
         </div>`;
 
 
-    let similarProducts = products.filter(p => p.categoryId == categoryId);
+    let similarProducts = categoriesSameProducts.filter(p => p.categoryId == categoryId);
     let categories_link = document.querySelector(".categories");
 
     for (let items of similarProducts) {
@@ -109,6 +133,7 @@ function scrollEvent() {
     }
 
 }
+
 
 let menu = document.querySelector(".menu");
 for (let links of header_tag_names) {

@@ -77,8 +77,6 @@ var products = [
     {
         id: 5,
         categoryId: 5,
-
-
         price: '$1029.00',
         discount: "999.00",
         brand: "Intel",
@@ -130,9 +128,7 @@ var products = [
             "/src/assets/img/phone_image.jpg",
             "/src/assets/img/phone2.jpg",
         ],
-
         title: "5G Unlocked Smartphone,12GB RAM+256GB Storage120Hz Fluid Display Hasselblad Quad Camera 65W Ultra Fast Charge 50W Wireless Charge",
-
     },
     {
         id: 8,
@@ -151,9 +147,6 @@ var products = [
             "/src/assets/img/phone1.jpg",
             "/src/assets/img/phone_info2.jpg",
         ],
-
-
         title: "6G Factory Unlocked Android Cell Phone 128GB Pro-Grade Camera 30X Space Zoom Night Mode, Space Grey",
-
     },
 ]
