@@ -300,6 +300,7 @@ header {
 
 .productsBox a {
     color: #000;
+    text-align: center;
 }
 
 .product {
@@ -318,9 +319,9 @@ header {
 
 .product .prduct_count {
     position: absolute;
-    left: -11px;
+    left: -5px;
     width: 100%;
-    top: 200px;
+    top: 229px;
 }
 
 .product p {
@@ -502,10 +503,10 @@ header {
 .card_basket_photo:hover {
     opacity: 1 !important;
 }
-
+/* 
 .card-photo:hover .card-img-top {
     opacity: 1 !important;
-}
+} */
 
 .card:hover .fa-heart {
     display: inline-block;
