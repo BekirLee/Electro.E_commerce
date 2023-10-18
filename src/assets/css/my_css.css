@@ -499,11 +499,6 @@ header {
     opacity: 1 !important;
 }
 
-/* 
-.card-photo:hover .card-img-top {
-    opacity: 1 !important;
-} */
-
 .card:hover .fa-heart {
     display: inline-block;
     transition: .2s;
@@ -690,17 +685,33 @@ header {
 
 .productName {
     font-family: 'Poppins', sans-serif;
-    margin: 0 0 0.5em 0; font-size: 30px;
+    margin: 0 0 0.5em 0;
+    font-size: 30px;
+
+}
+
+.offcanvasProductName {
+    color: #000;
+    height: 50px;
+    overflow: hidden;
 }
 
 .price {
     font-size: 1rem;
     font-weight: 700;
+    width: 160px;
+    display: flex;
     margin: 0 0 0.2em;
+    align-items: center;
+    margin: 15px;
 }
 
 .price_info {
     text-decoration: line-through;
+}
+
+.price_item {
+    margin-right: 10px;
 }
 
 #products {
@@ -723,6 +734,8 @@ header {
 .categories a:hover {
     color: #fff;
 }
+
+.unactive {}
 
 /* 
 .categorie {
@@ -763,7 +776,7 @@ header {
     background-color: orange;
 }
 
-.minus_icon {
+.fa-trash {
     display: block !important;
     color: #3498db;
     cursor: pointer;
@@ -857,6 +870,10 @@ header {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     padding: 20px;
+}
+
+.product-item .offcanvas_product_body {
+    height: 180px;
 }
 
 .offcanvas-body a {

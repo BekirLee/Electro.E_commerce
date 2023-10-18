@@ -21,6 +21,7 @@ productsList.forEach(product => {
         if (!favs.some(item => item.id == currentProduct.id)) {
             favs.push(currentProduct);
             alertify.success('Added product');
+            basketIcon.style.display = "block";
             addProductToFavs();
         } else {
             alertify.warning("There is product like that in favs!")
@@ -49,11 +50,17 @@ function addProductToFavs() {
                 <div class="off-canvas_photo">
                     <img src="${element.photo}" class="card-img-top card_basket_photo photo_width" style=height:200px alt="...">
                 </div>      
-                <div class="card-body">
+                <div class="card-body offcanvas_product_body">
+                
                     <div class="price">
-                         <del>${element.price}$</del>
-                    <span>${element.discount} $</span>
-                    <i id="${element.id}" class="fa-solid fa-square-minus minus_icon"></i>
+                        <div class="price_item">
+                            <del>${element.price}$</del> 
+                            <span>${element.discount} $</span> 
+                        </div>
+                        <i id="${element.id}" class="fa-solid fa-trash"></i>
+                    </div>
+                    <div class="offcanvasProductName">
+                    ${element.title}
                     </div>
                 </div>
             </div>
@@ -74,8 +81,8 @@ function addProductToFavs() {
 
     offcanvas.insertAdjacentHTML("beforeend", totalPriceInfo);
 
-    let      = document.querySelectorAll(".minus_icon");
-    minusIcons.forEach(minus => {
+    let trashIcon = document.querySelectorAll(".fa-trash");
+    trashIcon.forEach(minus => {
         minus.addEventListener("click", function () {
             let id = parseInt(minus.getAttribute('id')); // idni int. edir
             deleteproductFromFavs(id)
