@@ -1,33 +1,4 @@
 
-// let header_tag_names = [
-//     {
-//         id: 1,
-//         name: "Home Apliances",
-//     },
-//     {
-//         id: 2,
-//         name: "Audio & Video",
-//     },
-//     {
-//         id: 3,
-//         name: "Refrigator",
-//     },
-//     {
-//         id: 4,
-//         name: "New arrivals",
-//     },
-//     {
-//         id: 5,
-//         name: "Today's deal",
-//     },
-//     {
-//         id: 6,
-//         name: "Gift cards",
-//     },
-// ]
-
-
-// 
 
 getCategory();
 productInfo();

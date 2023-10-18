@@ -14,7 +14,7 @@ var products = [
         secondImage: "/src/assets/img/beardsheaver.jpeg",
         mainPhoto: "/src/assets/img/washingmachine_image.jpg",
         additionalPhotos: [
-            "/src/assets/img/amazon_product2.jpg",
+            "/src/assets/img/beardsheaver.jpeg",
             "/src/assets/img/amazon_product.jpg",
             "/src/assets/img/beardcleaner.jpg",
         ],
@@ -31,7 +31,7 @@ var products = [
         category: "Home",
         photo: "/src/assets/img/amazon_product.jpg",
         additionalPhotos: [
-            "/src/assets/img/amazon_product.jpg",
+            "/src/assets/img/amazon_product2.jpg",
             "/src/assets/img/amazon_product2.jpg",
             "/src/assets/img/amazon_product2.jpg",
         ],
@@ -49,7 +49,7 @@ var products = [
         category: "Home",
         photo: "/src/assets/img/amazon_product2.jpg",
         additionalPhotos: [
-            "/src/assets/img/amazon_product2.jpg",
+            "/src/assets/img/amazon_product.jpg",
             "/src/assets/img/amazon_product.jpg",
             "/src/assets/img/amazon_product2.jpg",
         ],
@@ -124,7 +124,7 @@ var products = [
         category: "Phone and Tablet",
         photo: "/src/assets/img/phone1.jpg",
         additionalPhotos: [
-            "/src/assets/img/phone_info1.jpg",
+            "/src/assets/img/phone2.jpg",
             "/src/assets/img/phone_image.jpg",
             "/src/assets/img/phone2.jpg",
         ],
