@@ -469,11 +469,6 @@ header {
     font-weight: 700;
 }
 
-.categories a {
-    text-decoration: none;
-    color: #3498db;
-
-}
 
 /*  */
 
@@ -503,6 +498,7 @@ header {
 .card_basket_photo:hover {
     opacity: 1 !important;
 }
+
 /* 
 .card-photo:hover .card-img-top {
     opacity: 1 !important;
@@ -694,7 +690,7 @@ header {
 
 .productName {
     font-family: 'Poppins', sans-serif;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0.5em 0; font-size: 30px;
 }
 
 .price {
@@ -711,6 +707,27 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+.categories {
+    background-color: #3498db;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.categories a {
+    text-decoration: none;
+    color: #084d9b;
+    transition: .3Fs ease-in-out;
+}
+
+.categories a:hover {
+    color: #fff;
+}
+
+/* 
+.categorie {
+    background-color: #74a6c7;
+} */
 
 /* icons */
 #backtotop {
