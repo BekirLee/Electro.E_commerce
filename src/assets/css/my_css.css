@@ -841,12 +841,12 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.loader.unactive {
+.unactive {
     display: none;
 }
 
-.loader.active {
-    display: none;
+.active {
+    display: block;
 }
 
 .animate-bottom {

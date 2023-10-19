@@ -5,7 +5,7 @@ let card = document.querySelector(".card-width");
 let loader = document.querySelector(".loader");
 let animatebottom = document.querySelector(".animate-bottom");
 
-loader.style.display = "none";
+// loader.style.display = "none";
 animatebottom.style.display = "none";
 
 deletesmthg();
@@ -14,18 +14,23 @@ function deletesmthg() {
 
     btn.addEventListener("click", function () {
         // loader.classList.add("active");
-
         window.addEventListener('load', function () {
 
             setTimeout(() => {
                 // loader.style.display = "block";
                 loader.classList.remove("active");
+                loader.classList.add("unactive");
+                animatebottom.style.display = "block";
 
 
-            }, 2000);
+
+            }, 1000);
 
 
         });
+
+        loader.classList.add("active");
+
     })
 }
 
