@@ -13,15 +13,14 @@ function deletesmthg() {
 
 
     btn.addEventListener("click", function () {
-        loader.classList.add("unactive");   
+        // loader.classList.add("active");
 
         window.addEventListener('load', function () {
 
             setTimeout(() => {
-                // loader.style.display = "none";
-                animatebottom.style.display = "block";
-                loader.classList.remove("unactive");
-                loader.classList.add('active')
+                // loader.style.display = "block";
+                loader.classList.remove("active");
+
 
             }, 2000);
 
