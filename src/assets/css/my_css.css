@@ -735,7 +735,7 @@ header {
     color: #fff;
 }
 
-.unactive {}
+
 
 /* 
 .categorie {
@@ -842,10 +842,12 @@ header {
 }
 
 .loader.active {
-    display: block;
+    display: none !important    ;
 }
 
-
+.loader.unactive {
+    display: block !important;
+}
 
 .animate-bottom {
     position: relative;
