@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function () {
+    getFavsFromLocalStorage();
+    addProductToFavs();  // Aldığınız ürünleri sayfada gösterin
+});
+
+function getFavsFromLocalStorage() {
+    const storedFavs = localStorage.getItem('fav');
+    if (storedFavs) {
+        favs = JSON.parse(storedFavs);
+    }
+}
 
 
 
@@ -25,14 +36,15 @@ productsList.forEach(product => {
             alertify.success('Added product');
             basketIcon.style.display = "block";
 
+            // getFavsFromLocalStorage();
+            let favsProducts = JSON.stringify(favs);
+            localStorage.setItem("fav", favsProducts);
+            let stringFavsProducts = localStorage.getItem("fav");
+            let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
+            console.log(getFavsFromLocalStorage);
 
             addProductToFavs();
-            document.addEventListener('load', (event) => {
-                const favsString = JSON.stringify(favs);
-                localStorage.setItem('favs', favsString);
-                favs = JSON.parse(favsString);
-                // Diğer yüklemeyle ilgili kodlarınız
-            });
+            // getFavsFromLocalStorage();
 
         } else {
             alertify.warning("There is product like that in favs!")
@@ -100,9 +112,6 @@ function addProductToFavs() {
         });
     });
 }
-
-
-
 
 
 function deleteproductFromFavs(id) {
