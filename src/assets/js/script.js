@@ -41,7 +41,7 @@ productsList.forEach(product => {
             localStorage.setItem("fav", favsProducts);
             let stringFavsProducts = localStorage.getItem("fav");
             let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
-            console.log(getFavsFromLocalStorage);
+            // console.log(getFavsFromLocalStorage);
 
             addProductToFavs();
             // getFavsFromLocalStorage();
@@ -119,6 +119,11 @@ function deleteproductFromFavs(id) {
 
     if (currentProduct) {
         favs.splice(currentProduct, 1);
+        let favsProducts = JSON.stringify(favs);
+        localStorage.setItem("fav", favsProducts);
+        let stringFavsProducts = localStorage.getItem("fav");
+        let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
+        
         addProductToFavs(); // Call this function again to refresh the UI
     }
 }
