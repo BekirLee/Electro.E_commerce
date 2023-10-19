@@ -1,4 +1,6 @@
 
+
+
 var productsList = document.querySelectorAll('.product-item');
 
 let favs = [];
@@ -22,7 +24,16 @@ productsList.forEach(product => {
             favs.push(currentProduct);
             alertify.success('Added product');
             basketIcon.style.display = "block";
+
+
             addProductToFavs();
+            document.addEventListener('load', (event) => {
+                const favsString = JSON.stringify(favs);
+                localStorage.setItem('favs', favsString);
+                favs = JSON.parse(favsString);
+                // Diğer yüklemeyle ilgili kodlarınız
+            });
+
         } else {
             alertify.warning("There is product like that in favs!")
         }
@@ -108,6 +119,7 @@ document.querySelector(".slicknav_menu").addEventListener("click", function () {
     menulinks.classList.toggle("active");
 
 })
+
 
 
 // backtotop 

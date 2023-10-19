@@ -894,7 +894,7 @@ header {
 
 .off-canvas_photo {
     text-align: left;
-    height: 90px;
+    height: 126backtotoppx;
 }
 
 .off-canvas_photo img {
