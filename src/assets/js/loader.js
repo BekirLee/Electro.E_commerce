@@ -1,5 +1,5 @@
 
-let btn = document.querySelector(".logInBtn button");
+let btn = document.querySelector(".card-width button");
 let card = document.querySelector(".card-width");
 // let loaderall = document.querySelector(".loader");
 let loader = document.querySelector(".loader");
@@ -14,24 +14,26 @@ function deletesmthg() {
 
     btn.addEventListener("click", function () {
         // loader.classList.add("active");
-        window.addEventListener('load', function () {
+        // window.addEventListener('load', function () {
 
-            setTimeout(() => {
-                // loader.style.display = "block";
-                loader.classList.remove("active");
-                loader.classList.add("unactive");
-                animatebottom.style.display = "block";
-
-
-
-            }, 1000);
+        setTimeout(() => {
+            // loader.style.display = "block";
+            loader.classList.remove("activeBtn");
+            loader.classList.add("unactive");
+            animatebottom.style.display = "block";
 
 
-        });
 
-        loader.classList.add("active");
+        }, 1000);
 
+
+        // });
+
+        loader.classList.add("activeBtn");
+
+        return card.classList.add("unactive");
     })
+
 }
 
 
