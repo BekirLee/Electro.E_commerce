@@ -1,21 +1,19 @@
 var users = [
     {
         name: "John",
-        age: 30,
-        password: 12345,
+        // age: 30,
+        password: "12345",
     },
     {
         name: "Nihad",
-        age: 17.999,
-        password: 12345,
+        // age: 17.999,
+        password: "12345",
     },
 ]
 
 checkLogin();
 
 function checkLogin() {
-    let username = document.getElementById("user").value;
-    let password = document.getElementById("password").value;
 
 
 
@@ -27,36 +25,35 @@ function checkLogin() {
     // loader.style.display = "none";
     animatebottom.style.display = "none";
 
-    deletesmthg();
+    // deletesmthg();
 
-    function deletesmthg() {
-        for (let infos of users)
+    // function deletesmthg() {
+    btn.addEventListener("click", function () {
+        let username = document.getElementById("user").value;
+        let password = document.getElementById("password").value;
 
-
-
-            btn.addEventListener("click", function () {
-                if (username == infos.name && password == infos.password) {
-                    loader.classList.add("activeBtn");
-
-                    setTimeout(() => {
-                        // loader.style.display = "block";
-                        loader.classList.remove("activeBtn");
-                        loader.classList.add("unactive");
-                        animatebottom.style.display = "block";
+        for (let i = 0; i < users.length; i++) {
 
 
 
-                    }, 1000);
+            if (username == users[i].name && password == users[i].password) {
+                console.log("true user infos")
+                loader.classList.add("activeBtn");
 
-                }
-                return card.classList.add("unactive");
+                setTimeout(() => {
+                    // loader.style.display = "block";
+                    loader.classList.remove("activeBtn");
+                    loader.classList.add("unactive");
+                    animatebottom.style.display = "block";
 
 
-            })
 
+                }, 1000);
 
-
-    }
+                break;
+            }
+        }
+    })
 
 }
 
