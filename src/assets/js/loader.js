@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Sayfa yüklendiğinde, kullanıcı bilgisini localStorage'dan al
-    let getUserDataString = localStorage.getItem("users");
-    let getUserData = JSON.parse(getUserDataString);
+    let userLogin = document.querySelector(".userLogin a");
 
-    if (getUserData) {  // Eğer kullanıcı bilgisi varsa
-        alert("var")
-        let userLogin = document.querySelector(".userLogin a");
-        userLogin.innerHTML = getUserData;
+    let getUserDataString = localStorage.getItem("users");
+
+    if (getUserDataString) {  // Eğer kullanıcı bilgisi varsa
+        userLogin.textContent = getUserDataString;
     }
 });

@@ -26,7 +26,7 @@ function checkLogin() {
     animatebottom.style.display = "none";
 
     // deletesmthg();
-    
+
     // function deletesmthg() {
     btn.addEventListener("click", function () {
         let username = document.getElementById("user").value;
