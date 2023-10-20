@@ -3,6 +3,7 @@ var products = [
     {
         id: 1,
         categoryId: 5,
+        headerTagNamesId: 1,
         title: "Multigroomer All-in-One Trimmer Series 5000, 23 Piece Mens Grooming Kit",
         price: "49.00",
         discount: "44.00",
@@ -22,6 +23,7 @@ var products = [
     {
         id: 2,
         categoryId: 2,
+        headerTagNamesId: 1,
         price: "249.00",
         discount: "219.00",
         brand: "Canon",
@@ -40,6 +42,7 @@ var products = [
     {
         id: 3,
         categoryId: 3,
+        headerTagNamesId: 1,
         price: "229.00",
         discount: "209.00",
         brand: "Mitsubishi",

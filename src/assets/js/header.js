@@ -16,7 +16,7 @@ function getElements() {
 
 
     let product = header_tag_names.find(p => p.id === parseInt(productId));
-    let productcategory = products.filter(p => p.categoryId === parseInt(product.id));
+    let productcategory = products.filter(p => p.headerTagNamesId === parseInt(product.id));
 
     if (!product) {
         console.error("Bu idyə uyğun məhsul tapılmadı");
