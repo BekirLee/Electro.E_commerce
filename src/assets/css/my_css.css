@@ -699,7 +699,7 @@ header {
 .price {
     font-size: 1rem;
     font-weight: 700;
-    width: 160px;
+    width: 185px;
     display: flex;
     margin: 0 0 0.2em;
     align-items: center;
@@ -896,7 +896,7 @@ header {
 
 .off-canvas_photo {
     text-align: left;
-    height: 126backtotoppx;
+    height: 126px;
 }
 
 .off-canvas_photo img {
