@@ -59,6 +59,11 @@ function checkLogin() {
 
                 break;
             }
+
+            // else {
+            //     alert("Wrong username or password!");
+            //     break;  
+            // }
         }
     })
 

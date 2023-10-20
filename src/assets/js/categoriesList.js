@@ -2,7 +2,7 @@
 var categories = [
     {
         id: 1,
-        mainPhoto: "src/assets/img/amazon_product.jpg",
+        mainPhoto: "",
         name: 'Phone',
         photo: "/src/assets/img/phone_image.jpg",
     },

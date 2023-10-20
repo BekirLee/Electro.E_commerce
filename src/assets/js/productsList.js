@@ -58,8 +58,8 @@ var products = [
     {
         id: 4,
         categoryId: 4,
-        price: "1,499.00",
-        discount: "1,399.00",
+        price: "1499.00",
+        discount: "1399.00",
         brand: "Intel",
         size: "Dimensions -69.5 x 75.0 x 169.0",
         guarantee: "12 years warranty",
@@ -77,7 +77,7 @@ var products = [
     {
         id: 5,
         categoryId: 5,
-        price: '$1029.00',
+        price: "1029.00",
         discount: "999.00",
         brand: "Intel",
         size: "Dimensions -69.5 x 75.0 x 169.0",
@@ -115,8 +115,8 @@ var products = [
     {
         id: 7,
         categoryId: 1,
-        price: "1,299.00",
-        discount: "1,199.00",
+        price: "1299.00",
+        discount: "1199.00",
         brand: "Apple",
         size: "Dimensions -69.5 x 75.0 x 169.0",
         guarantee: "12 years warranty",
@@ -133,7 +133,7 @@ var products = [
     {
         id: 8,
         categoryId: 8,
-        price: "1,099.00",
+        price: "1099.00",
         discount: "999.00",
         brand: "Apple",
         size: "Dimensions -69.5 x 75.0 x 169.0",
