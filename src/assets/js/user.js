@@ -26,7 +26,7 @@ function checkLogin() {
     animatebottom.style.display = "none";
 
     // deletesmthg();
-
+    
     // function deletesmthg() {
     btn.addEventListener("click", function () {
         let username = document.getElementById("user").value;
@@ -48,6 +48,12 @@ function checkLogin() {
                     animatebottom.style.display = "block";
                     card.classList.add("unactive");
                     userLogin.textContent = `Hello ,${users[i].name}`;
+
+                    let userData = JSON.stringify(userLogin.textContent);
+                    localStorage.setItem("users", userData);
+
+                    let getUserDataString = localStorage.getItem("users");
+                    let getUserData = JSON.parse(getUserDataString);
 
                 }, 1000);
 

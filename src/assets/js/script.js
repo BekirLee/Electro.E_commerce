@@ -123,7 +123,7 @@ function deleteproductFromFavs(id) {
         localStorage.setItem("fav", favsProducts);
         let stringFavsProducts = localStorage.getItem("fav");
         let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
-        
+
         addProductToFavs(); // Call this function again to refresh the UI
     }
 }
