@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", function () {
     productInfo();
 })
@@ -9,7 +8,7 @@ function productInfo() {
     let productCategory = document.querySelector("#products");
 
     const categoryId = new URLSearchParams(window.location.search).get('id');
-   
+
     if (!categoryId) {
         console.error("CategoryElement Idsi qeyde edilməyib.");
         return;
