@@ -31,6 +31,7 @@ function checkLogin() {
     btn.addEventListener("click", function () {
         let username = document.getElementById("user").value;
         let password = document.getElementById("password").value;
+        let userLogin = document.querySelector(".userLogin a");
 
         for (let i = 0; i < users.length; i++) {
 
@@ -45,8 +46,8 @@ function checkLogin() {
                     loader.classList.remove("activeBtn");
                     loader.classList.add("unactive");
                     animatebottom.style.display = "block";
-
-
+                    card.classList.add("unactive");
+                    userLogin.textContent = `Hello ,${users[i].name}`;
 
                 }, 1000);
 

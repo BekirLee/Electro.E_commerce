@@ -36,7 +36,7 @@ productsList.forEach(product => {
             alertify.success('Added product');
             basketIcon.style.display = "block";
 
-            // getFavsFromLocalStorage();
+            // localStorage;
             let favsProducts = JSON.stringify(favs);
             localStorage.setItem("fav", favsProducts);
             let stringFavsProducts = localStorage.getItem("fav");
