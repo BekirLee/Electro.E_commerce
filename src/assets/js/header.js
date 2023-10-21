@@ -1,8 +1,4 @@
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
-})
 getElements();
 
 

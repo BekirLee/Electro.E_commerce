@@ -3,7 +3,6 @@
 getCategory();
 productInfo();
 
-// headerSide
 
 
 
