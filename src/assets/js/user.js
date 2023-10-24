@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 checkLogin();
-
 function checkLogin() {
 
     let btn = document.querySelector(".card-width button");
@@ -39,33 +38,33 @@ function checkLogin() {
         let password = document.getElementById("password").value;
         let userLogin = document.querySelector(".userLogin a");
 
-        for (let i = 0; i < users.length; i++) {
 
-            if (username == users[i].name && password == users[i].password) {
-                console.log("true user infos")
+        let currentUser = users.find(x=>x.password == password && x.name == username  )
+
+            if (currentUser) {
                 loader.classList.add("activeBtn");
-
                 setTimeout(() => {
+
                     loader.classList.remove("activeBtn");
                     loader.classList.add("unactive");
                     animatebottom.style.display = "block";
                     card.classList.add("unactive");
 
-                    let userData = JSON.stringify(users[i].name);
-                    localStorage.setItem("users", userData);
+                    let userData = JSON.stringify(currentUser);
+                    localStorage.setItem("user", userData);
 
-                    let getUserDataString = localStorage.getItem("users");
-                    let getUserData = JSON.parse(getUserDataString);
+                    let getUserData = JSON.parse(localStorage.getItem("users"));
 
 
                     localStorage.setItem('isLoggedIn', true);
 
                 }, 1000);
 
-                break;
+            }
+            else{
+                alert("username or pass is invalid")
             }
 
-        }
     })
 
 }

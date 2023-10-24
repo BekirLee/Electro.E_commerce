@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     let userLogin = document.querySelector(".userLogin a");
-    let getUserDataString = localStorage.getItem("users");
+    let loggeduser = JSON.parse(localStorage.getItem("user"));
 
-    if (getUserDataString) {
-        userLogin.textContent = getUserDataString;
-        userLogin.textContent = `Hello ,${getUserDataString}`;
-
+    if (loggeduser && loggeduser.name) {
+        userLogin.textContent = `Hello ,${loggeduser.name}`;
     }
 });

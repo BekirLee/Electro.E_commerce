@@ -720,7 +720,6 @@ header {
 }
 
 .categories {
-    background-color: #3498db;
     border-radius: 7px;
     padding: 10px;
 }
@@ -728,11 +727,16 @@ header {
 .categories a {
     text-decoration: none;
     color: #084d9b;
+    display: block;
+    padding: 5px;
+    transition: all .1s linear;
+    border-radius: 3px;
     transition: .3Fs ease-in-out;
 }
 
 .categories a:hover {
     color: #fff;
+    background: #3498db!important;
 }
 
 

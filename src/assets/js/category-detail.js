@@ -62,7 +62,7 @@ function productInfo() {
     for (let links of categories) {
         let link = `
         <a href="category.html?id=${links.id}">
-            <p class="categorie">${links.name}</p>
+           ${links.name}
          </a> 
          `;
         categories_link.insertAdjacentHTML("beforeend", link);

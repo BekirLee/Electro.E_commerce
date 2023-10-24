@@ -11,7 +11,6 @@ function getFavsFromLocalStorage() {
 }
 
 
-
 var productsList = document.querySelectorAll('.product-item');
 
 let favs = [];
