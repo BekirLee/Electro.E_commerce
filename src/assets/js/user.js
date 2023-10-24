@@ -41,8 +41,6 @@ function checkLogin() {
 
         for (let i = 0; i < users.length; i++) {
 
-
-
             if (username == users[i].name && password == users[i].password) {
                 console.log("true user infos")
                 loader.classList.add("activeBtn");
@@ -52,13 +50,13 @@ function checkLogin() {
                     loader.classList.add("unactive");
                     animatebottom.style.display = "block";
                     card.classList.add("unactive");
-                    userLogin.textContent = `Hello ,${users[i].name}`;
 
-                    let userData = JSON.stringify(userLogin.textContent);
+                    let userData = JSON.stringify(users[i].name);
                     localStorage.setItem("users", userData);
 
                     let getUserDataString = localStorage.getItem("users");
                     let getUserData = JSON.parse(getUserDataString);
+
 
                     localStorage.setItem('isLoggedIn', true);
 
