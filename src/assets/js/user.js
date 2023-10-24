@@ -11,23 +11,29 @@ var users = [
     },
 ]
 
+
+var animatebottom = document.querySelector(".animate-bottom");
+
+document.addEventListener("DOMContentLoaded", function () {
+    let isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn) {
+        let card = document.querySelector('.card-width');
+        card.style.display = 'none';
+        animatebottom.style.display = "block";
+    }
+})
+
 checkLogin();
 
 function checkLogin() {
 
-
-
     let btn = document.querySelector(".card-width button");
     let card = document.querySelector(".card-width");
     let loader = document.querySelector(".loader");
-    let animatebottom = document.querySelector(".animate-bottom");
 
-    // loader.style.display = "none";
     animatebottom.style.display = "none";
 
-    // deletesmthg();
-
-    // function deletesmthg() {
     btn.addEventListener("click", function () {
         let username = document.getElementById("user").value;
         let password = document.getElementById("password").value;
@@ -42,7 +48,6 @@ function checkLogin() {
                 loader.classList.add("activeBtn");
 
                 setTimeout(() => {
-                    // loader.style.display = "block";
                     loader.classList.remove("activeBtn");
                     loader.classList.add("unactive");
                     animatebottom.style.display = "block";
@@ -55,15 +60,13 @@ function checkLogin() {
                     let getUserDataString = localStorage.getItem("users");
                     let getUserData = JSON.parse(getUserDataString);
 
+                    localStorage.setItem('isLoggedIn', true);
+
                 }, 1000);
 
                 break;
             }
 
-            // else {
-            //     alert("Wrong username or password!");
-            //     break;  
-            // }
         }
     })
 
