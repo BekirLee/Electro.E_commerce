@@ -32,38 +32,38 @@ function checkLogin() {
     let loader = document.querySelector(".loader");
 
     animatebottom.style.display = "none";
-
     btn.addEventListener("click", function () {
         let username = document.getElementById("user").value;
         let password = document.getElementById("password").value;
         let userLogin = document.querySelector(".userLogin a");
+        let currentUser = users.find(x => x.password == password && x.name == username)
 
 
-        let currentUser = users.find(x=>x.password == password && x.name == username  )
+ 
+        if (currentUser) {
+            let userData = JSON.stringify(currentUser);
+            localStorage.setItem("user", userData);
 
-            if (currentUser) {
-                loader.classList.add("activeBtn");
-                setTimeout(() => {
+            let getUserData = JSON.parse(localStorage.getItem("user"));
+            loader.classList.add("activeBtn");
+            setTimeout(() => {
 
-                    loader.classList.remove("activeBtn");
-                    loader.classList.add("unactive");
-                    animatebottom.style.display = "block";
-                    card.classList.add("unactive");
-
-                    let userData = JSON.stringify(currentUser);
-                    localStorage.setItem("user", userData);
-
-                    let getUserData = JSON.parse(localStorage.getItem("users"));
+                loader.classList.remove("activeBtn");
+                loader.classList.add("unactive");
+                animatebottom.style.display = "block";
+                card.classList.add("unactive");
 
 
-                    localStorage.setItem('isLoggedIn', true);
 
-                }, 1000);
 
-            }
-            else{
-                alert("username or pass is invalid")
-            }
+                localStorage.setItem('isLoggedIn', true);
+
+            }, 1000);
+
+        }
+        else {
+            alert("username or pass is invalid")
+        }
 
     })
 
