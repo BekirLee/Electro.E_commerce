@@ -27,34 +27,52 @@ productsList.forEach(product => {
     let basketIcon = product.querySelector('.fa-heart');
     let stringFavsProducts = localStorage.getItem("fav");
     let isUserLoggedIn = false;
-    basketIcon.addEventListener('click', (e) => {
 
-        if (!isUserLoggedIn) {
+    // let userLoggedInOrNo = JSON.stringify(isUserLoggedIn);
+    // localStorage.setItem("userLoggedInOrNo", userLoggedInOrNo);
+
+
+    basketIcon.addEventListener('click', (e) => {
+        let getTrue = JSON.parse(sessionStorage.getItem("user"));
+        if (!getTrue == true) {
             // alert("login");
+
+            // let UserLoggedIn = true;
+            // console.log(UserLoggedIn);
+            // let userloggeddata = JSON.stringify(UserLoggedIn);
+            // let userLoggedInOrNo = localStorage.setItem("logged", userloggeddata);
+
+            // localStorage.getItem(userLoggedInOrNo);
+
             window.location.href = 'src/pages/login.html';
             return;
         }
-        var id = parseInt(product.id);
-        var currentProduct = products.find(x => x.id == id);
-        basketIcon.style.color = "red";
 
-        if (!favs.some(item => item.id == currentProduct.id)) {
-            favs.push(currentProduct);
-            alertify.success('Added product');
-            basketIcon.style.display = "block";
+        else {
+            e.stopPropagation();
+            var id = parseInt(product.id);
+            var currentProduct = products.find(x => x.id == id);
+            basketIcon.style.color = "red";
 
-            // localStorage;
-            let favsProducts = JSON.stringify(favs);
-            localStorage.setItem("fav", favsProducts);
-            let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
-            // console.log(getFavsFromLocalStorage);
+            if (!favs.some(item => item.id == currentProduct.id)) {
+                favs.push(currentProduct);
+                alertify.success('Added product');
+                basketIcon.style.display = "block";
 
-            addProductToFavs();
-            // getFavsFromLocalStorage();
+                // localStorage;
+                let favsProducts = JSON.stringify(favs);
+                localStorage.setItem("fav", favsProducts);
+                let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
+                // console.log(getFavsFromLocalStorage);
 
-        } else {
-            alertify.warning("There is product like that in favs!")
+                addProductToFavs();
+                // getFavsFromLocalStorage();
+
+            } else {
+                alertify.warning("There is product like that in favs!")
+            }
         }
+
     })
 
 })
