@@ -1,6 +1,6 @@
 
 let logoutbtn = document.querySelector(".logout");
-
+let lgout = document.getElementById("lgout");
 
 if (loggeduser && loggeduser.name) {
     logout.classList.remove("unactive");
@@ -10,5 +10,14 @@ if (loggeduser && loggeduser.name) {
         window.location.href = "/index.html";
     })
     groupClass.classList.add("unactive");
+
+    let userCardHTML = `
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-text">User:${loggeduser.name}</h5>
+                <h5 class="card-text">Phone:${loggeduser.phone || "23434125"}</h5>
+            </div>
+        </div>`;
+    lgout.innerHTML = userCardHTML;
 
 }
