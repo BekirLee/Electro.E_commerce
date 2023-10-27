@@ -211,3 +211,11 @@ body {
 .unactive {
     display: none;
 }
+
+.active {
+    display: block;
+}
+
+/* .logOut {
+    display: none;
+} */

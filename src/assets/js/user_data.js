@@ -1,15 +1,19 @@
 
 let userLogin = document.querySelector(".userLogin a");
-let loggeduser = JSON.parse(sessionStorage.getItem("user"));
+var loggeduser = JSON.parse(sessionStorage.getItem("user"));
+var logout = document.querySelector(".logOut");
 
 let cardOfLogin = document.querySelector(".card-mine");
 
 if (loggeduser && loggeduser.name) {
     userLogin.textContent = `Hello ,${loggeduser.name}`;
+    // logout.classList.remove("unactive");
+
     // if (loggeduser) {
-    cardOfLogin.style.display = "none";
+    // cardOfLogin.style.display = "none";
     // }
 }
+
 // userLogin.textContent = `${currentUser.name}`
 
 
