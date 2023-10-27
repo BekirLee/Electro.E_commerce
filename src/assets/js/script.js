@@ -25,7 +25,15 @@ document.querySelector(".fa-heart").addEventListener("click", function (event) {
 
 productsList.forEach(product => {
     let basketIcon = product.querySelector('.fa-heart');
+    let stringFavsProducts = localStorage.getItem("fav");
+    let isUserLoggedIn = false;
     basketIcon.addEventListener('click', (e) => {
+
+        if (!isUserLoggedIn) {
+            // alert("login");
+            window.location.href = "/src/assets/pages/login.html";
+            return;
+        }
         var id = parseInt(product.id);
         var currentProduct = products.find(x => x.id == id);
         basketIcon.style.color = "red";
@@ -38,7 +46,6 @@ productsList.forEach(product => {
             // localStorage;
             let favsProducts = JSON.stringify(favs);
             localStorage.setItem("fav", favsProducts);
-            let stringFavsProducts = localStorage.getItem("fav");
             let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
             // console.log(getFavsFromLocalStorage);
 
