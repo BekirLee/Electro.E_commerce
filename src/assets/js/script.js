@@ -31,7 +31,7 @@ productsList.forEach(product => {
 
         if (!isUserLoggedIn) {
             // alert("login");
-            window.location.href = "/src/assets/pages/login.html";
+            window.location.href = 'src/pages/login.html';
             return;
         }
         var id = parseInt(product.id);
