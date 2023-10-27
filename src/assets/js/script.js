@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     getFavsFromLocalStorage();
-    addProductToFavs();  // Aldığınız ürünleri sayfada gösterin
+    addProductToFavs();  
 });
 
 function getFavsFromLocalStorage() {

@@ -14,28 +14,36 @@ var users = [
 
 checkLogin();
 function checkLogin() {
+    // animatebottom.style.display = "none";
 
     let btn = document.querySelector(".card-width .login");
-    let card = document.querySelector(".card-width");
     let loader = document.querySelector(".loader");
 
-    // animatebottom.style.display = "none";
+    if (currentUser) {
+        let cardOfLogin = document.querySelector(".card-mine");
+        cardOfLogin.style.display = "none";
+    }
+
     btn.addEventListener("click", function () {
         console.log("hi")
         let username = document.getElementById("user").value;
         let password = document.getElementById("password").value;
         let userLogin = document.querySelector(".userLogin a");
-        let currentUser = users.find(x => x.password == password && x.name == username)
+
+        var currentUser = users.find(x => x.password == password && x.name == username)
 
         console.log(currentUser);
 
+
         if (currentUser) {
             let userData = JSON.stringify(currentUser);
+
             sessionStorage.setItem("user", userData);
 
             let getUserData = JSON.parse(sessionStorage.getItem("user"));
             sessionStorage.setItem("isLoggedIn", true);
-           
+
+            // cardOfLogin.classList.add("unactive");
             window.location.href = '/index.html';
             // loader.classList.add("activeBtn");
             // setTimeout(() => {
@@ -52,6 +60,8 @@ function checkLogin() {
         else {
             alert("username or pass is invalid")
         }
+
+
 
     })
 
