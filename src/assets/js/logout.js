@@ -15,7 +15,7 @@ if (loggeduser && loggeduser.name) {
         <div class="card">
             <div class="card-body">
                 <h5 class="card-text">User:${loggeduser.name}</h5>
-                <h5 class="card-text">Phone:${loggeduser.phone || "23434125"}</h5>
+                <h5 class="card-text">Phone:${loggeduser.password}</h5>
             </div>
         </div>`;
     lgout.innerHTML = userCardHTML;
