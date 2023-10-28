@@ -30,9 +30,11 @@ function getElements() {
         let infos = `
         <div class="card product-item" id="${infolar.categoryId}">
             <div class="card-photo">
+            <a href='/src/pages/product.html?=${infolar.id}'
                 <img src="${infolar.photo}" class="card-img-top" alt="...">
                 <img src="${infolar.additionalPhotos[1]}" class="card-img-top img" alt="...">
-            </div>    
+            </a>
+                </div>    
             <span class="sale">Sale</span>
             <div class="card-body">
                 <h5 class="card-title">
