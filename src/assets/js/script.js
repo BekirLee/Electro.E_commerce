@@ -162,9 +162,9 @@ document.querySelector(".slicknav_menu").addEventListener("click", function () {
 
 // backtotop 
 
-let backtotop_button = document.getElementById("backtotop");
-let header_fluid = document.querySelector(".header_fluid");
-let main_menu = document.querySelector(".main_menu");
+var backtotop_button = document.getElementById("backtotop");
+var header_fluid = document.querySelector(".header_fluid");
+var main_menu = document.querySelector(".main_menu");
 
 
 window.onscroll = function () {

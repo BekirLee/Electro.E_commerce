@@ -36,25 +36,48 @@ function productInfo() {
     for (let items of similarProducts) {
         let item = `
                   
-                    <div class="card product-item" id="${items.categoryId}">
-              
-                    <div class="card-body">
+                   
+
+                <div class="card product-item" id="${items.categoryId}}">
+                <a href="src/pages/product.html?id=${items.id}">
                     <div class="card-photo">
-                    <img src="${items.photo}" class="card-img-top" alt="...">
-                    <img src="${items.additionalPhotos[0]}" class="card-img-top img" alt="...">
-                </div>    
-                <span class="sale">Sale</span>
-                        <h5 class="card-title">
-                      
-                        </h5>
+                        <img src="${items.photo}" class="card-img-top" alt="...">
+                        <img src="${items.additionalPhotos[0]}" class="card-img-top img" alt="...">
+                    </div>  
+                </a>  
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="sale">Sale</span>
+                    <div class="card-body">
                             <p class="card-text">${items.title}</p>
                             <div class="price">
                                 <del>${items.price}$</del>
                                 <span>${items.discount}$</span>
                             </div>
+                      
                     </div>
                 </div>
                 `;
+                
+            //     <div class="card product-item" id="${items.categoryId}">
+              
+            //     <div class="card-body">
+            //     <div class="card-photo">
+            //     <img src="${items.photo}" class="card-img-top" alt="...">
+            //     <img src="${items.additionalPhotos[0]}" class="card-img-top img" alt="...">
+            // </div>     
+            //  <i class="fa-regular fa-heart"></i>
+            // <span class="sale">Sale</span>
+            //         <h5 class="card-title">
+                  
+            //         </h5>
+            //             <p class="card-text">${items.title}</p>
+            //             <div class="price">
+            //                 <del>${items.price}$</del>
+            //                 <span>${items.discount}$</span>
+            //             </div>
+            //     </div>
+            // </div>
+            
         productCategory.insertAdjacentHTML("beforeend", item);
     }
 
@@ -79,9 +102,9 @@ document.querySelector(".slicknav_menu").addEventListener("click", function () {
 
 // backtotop 
 
-let backtotop_button = document.getElementById("backtotop");
-let header_fluid = document.querySelector(".header_fluid");
-let main_menu = document.querySelector(".main_menu");
+var backtotop_button = document.getElementById("backtotop");
+var header_fluid = document.querySelector(".header_fluid");
+var main_menu = document.querySelector(".main_menu");
 
 
 window.onscroll = function () {
