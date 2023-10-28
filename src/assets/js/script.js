@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     getFavsFromLocalStorage();
-    addProductToFavs();  
+    addProductToFavs();
 });
 
 function getFavsFromLocalStorage() {
@@ -18,21 +18,26 @@ let favs = [];
 
 document.querySelector(".fa-heart").addEventListener("click", function (event) {
     let basket = document.querySelector(".cards .card");
+    let basketCategory = document.querySelector("#products .card");
     event.preventDefault();
 
     console.log(basket);
+    console.log(basketCategory);
 });
 
 productsList.forEach(product => {
-    let basketIcon = product.querySelector('.fa-heart');
+    var basketIcon = product.querySelector('.fa-heart');
+    var basketIcon1 = product.querySelector('.kalp');
     let stringFavsProducts = localStorage.getItem("fav");
     let isUserLoggedIn = false;
 
     // let userLoggedInOrNo = JSON.stringify(isUserLoggedIn);
     // localStorage.setItem("userLoggedInOrNo", userLoggedInOrNo);
 
+    console.log("ji");
 
     basketIcon.addEventListener('click', (e) => {
+        console.log("come on!");
         let getTrue = JSON.parse(sessionStorage.getItem("user"));
         if (!getTrue == true) {
             // alert("login");
@@ -72,7 +77,7 @@ productsList.forEach(product => {
                 alertify.warning("There is product like that in favs!")
             }
         }
-
+        // event.stopPropagation();
     })
 
 })

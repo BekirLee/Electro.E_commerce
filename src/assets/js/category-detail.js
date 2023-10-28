@@ -35,49 +35,48 @@ function productInfo() {
 
     for (let items of similarProducts) {
         let item = `
-                  
-                   
-
-                <div class="card product-item" id="${items.categoryId}}">
-                <a href="src/pages/product.html?id=${items.id}">
+        
+            <div class="card product-item" id="${items.categoryId}">
+                <div class="card-body">
                     <div class="card-photo">
-                        <img src="${items.photo}" class="card-img-top" alt="...">
-                        <img src="${items.additionalPhotos[0]}" class="card-img-top img" alt="...">
-                    </div>  
-                </a>  
-                    <i class="fa-regular fa-heart"></i>
-                    <span class="sale">Sale</span>
-                    <div class="card-body">
-                            <p class="card-text">${items.title}</p>
-                            <div class="price">
-                                <del>${items.price}$</del>
-                                <span>${items.discount}$</span>
-                            </div>
-                      
-                    </div>
-                </div>
-                `;
-                
-            //     <div class="card product-item" id="${items.categoryId}">
-              
-            //     <div class="card-body">
-            //     <div class="card-photo">
-            //     <img src="${items.photo}" class="card-img-top" alt="...">
-            //     <img src="${items.additionalPhotos[0]}" class="card-img-top img" alt="...">
-            // </div>     
-            //  <i class="fa-regular fa-heart"></i>
-            // <span class="sale">Sale</span>
-            //         <h5 class="card-title">
-                  
-            //         </h5>
-            //             <p class="card-text">${items.title}</p>
-            //             <div class="price">
-            //                 <del>${items.price}$</del>
-            //                 <span>${items.discount}$</span>
-            //             </div>
-            //     </div>
-            // </div>
-            
+                        <a href='/src/pages/product.html?id=${items.id}'>
+                                <img src="${items.photo}" class="card-img-top" alt="...">
+                                <img src="${items.additionalPhotos[0]}" class="card-img-top img" alt="...">
+                        </a>
+                    </div>     
+                    <i class="fa-regular fa-heart kalp"></i>
+                        <span class="sale">Sale</span>
+                        <h5 class="card-title">
+
+                          </h5>
+                        <p class="card-text">${items.title}</p>
+                        <div class="price">
+                            <del>${items.price}$</del>
+                            <span>${items.discount}$</span>
+                        </div>
+                </div>  
+        </div>
+        `;
+
+
+        // <div class="card product-item" id="${items.categoryId}}">
+        // <a href="src/pages/product.html?id=${items.id}">
+        //     <div class="card-photo">
+        //         <img src="${items.photo}" class="card-img-top" alt="...">
+        //         <img src="${items.additionalPhotos[0]}" class="card-img-top img" alt="...">
+        //     </div>  
+        // </a>  
+        //     <i class="fa-regular fa-heart"></i>
+        //     <span class="sale">Sale</span>
+        //     <div class="card-body">
+        //             <p class="card-text">${items.title}</p>
+        //             <div class="price">
+        //                 <del>${items.price}$</del>
+        //                 <span>${items.discount}$</span>
+        //             </div>
+
+        //     </div>
+        // </div>
         productCategory.insertAdjacentHTML("beforeend", item);
     }
 
@@ -91,6 +90,57 @@ function productInfo() {
         categories_link.insertAdjacentHTML("beforeend", link);
     }
 }
+var productsList = document.querySelectorAll('.product-item');
+
+
+productsList.forEach(product => {
+    var basketIcon = product.querySelector('.fa-heart');
+    let stringFavsProducts = localStorage.getItem("fav");
+    let isUserLoggedIn = false;
+
+    basketIcon.addEventListener('click', (e) => {
+        let getTrue = JSON.parse(sessionStorage.getItem("user"));
+        if (!getTrue == true) {
+            // alert("login");
+
+            // let UserLoggedIn = true;
+            // console.log(UserLoggedIn);
+            // let userloggeddata = JSON.stringify(UserLoggedIn);
+            // let userLoggedInOrNo = localStorage.setItem("logged", userloggeddata);
+
+            // localStorage.getItem(userLoggedInOrNo);
+
+            window.location.href = 'src/pages/login.html';
+            return;
+        }
+
+        else {
+            e.stopPropagation();
+            var id = parseInt(product.id);
+            var currentProduct = products.find(x => x.id == id);
+            basketIcon.style.color = "red";
+
+            if (!favs.some(item => item.id == currentProduct.id)) {
+                favs.push(currentProduct);
+                alertify.success('Added product');
+                basketIcon.style.display = "block";
+
+                // localStorage;
+                let favsProducts = JSON.stringify(favs);
+                localStorage.setItem("fav", favsProducts);
+                let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
+                // console.log(getFavsFromLocalStorage);
+
+                addProductToFavs();
+                // getFavsFromLocalStorage();
+
+            } else {
+                alertify.warning("There is product like that in favs!")
+            }
+        }
+        // event.stopPropagation();
+    })
+})
 
 
 document.querySelector(".slicknav_menu").addEventListener("click", function () {
