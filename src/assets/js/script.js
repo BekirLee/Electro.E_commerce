@@ -182,7 +182,7 @@ function scrollEvent() {
 
     if (document.body.scrollTop > scrollHalfBody || document.documentElement.scrollTop > scrollHalfBody) {
         backtotop_button.style.opacity = 1;
-        header_fluid.style.height = "55px";
+        header_fluid.style.height = "70px";
         main_menu.style.display = "none";
     }
     else {

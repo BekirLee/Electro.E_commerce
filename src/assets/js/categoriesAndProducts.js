@@ -37,7 +37,7 @@ function getCategory() {
 
 function productInfo() {
 
-    let favsProducts = JSON.parse( localStorage.getItem("fav") ?? [])
+    let favsProducts = JSON.parse( localStorage.getItem("fav") ?? '[]')
     let elementsInfo = document.querySelector(".cards");
 
     for (let element of products) {
