@@ -37,9 +37,11 @@ function getCategory() {
 
 function productInfo() {
 
+    let favsProducts = JSON.parse( localStorage.getItem("fav") ?? [])
     let elementsInfo = document.querySelector(".cards");
 
     for (let element of products) {
+        let favChecker= favsProducts.find(x=>x.id == element.id)  ?? null
         let info = `
         
         <div class="card product-item" id="${element.id}">
@@ -49,7 +51,9 @@ function productInfo() {
                 <img src="${element.additionalPhotos[0]}" class="card-img-top img" alt="...">
             </div>  
         </a>  
-            <i class="fa-regular fa-heart"></i>
+        <div class="fav-icon">
+        <i class="fa-solid fa-heart ${favChecker ? "active":""}"></i>
+        </div>
             <span class="sale">Sale</span>
             <div class="card-body">
                     <p class="card-text">${element.title}</p>

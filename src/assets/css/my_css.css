@@ -25,7 +25,7 @@ header {
     position: fixed;
     height: 70px;
     width: 100%;
-    z-index: 1;
+    z-index: 12;
     top: 0;
 }
 
@@ -175,14 +175,14 @@ header {
     box-shadow: 4px 2px 2px 4px rgba(0, 0, 0.1, 0.15);
 }
 
-.active {
+.menu_link .active {
     display: block;
     width: 100%;
     text-align: left;
     transition: 0.8s ease-out 0.3s;
 }
 
-.active li {
+ .active li {
     padding: 5px 10px;
     margin: 2px 5px;
     font-size: 10px;
@@ -404,16 +404,19 @@ header {
     overflow: hidden;
 }
 
-.card .fa-heart {
+.product-item .fav-icon{
     position: absolute;
-    left: 199px;
-    top: 20px;
-    color: rgb(82, 80, 80);
-    border: 1px solid grey;
+    right: 5px;
+    top: 35px;
+}
+.product-item .fav-icon i {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     border-radius: 50%;
+    box-shadow: 0 1px 3px #00000065;
     padding: 6px;
-    background-color: #dbe2e2;
-    display: none;
 }
 
 .card button {
@@ -499,10 +502,7 @@ header {
     opacity: 1 !important;
 }
 
-.card:hover .fa-heart {
-    display: inline-block;
-    transition: .2s;
-}
+
 
 .card:hover button {
     display: inline-block;
@@ -536,7 +536,6 @@ header {
 }
 
 .brandList {
-    border: 1px solid grey;
     padding: 0;
     background-color: #ffffff;
     display: grid;
@@ -876,6 +875,11 @@ header {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     padding: 20px;
+}
+
+.product-item  .fav-icon i.active{
+        background-color: #ff5000;
+        color: #fff;
 }
 
 .product-item .offcanvas_product_body {

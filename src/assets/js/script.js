@@ -57,7 +57,7 @@ productsList.forEach(product => {
             e.stopPropagation();
             var id = parseInt(product.id);
             var currentProduct = products.find(x => x.id == id);
-            basketIcon.style.color = "red";
+            basketIcon.classList.toggle('active');
 
             if (!favs.some(item => item.id == currentProduct.id)) {
                 favs.push(currentProduct);
