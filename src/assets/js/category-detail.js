@@ -57,26 +57,6 @@ function productInfo() {
                 </div>  
         </div>
         `;
-
-
-        // <div class="card product-item" id="${items.categoryId}}">
-        // <a href="src/pages/product.html?id=${items.id}">
-        //     <div class="card-photo">
-        //         <img src="${items.photo}" class="card-img-top" alt="...">
-        //         <img src="${items.additionalPhotos[0]}" class="card-img-top img" alt="...">
-        //     </div>  
-        // </a>  
-        //     <i class="fa-regular fa-heart"></i>
-        //     <span class="sale">Sale</span>
-        //     <div class="card-body">
-        //             <p class="card-text">${items.title}</p>
-        //             <div class="price">
-        //                 <del>${items.price}$</del>
-        //                 <span>${items.discount}$</span>
-        //             </div>
-
-        //     </div>
-        // </div>
         productCategory.insertAdjacentHTML("beforeend", item);
     }
 
@@ -101,15 +81,6 @@ productsList.forEach(product => {
     basketIcon.addEventListener('click', (e) => {
         let getTrue = JSON.parse(sessionStorage.getItem("user"));
         if (!getTrue == true) {
-            // alert("login");
-
-            // let UserLoggedIn = true;
-            // console.log(UserLoggedIn);
-            // let userloggeddata = JSON.stringify(UserLoggedIn);
-            // let userLoggedInOrNo = localStorage.setItem("logged", userloggeddata);
-
-            // localStorage.getItem(userLoggedInOrNo);
-
             window.location.href = 'src/pages/login.html';
             return;
         }
@@ -129,16 +100,13 @@ productsList.forEach(product => {
                 let favsProducts = JSON.stringify(favs);
                 localStorage.setItem("fav", favsProducts);
                 let getFavsFromLocalStorage = JSON.parse(stringFavsProducts);
-                // console.log(getFavsFromLocalStorage);
 
                 addProductToFavs();
-                // getFavsFromLocalStorage();
 
             } else {
                 alertify.warning("There is product like that in favs!")
             }
         }
-        // event.stopPropagation();
     })
 })
 

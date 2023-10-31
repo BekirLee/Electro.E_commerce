@@ -8,13 +8,7 @@ let cardOfLogin = document.querySelector(".card-mine");
 
 if (loggeduser && loggeduser.name) {
     userLogin.textContent = `Hello ,${loggeduser.name}`;
-    // logout.classList.remove("unactive");
-
-    // if (loggeduser) {
-    // cardOfLogin.style.display = "none";
-    // }
 }
 
-// userLogin.textContent = `${currentUser.name}`
 
 
