@@ -97,7 +97,7 @@ function addProductToFavs() {
         total += +element.price;
         discount += +element.discount;
         var item = ` 
-        <a href="javascript:void(0)">
+        <a href="#">
             <div class="product-item" id="${element.id}">
                 <div class="off-canvas_photo">
                     <img src="${element.photo}" class="card-img-top card_basket_photo photo_width" style=height:200px alt="...">
