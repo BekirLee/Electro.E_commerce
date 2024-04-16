@@ -34,8 +34,6 @@ productsList.forEach(product => {
     // let userLoggedInOrNo = JSON.stringify(isUserLoggedIn);
     // localStorage.setItem("userLoggedInOrNo", userLoggedInOrNo);
 
-    console.log("ji");
-
     basketIcon.addEventListener('click', (e) => {
         console.log("come on!");
         let getTrue = JSON.parse(sessionStorage.getItem("user"));
@@ -191,5 +189,4 @@ function scrollEvent() {
         main_menu.style.display = "block";
         main_menu.style.height = "53px"
     }
-
 }
